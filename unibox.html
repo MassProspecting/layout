@@ -1836,6 +1836,7 @@
         padding: 10px;
         border: none;
         cursor: pointer;
+        display: none;
         }
         .arrow-btn.left {
         left: 10px;
@@ -2261,7 +2262,7 @@
               <!-- <div class="panel-footer">
                         Footer for Pool 1
                         </div> -->
-              <button class="arrow-btn right" onclick="togglePanel('pool2')">→</button>
+              <button id="arrow1" class="arrow-btn right" onclick="togglePanel('pool2')">→</button>
             </div>
           </section>
           <!-- Pool 2 -->
@@ -2431,8 +2432,8 @@
                   <button class="send-btn">Send</button>
                 </div>
               </div>
-              <button class="arrow-btn left" onclick="togglePanel('pool1')">←</button>
-                     <button class="arrow-btn right" onclick="togglePanel('pool3')">→</button>
+              <button id="arrow2" class="arrow-btn left" onclick="togglePanel('pool1')">←</button>
+              <button id="arrow3" class="arrow-btn right" onclick="togglePanel('pool3')">→</button>
             </div>
           </section>
           <!-- Pool 3 -->
@@ -2456,7 +2457,7 @@
                           <button class="tab-button" data-tab="tab4">Insights</button>
                        </div>
                        <!-- Tab Contents -->
-                       <!-- <div class="tab-contents">
+                       <div class="tab-contents">
                           <div id="tab1" class="tab-content active">
                              <p>Content for Chats. This is the first tab's content.</p>
                           </div>
@@ -2469,7 +2470,7 @@
                           <div id="tab4" class="tab-content">
                              <p>Content for Insights. This is the fourth tab's content.</p>
                           </div>
-                       </div> -->
+                       </div>
                     </div>
                 </section>
               </div>
@@ -2486,26 +2487,39 @@
         // Function to close a panel
         function closePanel(panelId) {
           document.getElementById(panelId).style.display = "none";
-          adjustPanels();
+          document.getElementById('arrow1').style.display = 'block';
+          document.getElementById('arrow2').style.display = 'block';
+          document.getElementById('arrow3').style.display = 'block';
+          adjustLayout();
         }
 
         
         // Function to toggle visibility of sibling panels
         function togglePanel(panelId) {
           const panel = document.getElementById(panelId);
+          const pool1 = document.getElementById('pool1').style.display;
+          const pool2 = document.getElementById('pool2').style.display;
+          const pool3 = document.getElementById('pool3').style.display;
           if (panel.style.display === "none") {
             panel.style.display = "block";
+            if(pool1 === 'block' || pool2 === 'block' || pool3 === 'block')
+          {
+            document.getElementById('arrow1').style.display = 'none'
+            document.getElementById('arrow2').style.display = 'none'
+            document.getElementById('arrow3').style.display = 'none'
+          }
+           
           } else {
             panel.style.display = "none";
           }
-          adjustPanels();
+          adjustLayout();
         }
 
 
         function openPanel(panelId) {
           const panel = document.getElementById(panelId);
          panel.style.display = "block";
-          adjustPanels();
+         adjustLayout();
         }
         // Function to adjust panel layout dynamically
         function adjustLayout() {
@@ -2533,6 +2547,25 @@
                  if (thirdSection.style.display !== "none") thirdSection.style.width = "100%";
              }
          }
+
+         document.querySelectorAll(".tab-button").forEach(button => {
+             button.addEventListener("click", () => {
+                 const tabContainer = button.closest(".tab-container");
+                 const tabId = button.getAttribute("data-tab");
+         
+                 tabContainer.querySelectorAll(".tab-button").forEach(btn => {
+                     btn.classList.remove("active");
+                 });
+         
+                 button.classList.add("active");
+         
+                 tabContainer.querySelectorAll(".tab-content").forEach(content => {
+                     content.classList.remove("active");
+                 });
+         
+                 tabContainer.querySelector(`#${tabId}`).classList.add("active");
+             });
+         });
       </script>
 
       <script>
