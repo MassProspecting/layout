@@ -2393,12 +2393,79 @@
                           </div>
                           <div id="tab2" class="tab-content">
                              <p>Content for Filters. This is the second tab's content.</p>
+                             <div class="btn-group">
+                              <a class="btn dropdown-toggle" data-toggle="dropdown" href="#"><i class="icon-calendar"></i> <span id="filter_period" data-unit="hours" data-number="1">Last Hour</span></a>
+                              <ul id="periods" class="dropdown-menu">                                  
+                                  <li><button class="btn btn-link period" data-unit="hours" data-number="1">Last Hour</button></li>
+                                  <li><button class="btn btn-link period" data-unit="hours" data-number="3">Last 3 Hours</button></li>
+                                  <li><button class="btn btn-link period" data-unit="hours" data-number="6">Last 6 Hours</button></li>
+                                  <li><button class="btn btn-link period" data-unit="hours" data-number="12">Last 12 Hours</button></li>
+                                  <li><button class="btn btn-link period" data-unit="hours" data-number="24">Last 24 Hours</button></li>
+                                  <li><button class="btn btn-link period" data-unit="days" data-number="1">Last 1 Day</button></li>
+                                  <li><button class="btn btn-link period" data-unit="days" data-number="3">Last 3 Days</button></li>
+                                  <li><button class="btn btn-link period" data-unit="weeks" data-number="1">Last 1 Week</button></li>
+                                  <li><button class="btn btn-link period" data-unit="weeks" data-number="4">Last 4 Weeks</button></li>
+                              </ul>
+                             </div>
+                             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                           </div>
                           <div id="tab3" class="tab-content">
                              <p>Content for Events. This is the third tab's content.</p>
+                             <div class="buttons">
+                              <div class="btn-group open">
+                              <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span class="caption badge badge-blue">1</span></button>
+                              <ul class="dropdown-menu ul-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                                  <div class="div-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                                  <li data-id-tag-list="4e9f3b6c-076e-489f-ba27-cecf9706fa10" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="test1234" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="4e9f3b6c-076e-489f-ba27-cecf9706fa10" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> <span class="badge badge-black"><i class="icon-circle" style="color:blue"></i> tag-1</span></li>
+                                  <li data-id-tag-list="c8358cbf-68a4-4c89-b104-c6b40ef23612" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="Offsite Expo ATL" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="c8358cbf-68a4-4c89-b104-c6b40ef23612" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> <span class="badge badge-black"><i class="icon-circle" style="color:green"></i> tag-2</span></li>
+                                  <li class="divider"></li>
+                                  <li>
+                                  <p>Create New Tag</p>
+                                  <input class="input input-medium input-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"><br> 
+                                  <button class="btn btn-link btn-create-tag-list" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" disabled=""><i class="icon-plus"></i> Add</button>
+                                  </li>
+                              </ul>
+                              </div>      
+                             </div>
+                             <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
                           </div>
                           <div id="tab4" class="tab-content">
                              <p>Content for Insights. This is the fourth tab's content.</p>
+                             <div class="row-fluid">
+                              <table class="insights" style="width:100%">
+                                  <!-- stats -->
+                                  <tbody>
+                                  <tr>
+                                      <td width="150px" class="insight-label"><b>Scraping</b></td>
+                                      <td width="48px" class="insight-value"></td>
+                                  </tr>
+                      
+                                  <tr>
+                                      <td class="insight-label"><i class="icon-circle" style="color:gray;"></i> Jobs Performed <i class="icon-info-sign" rel="tooltip" title="" data-original-title="How many times we ran a search."></i></td>
+                                      <td class="insight-value" id="jobs_performed">0</td>
+                                  </tr>
+                      
+                                  <tr>
+                                      <td class="insight-label"><i class="icon-circle" style="color:black;"></i> Events Scraped <i class="icon-info-sign" rel="tooltip" title="" data-original-title="Total events (posts, comments, likes, etc.) scraped on all jobs."></i></td>
+                                      <td class="insight-value" id="events_scraped">0</td>
+                                  </tr>
+                      
+                                  <tr>
+                                      <td class="insight-label"><i class="icon-circle" style="color:blue;"></i> Events Discovered <i class="icon-info-sign" rel="tooltip" title="" data-original-title="New events (posts, comments, likes, etc.) added to the database."></i></td>
+                                      <td class="insight-value" id="events_discovered">0</td>
+                                  </tr>
+                      
+                                  <tr>
+                                      <td class="insight-label"><i class="icon-circle" style="color:orange;"></i> Leads Discovered <i class="icon-info-sign" rel="tooltip" title="" data-original-title="New leads added to the database."></i></td>
+                                      <td class="insight-value" id="leads_discovered">0</td>
+                                  </tr>
+                      
+                                  <tr>
+                                      <td class="insight-label"><i class="icon-circle" style="color:green;"></i> Companies Discovered <i class="icon-info-sign" rel="tooltip" title="" data-original-title="New companies added to the database."></i></td>
+                                      <td class="insight-value" id="companies_discovered">0</td>
+                                  </tr>
+                              </tbody></table>
+                             </div>
                           </div>
                        </div>
                     </div>
