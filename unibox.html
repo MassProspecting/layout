@@ -15,6 +15,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -1039,6 +1041,14 @@
         border: 1px solid white;
         z-index: 10000;
       }
+      #body-default{
+        padding: 43px 0 0 82px !important;
+      }
+      @media screen and (max-width : 480px){
+        #body-default{
+          padding: 0 0 0 0 !important;
+        }
+      }
       .jqsfield {
         color: white;
         font: 10px arial, san serif;
@@ -1048,7 +1058,7 @@
   </head>
   <!-- / Message and error alerts -->
   <!-- / Message and error alerts -->
-  <body class="mysaas default-layout wysihtml5-supported" style="padding: 43px 0 0 82px !important;">
+  <body class="mysaas default-layout wysihtml5-supported" id="body-default" >
     <!-- Main navigation bar -->
     <div
       id="wait"
@@ -1393,7 +1403,7 @@
            height: 100%;
            right: 0;
            width: 100%;
-           overflow-y: scroll;
+           /* overflow-y: scroll; */
            //background-color: black;
            }
            .pool2 .pool2-panel .panel2-header {
@@ -1530,7 +1540,7 @@
         position: relative;
         overflow: hidden;
         border: 1px solid #ddd;
-        height: 92vh;
+        height:92vh;
         background-color: #f7f9fc;
         }
         #pool1_header, #pool2_header, #pool3_header {
@@ -1541,7 +1551,7 @@
         border-bottom: 1px solid #ccc;
         }
         .panel-content {
-        overflow-y: auto;
+        /* overflow-y: auto; */
         /* padding: 20px; */
         height: calc(100% - 80px);
         }
@@ -1580,11 +1590,38 @@
         
         }
         /* Arrow Buttons */
+        .arrow{
+        position: absolute;
+        top: 10px;
+        right: 40px;
+        color: #007bff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #d0d0d04a;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        }
+        .arrow-left{
+        position: absolute;
+        top: 10px;
+        left: 4px;
+        color: #007bff;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        background-color: #d0d0d04a;
+        width: 30px;
+        height: 30px;
+        border-radius: 20px;
+        }
         .arrow-btn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         background-color: #007bff;
+        display: none;
         color: #fff;
         border: none;
         padding: 5px 10px;
@@ -1637,7 +1674,7 @@
         padding: 15px;
         overflow-y: auto;
         background-color: #fff;
-        max-height: calc(100vh - 155px);
+        max-height: calc(92vh - 105px);
         }
         .message.other {
         display: flex;
@@ -1672,6 +1709,8 @@
         }
         .list{
           /* overflow-y: auto; */
+          /* height: 90vh; */
+          height: 65vh;
         }
         
         .user-list {
@@ -1727,6 +1766,9 @@
         align-items: center;
         justify-content: space-between;
         }
+        .user-info{
+          width: 70%;
+        }
         .user-info .user-title {
         font-size: 12px;
         color: #666;
@@ -1751,6 +1793,37 @@
         font-weight: 600;
         color: #3f89de;
         }
+        .user-name,
+.user-title,
+.chat-messages .user-name {
+   display: inline-block; /* Add display inline-block for width to take effect */
+   /* max-width: 105px;       Adjust width as needed */
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+
+        .header-info .user-name {
+          max-width: 220px;       /* Adjust width as needed */
+          white-space: nowrap;
+          display: inline-block;
+          padding: 0;
+          padding-left: 23px ;
+          vertical-align: middle;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        
+        .header-info .user-message {
+          max-width: 240px;       /* Adjust width as needed */
+          white-space: nowrap;
+          display: inline-block;
+          vertical-align: middle;
+          padding: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
         .header-info .user-message {
         font-size: 12px;
         color: #666;
@@ -1794,6 +1867,8 @@
         bottom: 0px;
         left: 0;
         right: 0;
+        height: 50px;
+        /* top:0px; */
         background-color: #fff; /* Adjust as needed */
         padding: 10px;
         display: flex;
@@ -1805,6 +1880,12 @@
         .message-input {
         display: flex;
         width: 100%;
+        }
+        .message-header .days{
+          vertical-align: super;
+        }
+        .message-header .user-name{
+            max-width: 129px;
         }
         .message-input input {
         flex-grow: 1;
@@ -1854,6 +1935,11 @@
     padding-left: 5px !important;
     border-bottom: 1px solid #e0e0e0;
 }
+@media screen and (max-width: 420px ) {
+  .panel-footer.bottom-label{
+    /* bottom: 20px; */
+  }
+}
 
 .search-bar input {
     width: 100%;
@@ -1887,7 +1973,7 @@
 /* Tab container */
 .tab-container {
     width: 100%;
-    max-width: 600px;
+    /* max-width: 600px; */
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -1917,7 +2003,6 @@
 }
 
 
-
 .tab-button:hover {
     background: #0056b3;
 }
@@ -1932,11 +2017,14 @@
 .tab-contents {
     padding: 20px;
     border-top: 1px solid #ddd;
+    overflow-y: auto !important;
+    height:82vh;
 }
 
 .tab-content {
     display: none;
     animation: fadeIn 0.3s ease-in-out;
+
 }
 
 .tab-content.active {
@@ -1944,8 +2032,13 @@
 }
 @media screen and (max-width: 768px) {
   .row{
-    height: 92vh;
+    height: 90vh;
   }
+}
+@media screen and (max-width: 480px) {
+  #left-panel{
+    margin-bottom:0 !important;
+  } 
 }
 
 @media screen and (max-width : 1062px) {
@@ -1965,6 +2058,9 @@
     display: none;
   }
   
+}
+#main-footer{
+  display: none;
 }
 
       </style>
@@ -1993,6 +2089,8 @@
               <div id="pool1_header" name="pool1_header" class="panel1-header">
                 <h2>Messages</h2>
                 <button class="close-btn" onclick="closePanel('pool1')"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
+                <button class="arrow"  onclick="togglePanel('pool2')"><i class="fa-solid fa-arrows-left-right"></i></button>
+
               </div>
               <div class="search-bar">
                 <input type="text" placeholder="Search">
@@ -2013,10 +2111,10 @@
                       </div>
                       <div class="user-info">
                         <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
+                          <span class="user-name">John L Mkjhkjkjkjkjknjjjjjjjjjjjjjjjjjjjjiller</span>
                           <span class="view">view</span>
                         </div>
-                        <span class="user-title">Full Stack Development</span>
+                        <span class="user-title">Full Stack Deveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeelopment</span>
                         <span class="message-date"
                           >22 minute ago |
                           <i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -2040,10 +2138,10 @@
                       </div>
                       <div class="user-info">
                         <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
+                          <span class="user-name">John L Missssssssssssssssssssssssssssssssssssller</span>
                           <span class="view">view</span>
                         </div>
-                        <span class="user-title">Full Stack Development</span>
+                        <span class="user-title">Full Stack Dessssssssssssssssssssssssssssssssvelopment</span>
                         <span class="message-date"
                           >22 minute ago |
                           <i class="fa fa-linkedin" aria-hidden="true"></i>
@@ -2278,6 +2376,13 @@
                 <button class="close-btn" onclick="closePanel('pool2')">
                   <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                 </button>
+                
+                <button class="arrow" onclick="togglePanel('pool3')">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
+                <button class="arrow-left" onclick="togglePanel('pool1')">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
               </div>
               <div id="list_div" class="panel-content">
                 <section class="list">
@@ -2290,12 +2395,23 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
-                          >John L Miller
-                          <span class="days">| 22 days ago </span>
+                        <span class="message-header">
+                          <span class="user-name"
+                          >John L Millhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhher
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
                           project with highest quality and within the timeline.
                         </p>
                       </div>
@@ -2307,13 +2423,24 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
-                          project with highest quality and within the timeline.
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
+                          project with highest quality and within the 
                         </p>
                       </div>
                     </div>
@@ -2326,12 +2453,23 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
                           project with highest quality and within the timeline.
                         </p>
                       </div>
@@ -2343,13 +2481,24 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
-                          project with highest quality and within the timeline.
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
+                          project with highest quality and within the 
                         </p>
                       </div>
                     </div>
@@ -2361,12 +2510,23 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
                           project with highest quality and within the timeline.
                         </p>
                       </div>
@@ -2378,13 +2538,24 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
-                          project with highest quality and within the timeline.
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
+                          project with highest quality and within the 
                         </p>
                       </div>
                     </div>
@@ -2396,12 +2567,23 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
                           project with highest quality and within the timeline.
                         </p>
                       </div>
@@ -2413,13 +2595,24 @@
                         alt="User Avatar"
                       />
                       <div class="other-user-content">
-                        <span class="user-name"
+                        <span class="message-header">
+                          <span class="user-name"
                           >John L Miller
-                          <span class="days">| 22 days ago </span>
                         </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
                         <p>
                           As a Full Stack Developer I can help you complete this
-                          project with highest quality and within the timeline.
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          As a Full Stack Developer I can help you complete this
+                          project. I have experience with HTML, CSS, JavaScript,
+                          React, Node.js, and MongoDB. I can also help with
+                          testing and debugging.
+                          
+                          project with highest quality and within the 
                         </p>
                       </div>
                     </div>
@@ -2444,6 +2637,8 @@
                 <button class="close-btn" onclick="closePanel('pool3')">
                   <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                 </button>
+                <button class="arrow-left" onclick="togglePanel('pool2')"><i class="fa-solid fa-arrows-left-right"></i></button>
+
               </div>
               <div id="list_div" class="panel-content">
                 <section class="list">
@@ -2459,7 +2654,36 @@
                        <!-- Tab Contents -->
                        <div class="tab-contents">
                           <div id="tab1" class="tab-content active">
-                             <p>Content for Chats. This is the first tab's content.</p>
+                             <p>
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+                              Content for Chats. This is the first tab's content.
+
+
+                             </p>
                           </div>
                           <div id="tab2" class="tab-content">
                              <p>Content for Filters. This is the second tab's content.</p>
@@ -2477,7 +2701,7 @@
               <!-- <div class="panel-footer">
                         Footer for Pool 3
                         </div> -->
-              <!-- <button class="arrow-btn left" onclick="togglePanel('pool2')">←</button> -->
+              <button class="arrow-btn left" onclick="togglePanel('pool2')">←</button>
             </div>
           </section>
         </div>
@@ -2487,9 +2711,9 @@
         // Function to close a panel
         function closePanel(panelId) {
           document.getElementById(panelId).style.display = "none";
-          document.getElementById('arrow1').style.display = 'block';
-          document.getElementById('arrow2').style.display = 'block';
-          document.getElementById('arrow3').style.display = 'block';
+          document.getElementById('arrow1').style.display = 'none';
+          document.getElementById('arrow2').style.display = 'none';
+          document.getElementById('arrow3').style.display = 'none';
           adjustLayout();
         }
 
@@ -2518,7 +2742,7 @@
 
         function openPanel(panelId) {
           const panel = document.getElementById(panelId);
-         panel.style.display = "block";
+          panel.style.display = "block";
          adjustLayout();
         }
         // Function to adjust panel layout dynamically
@@ -2531,7 +2755,7 @@
                  sidebar.style.width = "25%";
                  chatSection.style.width = "50%";
                  thirdSection.style.width = "25%";
-                 document.getElementById('arrow-btn').style.display = 'none'
+                //  document.getElementById('arrow-btn').style.display = 'none'
              } else if (sidebar.style.display !== "none" && chatSection.style.display !== "none") {
                  sidebar.style.width = "30%";
                  chatSection.style.width = "70%";
