@@ -1654,11 +1654,15 @@
         }
         /* Responsive Design */
         @media (max-width: 768px) {
-        #pool1, #pool3 {
+         #pool3 {
         display: none; /* Hide Panel 1 and Panel 3 */
         }
+        #pool1{
+          display: block;
+          width: 100%;
+        }
         #pool2 {
-        display: block;
+        display: none;
         flex: 1 1 100%; /* Panel 2 takes full width on mobile */
         height: auto;
         }
@@ -2041,7 +2045,7 @@
   } 
 }
 
-@media screen and (max-width : 1062px) {
+@media screen and (min-width : 769px) and (max-width : 1062px) {
   .user-item{
     display: block;
   }
@@ -2708,36 +2712,93 @@
       </div>
 
       <script>
-        // Function to close a panel
         function closePanel(panelId) {
-          document.getElementById(panelId).style.display = "none";
-          document.getElementById('arrow1').style.display = 'none';
-          document.getElementById('arrow2').style.display = 'none';
-          document.getElementById('arrow3').style.display = 'none';
-          adjustLayout();
+        document.getElementById(panelId).style.display = "none";
+
+        document.getElementById("arrow1").style.display = "none";
+        document.getElementById("arrow2").style.display = "none";
+        document.getElementById("arrow3").style.display = "none";
+
+        const pool1 = document.getElementById("pool1").style.display !== "none";
+        const pool2 = document.getElementById("pool2").style.display !== "none";
+        const pool3 = document.getElementById("pool3").style.display !== "none";
+
+        const visiblePanels = [pool1, pool2, pool3].filter(Boolean).length;
+        if (visiblePanels === 1) {
+         if (pool1) {
+        document.querySelector("#pool1 .close-btn").style.display = "none";
         }
+         if (pool2) {
+        document.querySelector("#pool2 .close-btn").style.display = "none";
+          }
+         if (pool3) {
+        document.querySelector("#pool3 .close-btn").style.display = "none";
+        }
+         }
+
+        adjustLayout();
+      }
+
 
         
-        // Function to toggle visibility of sibling panels
-        function togglePanel(panelId) {
-          const panel = document.getElementById(panelId);
-          const pool1 = document.getElementById('pool1').style.display;
-          const pool2 = document.getElementById('pool2').style.display;
-          const pool3 = document.getElementById('pool3').style.display;
-          if (panel.style.display === "none") {
-            panel.style.display = "block";
-            if(pool1 === 'block' || pool2 === 'block' || pool3 === 'block')
-          {
-            document.getElementById('arrow1').style.display = 'none'
-            document.getElementById('arrow2').style.display = 'none'
-            document.getElementById('arrow3').style.display = 'none'
-          }
-           
-          } else {
-            panel.style.display = "none";
-          }
-          adjustLayout();
+      function togglePanel(panelId) {
+  const panel = document.getElementById(panelId);
+  const pool1 = document.getElementById("pool1");
+  const pool2 = document.getElementById("pool2");
+  const pool3 = document.getElementById("pool3");
+  const arrow1 = document.getElementById("arrow1");
+  const arrow2 = document.getElementById("arrow2");
+  const arrow3 = document.getElementById("arrow3");
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    pool1.style.display = "none";
+    pool2.style.display = "none";
+    pool3.style.display = "none";
+
+    panel.style.display = "block";
+
+    arrow1.style.display = "none";
+    arrow2.style.display = "none";
+    arrow3.style.display = "none";
+  } else {
+
+    const pool1Visible = window.getComputedStyle(pool1).display !== "none";
+    const pool2Visible = window.getComputedStyle(pool2).display !== "none";
+    const pool3Visible = window.getComputedStyle(pool3).display !== "none";
+
+    const panelVisible = window.getComputedStyle(panel).display !== "none";
+
+    if (!panelVisible) {
+      panel.style.display = "block";
+    } else {
+      panel.style.display = "none";
+    }
+
+    const visiblePanels = [pool1, pool2, pool3].filter(Boolean).length;
+        if (visiblePanels !== 1) {
+         if (pool1) {
+        document.querySelector("#pool1 .close-btn").style.display = "block";
         }
+         if (pool2) {
+        document.querySelector("#pool2 .close-btn").style.display = "block";
+          }
+         if (pool3) {
+        document.querySelector("#pool3 .close-btn").style.display = "block";
+        }
+         }
+    if (pool1Visible || pool2Visible || pool3Visible) {
+      arrow1.style.display = "none";
+      arrow2.style.display = "none";
+      arrow3.style.display = "none";
+    }
+  }
+
+
+  adjustLayout();
+}
+
+
+
 
 
         function openPanel(panelId) {
@@ -2745,7 +2806,6 @@
           panel.style.display = "block";
          adjustLayout();
         }
-        // Function to adjust panel layout dynamically
         function adjustLayout() {
              const sidebar = document.getElementById("pool1");
              const chatSection = document.getElementById("pool2");
