@@ -260,7 +260,6 @@
                   aria-hidden="true"></i></button>
               <button class="arrow" onclick="togglePanel('pool2')"><i
                   class="fa-solid fa-arrows-left-right"></i></button>
-
             </div>
             <div class="search-bar">
               <input type="text" placeholder="Search">
@@ -492,6 +491,17 @@
                   <span class="user-name">John L Miller</span> |
                   <span class="user-message">Full Stack Development</span>
                 </div>
+                <!--
+                <button class="close-btn" onclick="closePanel('pool2')">
+                  <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                </button>
+                -->
+                <button class="arrow" onclick="togglePanel('pool3')">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
+                <button class="arrow-left" onclick="togglePanel('pool1')">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </button>
               </div>
               <button class="close-btn" onclick="closePanel('pool2')">
                 <i class="fa fa-times-circle-o" aria-hidden="true"></i>
@@ -705,15 +715,17 @@
                 <button class="send-btn">Send</button>
               </div>
             </div>
-            <button id="arrow2" class="arrow-btn left" onclick="togglePanel('pool1')">←</button>
-            <button id="arrow3" class="arrow-btn right" onclick="togglePanel('pool3')">→</button>
-          </div>
-        </section>
-        <!-- Pool 3 -->
-        <section id="pool3" name="pool3" class="col panel">
-          <div id="panel3_panel" class="pool3-panel">
-            <div id="pool3_header" name="pool3_header" class="panel3-header">
-
+          </section>
+          <!-- Pool 3 -->
+          <section id="pool3" name="pool3" class="col panel">
+            <div id="panel3_panel" class="pool3-panel">
+              <div id="pool3_header" name="pool3_header" class="panel3-header">
+                <!--
+                <button class="close-btn" onclick="closePanel('pool3')">
+                  <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+                </button>
+                -->
+                <button class="arrow-left" onclick="togglePanel('pool2')"><i class="fa-solid fa-arrows-left-right"></i></button>
               <button class="close-btn" onclick="closePanel('pool3')">
                 <i class="fa fa-times-circle-o" aria-hidden="true"></i>
               </button>
