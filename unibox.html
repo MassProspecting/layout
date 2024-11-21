@@ -2,1068 +2,63 @@
 <!-- saved from url=(0042)http://s01.massprospecting.com:3000/unibox -->
 <html
   class="js flexbox canvas canvastext webgl no-touch geolocation postmessage no-websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers no-applicationcache no-svg no-inlinesvg no-smil no-svgclippaths"
-  style=""
->
-  <!--<!
+  style="">
+<!--<!
   [endif]--><!-- Message and error alerts -->
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <!-- NO GA CONFIGURED -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <!-- NO GA CONFIGURED -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 
-    <title>MassProspecting - AI-Driven Multi-Channel Outreach System</title>
-    <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="./unibox_files/favicon.png" />
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <!-- TODO: setup this as an account property -->
-    <script async="" src="./unibox_files/js"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
 
-      gtag("config", "G-XHCG5LE744");
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script
-      src="./unibox_files/adminflare-demo-init.min.js"
-      type="text/javascript"
-    ></script>
-    <link href="./unibox_files/css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript">
-      DEMO_CURRENT_THEME = "black-blue";
+  <title>MassProspecting - AI-Driven Multi-Channel Outreach System</title>
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width" />
+  <link rel="icon" href="./unibox_files/favicon.png" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <!-- TODO: setup this as an account property -->
+  <script async="" src="./unibox_files/js"></script>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script src="./unibox_files/adminflare-demo-init.min.js" type="text/javascript"></script>
+  <link href="./unibox_files/css" rel="stylesheet" type="text/css" />
+  <link href="./unibox_files/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" id="bootstrap-css" />
+  <link href="./unibox_files/adminflare.min.css" media="all" rel="stylesheet" type="text/css" id="adminflare-css" />
+  <link href="./unibox_files/pages.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./unibox_files/wizard.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./unibox_files/plantable.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./unibox_files/awesomplete.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./unibox_files/filters.css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./unibox_files/navbar.css" media="all" rel="stylesheet" type="text/css" id="ajax-navbar-css" />
+  <link href="./unibox_files/dialog.css" media="all" rel="stylesheet" type="text/css" id="ajax-dialog-css" />
+  <link href="./unibox_files/filters(1).css" media="all" rel="stylesheet" type="text/css" />
+  <link href="./assets/css/index.css" media="all" rel="stylesheet" type="text/css" />
+  <script src="./unibox_files/modernizr-jquery.min.js" type="text/javascript"></script>
+  <script src="./unibox_files/react-1.0.2.min.js" type="text/javascript"></script>
+  <script src="./unibox_files/contenteditable.js" type="text/javascript"></script>
+  <script src="./unibox_files/bootstrap.min.js" type="text/javascript"></script>
+  <script src="./unibox_files/tinymce.min.js" referrerpolicy="origin"></script>
+  <script src="./unibox_files/awesomplete.min.js" type="text/javascript"></script>
+  <script src="./unibox_files/adminflare.min.js" type="text/javascript"></script>
 
-      // Include Bootstrap stylesheet
-      document.write(
-        '<link href="/core/css/' +
-          DEMO_ADMINFLARE_VERSION +
-          "/" +
-          DEMO_CURRENT_THEME +
-          '/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" id="bootstrap-css">'
-      );
-      // Include AdminFlare stylesheet
-      document.write(
-        '<link href="/core/css/' +
-          DEMO_ADMINFLARE_VERSION +
-          "/" +
-          DEMO_CURRENT_THEME +
-          '/adminflare.min.css" media="all" rel="stylesheet" type="text/css" id="adminflare-css">'
-      );
-      // Include AdminFlare page stylesheet
-      document.write(
-        '<link href="/core/css/' +
-          DEMO_ADMINFLARE_VERSION +
-          '/pages.css" media="all" rel="stylesheet" type="text/css">'
-      );
-      // Include Style to Draw Wizards
-      document.write(
-        '<link href="/core/css/wizard.css" media="all" rel="stylesheet" type="text/css">'
-      );
-      // Include Style to Draw Plan Tables
-      document.write(
-        '<link href="/core/css/plantable.css" media="all" rel="stylesheet" type="text/css">'
-      );
-      // Include Style to Draw Landing Pages
-      //		document.write('<link href="/core/css/landing.css" media="all" rel="stylesheet" type="text/css">');
-      // Include Awesomplete stylesheet
-      document.write(
-        '<link href="/core/css/awesomplete.css" media="all" rel="stylesheet" type="text/css">'
-      );
-      // Include FilterJS stylesheet
-      document.write(
-        '<link href="/core/css/filters.css" media="all" rel="stylesheet" type="text/css">'
-      );
-      // Include NavBar
-      document.write(
-        '<link href="/core/css/navbar.css" media="all" rel="stylesheet" type="text/css" id="ajax-navbar-css">'
-      );
-      // Include Dialog
-      document.write(
-        '<link href="/core/css/dialog.css" media="all" rel="stylesheet" type="text/css" id="ajax-dialog-css">'
-      );
-
-      // Include CSS files of extensions
-
-      document.write(
-        '<link href="/filtersjs/css/filters.css" media="all" rel="stylesheet" type="text/css">'
-      );
-    </script>
-    <link
-      href="./unibox_files/bootstrap.min.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-      id="bootstrap-css"
-    />
-    <link
-      href="./unibox_files/adminflare.min.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-      id="adminflare-css"
-    />
-    <link
-      href="./unibox_files/pages.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="./unibox_files/wizard.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="./unibox_files/plantable.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="./unibox_files/awesomplete.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="./unibox_files/filters.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <link
-      href="./unibox_files/navbar.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-      id="ajax-navbar-css"
-    />
-    <link
-      href="./unibox_files/dialog.css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-      id="ajax-dialog-css"
-    />
-    <link
-      href="./unibox_files/filters(1).css"
-      media="all"
-      rel="stylesheet"
-      type="text/css"
-    />
-    <script type="text/javascript">
-      // behaviour of pages when load
-      let hide_loading_message_after_page_load = true;
-
-      //
-      const reLinkedInGroup =
-        /^http(s)?:\/\/(www\.)?linkedin\.com\/groups\/(\d+)(\/(profile)?)?$/;
-      const reLinkedInGroupUrlCode = /(\d+)/;
-      function getLinkedInGroupUrlCode(url) {
-        if (!reLinkedInGroup.test(url)) {
-          return null;
-        }
-        return url.match(reLinkedInGroupUrlCode)[0];
-      }
-
-      // apply tooltips CSS to any element with a title attribue
-      function applyToolTips() {
-        $("[title]").tooltip({
-          placement: "bottom",
-        });
-      }
-
-      // enable select-all-text when focus on any input with class `select-all-on-focus`
-      function enableSelectAllTextOnFocus() {
-        $(".select-all-on-focus").focus(function () {
-          this.select();
-        });
-      }
-
-      // this function check/uncheck all the rows,
-      // then calls methods h['afterCallback'] in order.
-      function enableSelectRows(h) {
-        // update list of selected rows
-        function updateSelectedIDs() {
-          a = $(".selected-ids");
-          i = 0;
-          a.val("");
-          $(".select-row:checked").each(function (index) {
-            if (i > 0) {
-              a.val(a.val() + ",");
-            }
-            a.val(a.val() + $(this).data("id"));
-            i++;
-          });
-        }
-
-        // initialize selected rows, only if sessionPersistance is on.
-        if (h["sessionPersistance"] == true) {
-          $(".selected-ids")
-            .val()
-            .split(",")
-            .forEach(function (id) {
-              $('.select-row[data-id="' + id + '"]').prop("checked", true);
-            });
-          // callback function for after you select/unselect rows
-          h["afterCallback"]();
-        }
-
-        // select/unselect all rows.
-        $(".select-all-rows").click(function () {
-          b = $(this);
-          d = $(".select-row");
-          if (b.prop("checked")) {
-            d.prop("checked", true);
-          } else {
-            d.prop("checked", false);
-          }
-          // update list of selected rows
-          updateSelectedIDs();
-          // callback function for after you select/unselect rows
-          h["afterCallback"]();
-        });
-
-        // select/unselect one signle row
-        $(".select-row").click(function () {
-          // update list of selected rows
-          updateSelectedIDs();
-          // callback function for after you select/unselect rows
-          h["afterCallback"]();
-        });
-      }
-
-      //
-      function selectRow(id) {
-        $('.select-row[data-id="' + id + '"]').prop("checked", true);
-      }
-
-      //
-      function newHttpRequest() {
-        var xmlhttp;
-        if (window.XMLHttpRequest) {
-          // code for IE7+, Firefox, Chrome, Opera, Safari
-          xmlhttp = new XMLHttpRequest();
-        } else {
-          // code for IE6, IE5
-          xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-        }
-
-        return xmlhttp;
-      }
-
-      //
-      function newXmlParser(txt) {
-        if (window.DOMParser) {
-          parser = new DOMParser();
-          xmlDoc = parser.parseFromString(txt, "text/xml");
-        } // Internet Explorer
-        else {
-          xmlDoc = new ActiveXObject("Microsoft.XMLDOM");
-          xmlDoc.async = false;
-          xmlDoc.loadXML(txt);
-        }
-
-        return xmlDoc;
-      }
-
-      //
-      function addEvent(element, eventName, fn) {
-        if (element.addEventListener)
-          element.addEventListener(eventName, fn, false);
-        else if (element.attachEvent) element.attachEvent("on" + eventName, fn);
-      }
-
-      function showWait(s) {
-        $("#wait").show();
-        $("#wait-caption").text(s);
-      }
-
-      function hideWait(s) {
-        $("#wait").hide();
-      }
-
-      function semiTransparentLinks() {
-        // make all the .semi-transparent-link semi-transparent
-        $(".semi-transparent-link").css("opacity", "0.5");
-        // a .semi-transparent-link link gets opaciity when the mouse pointer is over
-        $(".semi-transparent-link").hover(
-          function () {
-            $(this).css("opacity", "1");
-          },
-          function () {
-            $(this).css("opacity", "0.5");
-          }
-        );
-      }
-
-      function formatLinks() {
-        // remove text decoration from all links
-        $("a").css("text-decoration", "none");
-        // remove text decoration from all buttons with class .btn-link
-        $(".btn-link").css("text-decoration", "none");
-      }
-    </script>
-    <script
-      src="./unibox_files/modernizr-jquery.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="./unibox_files/react-1.0.2.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="./unibox_files/contenteditable.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="./unibox_files/bootstrap.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="./unibox_files/tinymce.min.js"
-      referrerpolicy="origin"
-    ></script>
-    <script
-      src="./unibox_files/awesomplete.min.js"
-      type="text/javascript"
-    ></script>
-    <script
-      src="./unibox_files/adminflare.min.js"
-      type="text/javascript"
-    ></script>
-    <!-- TODO: Getting javascript error when enable this line.
+  <!-- TODO: Getting javascript error when enable this line.
          <script src="/landing/javascripts/ajax_status-1.0.1.min.js" type="text/javascript"></script>
          -->
-    <!-- Include JS files of extensions -->
-    <script
-      src="./unibox_files/selectrows.min.js"
-      type="text/javascript"
-    ></script>
-    <script src="./unibox_files/filters.min.js" type="text/javascript"></script>
-    <style>
-               // Modals to show pictures in carousel
-               img.screenshot {
-               margin-bottom: 10px;
-               border: 1px solid #ddd;
-               shadow: 0 1px 4px rgba(0, 0, 0, 0.067);
-               // link like mouse pointer
-               cursor: pointer;
-               }
-               div.screenshot-modal {
-               display: none;
-               position: fixed;
-               z-index: 100000000000;
-               //top: 50px;
-               //left: 50px;
-               //right: 50px;
-               //bottom: 50px;
-               top: 0px;
-               left: 0px;
-               width: 100%;
-               height: 100%;
-               border: 5px solid #ddd;
-               //border-radius: 50px;
-               //width: 100%;
-               //height: 100%;
-               }
-               div.screenshot-modal img {
-               width: 100%;
-               height: 100%;
-               }
-               div.screenshot-modal button.close {
-               position: absolute;
-               top: 50px;
-               right: 50px;
-               //border-radius: 50px;
-               font-size: 50pt;
-               background-color: white;
-               z-index: 100000000001;
-               color: blue;
-               text-decoration: none;
-               }
-               div.screenshot-modal button.next {
-               position: absolute;
-               top: 50%;
-               right: 50px;
-               //border-radius: 50px;
-               font-size: 50pt;
-               background-color: white;
-               z-index: 100000000001;
-               color: blue;
-               text-decoration: none;
-               }
-               div.screenshot-modal button.prev {
-               position: absolute;
-               top: 50%;
-               left: 50px;
-      zz         font-size: 50pt;
-               background-color: white;
-               z-index: 100000000001;
-               color: blue;
-               text-decoration: none;
-               }
-               // Tables with clickeable rows to show details in the right-side bar
-               table tbody tr.clickeable td {
-               cursor: pointer;
-               }
-               table tbody tr.clickeable td:last-child {
-               border-right: 5px dashed rgb(245,245,245);
-               }
-               table tbody tr.clickeable:hover td:last-child {
-               border-right: 5px dashed rgb(255,175,175);
-               }
-               table tbody tr.clickeable:hover td {
-               background-color: rgb(245,245,245);
-               }
-               table tbody tr.selected td:last-child {
-               border-right: 5px dashed red;
-               }
-               /* Dark Mode Bootstrap Add-on */
-               /* General Dark Mode Colors */
-               body.dark-mode {
-               /* Background Image */
-               //background: linear-gradient(90deg, rgba(44, 0, 62, 0.8), rgba(18, 1, 54, 0.8)), url('/core/images/blockquote-bg.png') no-repeat center center fixed;
-               background: url('/core/images/blockquote-bg.png') no-repeat center center fixed;
-               background-size: cover;
-               color: #f1f1f1;
-               /* Ensure the background covers the entire viewport */
-               min-height: 100vh;
-               /* Optional: Fallback background color in case the image doesn't load */
-               background-color: #120136;
-               }
-               .dark-mode .bg-dark {
-               background-color: #1c1c1c !important;
-               }
-               .dark-mode .text-light {
-               color: #e0e0e0 !important;
-               }
-               .dark-mode .text-muted {
-               color: #a0a0a0 !important;
-               }
-               /* Navbar */
-               .dark-mode .navbar {
-               background-color: rgba(31, 31, 31, 0.22); /* Semi-transparent */
-               border-bottom: 1px solid #333;
-               }
-               .dark-mode .navbar .nav-link {
-               color: #f1f1f1 !important;
-               }
-               .dark-mode .navbar .nav-link:hover {
-               color: #e6e6e6 !important;
-               }
-               /* Buttons */
-               .dark-mode .btn {
-               color: #fff;
-               background-color: #444;
-               border-color: #555;
-               }
-               .dark-mode .btn:hover {
-               background-color: #555;
-               border-color: #666;
-               }
-               /* Card Component */
-               .dark-mode .card {
-               background-color: rgba(28, 28, 28, 0.22); /* Semi-transparent */
-               border-color: #333;
-               }
-               .dark-mode .card-header {
-               background-color: rgba(42, 42, 42, 0.22); /* Semi-transparent */
-               border-bottom: 1px solid #444;
-               }
-               .dark-mode .card-body {
-               color: #e0e0e0;
-               }
-               /* Form Elements */
-               .dark-mode .form-control {
-               background-color: rgba(46, 46, 46, 0.22); /* Semi-transparent */
-               color: #e0e0e0;
-               border-color: #444;
-               }
-               .dark-mode .form-control::placeholder {
-               color: #a0a0a0;
-               }
-               .dark-mode .form-select {
-               background-color: rgba(46, 46, 46, 0.22); /* Semi-transparent */
-               color: #e0e0e0;
-               border-color: #444;
-               }
-               /* Table Component */
-               .dark-mode .table {
-               color: #e0e0e0;
-               background-color: rgba(31, 31, 31, 0.22); /* Semi-transparent */
-               }
-               .dark-mode .table thead {
-               background-color: rgba(42, 42, 42, 0.22); /* Semi-transparent */
-               }
-               .dark-mode .table tbody tr {
-               border-color: #444;
-               }
-               .dark-mode .table-striped tbody tr:nth-of-type(odd) {
-               background-color: rgba(44, 44, 44, 0.22); /* Semi-transparent */
-               }
-               /* Tooltip & Popover */
-               .dark-mode .tooltip {
-               background-color: #444;
-               color: #f1f1f1;
-               }
-               .dark-mode .popover {
-               background-color: rgba(42, 42, 42, 0.22); /* Semi-transparent */
-               color: #f1f1f1;
-               }
-               /* Modals */
-               .dark-mode .modal-content {
-               background-color: rgba(30, 30, 30, 0.22); /* Semi-transparent */
-               color: #e0e0e0;
-               }
-               .dark-mode .modal-header {
-               border-bottom: 1px solid #333;
-               }
-               .dark-mode .modal-footer {
-               border-top: 1px solid #333;
-               }
-               /* Alerts */
-               .dark-mode .alert {
-               background-color: rgba(42, 42, 42, 0.22); /* Semi-transparent */
-               color: #f1f1f1;
-               border-color: #444;
-               }
-               /* Utility Classes */
-               .bg-dark-mode {
-               background-color: #121212 !important;
-               }
-               .text-dark-mode {
-               color: #f1f1f1 !important;
-               }
-               /* Sections and Divs */
-               .dark-mode section.row-fluid {
-               background-color: rgba(17, 17, 17, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode section.row-fluid div {
-               background-color: rgba(17, 17, 17, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode section.div {
-               background-color: rgba(0, 0, 0, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode table {
-               background-color: rgba(0, 0, 0, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode th {
-               background-color: rgba(0, 0, 0, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode tr {
-               background-color: rgba(0, 0, 0, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode td {
-               background-color: rgba(0, 0, 0, 0.22); /* Semi-transparent */
-               color: #fff;
-               }
-               .dark-mode p {
-               color: #fff;
-               }
-               .dark-mode span {
-               color: #fff;
-               }
-               .dark-mode h1,
-               .dark-mode h2,
-               .dark-mode h3,
-               .dark-mode h4 {
-               color: #fff;
-               }
-               .dark-mode a {
-               color: #ddf;
-               }
-               .dark-mode a:hover {
-               color: #eeef;
-               }
-               // general styles
-               a {
-               text-decoration: none;
-               }
-               button.btn-link {
-               text-decoration:none;
-               }
-               img.avatar {
-               border-radius: 50%;
-               }
-               /*
-               * Dark mode
-               *
-               */
-               /*
-               body {
-               background-color: black;
-               border-color: black transparent;
-               border: 1px solid black;
-               padding-top: 0px;
-               padding-left: 0px;
-               margin-top: 35px;
-               margin-left: 85px;
-               }
-               section {
-               background-color: black;
-               border-color: black transparent;
-               border: 1px solid black;
-               //padding: 0px;
-               //margin: 0px;
-               }
-               div {
-               background-color: black;
-               border-color: black transparent;
-               border: 1px solid black;
-               //padding: 0px;
-               //margin: 0px;
-               }
-               table {
-               background-color: black;
-               border-color: black transparent;
-               border: 1px solid black;
-               padding: 0px;
-               margin: 0px;
-               }
-               tbody {
-               background-color: black;
-               border-color: black transparent;
-               border: 1px solid black;
-               padding: 0px;
-               margin: 0px;
-               }
-               thead {
-               background-color: black;
-               border-color: black transparent;
-               border: 1px solid black;
-               padding: 0px;
-               margin: 0px;
-               }
-               */
-               /*
-               * Dark mode
-               *
-               */
-               section.dark {
-               background-color: black;
-               color: white;
-               }
-               section.dark input {
-               background-color: black;
-               color: white;
-               }
-               section.dark table tbody tr {
-               background-color: black;
-               border: 2px none black;
-               }
-               section.dark table tbody tr:hover {
-               background-color: rgb(30,30,30);
-               border: 2px solid yellow;
-               }
-               /*
-               * Style for fullscreen dashboard
-               *
-               */
-               section.fullscreen {
-               position:absolute;
-               top:0;
-               left:0;
-               width:100%;
-               height:100%;
-               z-index:999999999;
-               }
-               section.maximizable div.controls {
-               position:relative;
-               width: 100%;
-               }
-               section.maximizable div.controls button {
-               position:absolute;
-               top:-25px;
-               right:-25px;
-               }
-               /*
-               if the section is in fullscreen mode, then the header of the table will be sticky to the top even if the table is scrolled down.
-               reference: https://csslayout.io/sticky-table-headers/
-               */
-               section.fullscreen table thead {
-               position: sticky;
-               top: 0;
-               z-index: 9999999;
-               opacity: 1.0;
-               background-color: black;
-               }
-               /*
-               * Style for scripts shown in both the responses and pipeline edition screen.
-               *
-               */
-               pre {
-               mergin: 0px;
-               padding: 0px;
-               border:0px;
-               background-color: transparent;
-               font-size: 14px;
-               font-name: Arial;
-               color: rgb(64, 97, 140);
-               }
-               span.filesample {
-               font-size: 12px;
-               font-name: Arial;
-               color: rgb(64, 97, 140);
-               border: 1px rgb(175,175,175) solid;
-               border-radius: 5px;
-               background-color: rgb(235,235,235);
-               margin: 5px;
-               padding: 5px;
-               }
-               pre.filesample {
-               font-size: 12px;
-               font-name: Arial;
-               color: rgb(64, 97, 140);
-               border: 1px rgb(175,175,175) solid;
-               border-radius: 5px;
-               background-color: rgb(235,235,235);
-               margin: 5px;
-               padding: 5px;
-               }
-               /*
-               * Waiting GIF
-               *
-               */
-               div.wait {
-               position:   absolute;
-               z-index:    1000;
-               top:        0;
-               left:       0;
-               height:     100%;
-               width:      100%;
-               background: rgba( 255, 255, 255, .8 );
-               }
-               /*
-               * Popups
-               *
-               */
-               div.popup {
-               position:fixed;
-               top:0;
-               left:0;
-               width:100%;
-               height:100%;
-               z-index:99999;
-               background-color:white;
-               opacity: 0.22;
-               overflow-y:scroll;
-               display:none;
-               }
-               div.popup div.top-right-buttons {
-               position:absolute;
-               top:17px;
-               right:17px;
-               }
-               div.popup div.area {
-               position:relative;
-               top:15%;
-               left:15%;
-               width:70%;
-               height:70%;
-               }
-               div.popup div.area h1 {
-               margin-bottom:34px;
-               }
-               /*
-               *
-               */
-               span.yellow-backgrownd {
-               background-color: yellow;
-               color: black;
-               }
-               div.fixed-position {
-               position: fixed;
-               }
-               .same-line {
-               display: inline-block;
-               }
-               .loading-container {
-               position: fixed;
-               left: 0;
-               top: 0;
-               width: 100%;
-               height: 100%;
-               background-color: white;
-               opacity: 0.5;
-               text-align: center;
-               padding-top: 45vh;
-               display: none;
-               z-index: 9999;
-               }
-               #loader {
-               //border: 16px solid #f3f3f3;
-               //border-radius: 50%;
-               //border-top: 16px solid #3498db;
-               width: 120px;
-               height: 120px;
-               -webkit-animation: spin 2s linear infinite;
-               /* Safari */
-               animation: spin 2s linear infinite;
-               position: relative;
-               }
-               #loader img {
-               position: absolute;
-               top: 0;
-               left: 0;
-               width: 100%;
-               height: 100%;
-               }
-               table.fix {
-               table-layout: fixed;
-               }
-               table.fix td.fix {
-               white-space:nowrap;
-               overflow:hidden;
-               text-overflow:ellipsis;
-               }
-    </style>
-    <script type="text/javascript">
-      // clickeable rows
-      function on_click_tr_clickeable(o) {
-        var id = $(o).data("id");
-        // if the row is not selected, then add the class selected
-        if ($(o).hasClass("selected") == false) {
-          $(o).addClass("selected");
-        }
-        // remove the class selected from all the other rows tr.clickeable.
-        $("tr.clickeable").each(function () {
-          if ($(this).data("id") != id) {
-            $(this).removeClass("selected");
-          }
-        });
-      }
+  <!-- Include JS files of extensions -->
+  <script src="./unibox_files/selectrows.min.js" type="text/javascript"></script>
+  <script src="./unibox_files/filters.min.js" type="text/javascript"></script>
+  <script src="./assets/js/index.js" type="text/javascript"></script>
+</head>
+<!-- / Message and error alerts -->
+<!-- / Message and error alerts -->
 
-      // images carousel functions
-      function update_numbers() {
-        img = $("#screenshot_modal_img");
-        var number = parseInt($(img).attr("data-number"));
-        var total = $(".screenshot").length;
-        $("#number").html(number + 1);
-        $("#total").html(total);
-      }
-
-      function next_screenshot() {
-        img = $("#screenshot_modal_img");
-        var number = parseInt($(img).attr("data-number"));
-        var next_number = number + 1;
-        var total = $(".screenshot").length;
-        if (next_number >= total) {
-          next_number = 0;
-        }
-        // get the src of the next image
-        let q = "#screenshot-" + next_number.toString();
-        let src = $(q).attr("src");
-        $(img).attr("src", src);
-        $(img).attr("data-number", next_number);
-        // update the number
-        update_numbers();
-      }
-
-      function prev_screenshot() {
-        img = $("#screenshot_modal_img");
-        var number = parseInt($(img).attr("data-number"));
-        var prev_number = number - 1;
-        var total = $(".screenshot").length;
-        if (prev_number < 0) {
-          prev_number = total - 1;
-        }
-        // get the src of the next image
-        let q = "#screenshot-" + prev_number.toString();
-        let src = $(q).attr("src");
-        $(img).attr("src", src);
-        $(img).attr("data-number", prev_number);
-        // update the number
-        update_numbers();
-      }
-
-      // on click on .close, hide the screenshot modal
-      $("#screenshot_modal .close").click(function () {
-        $("#screenshot_modal").hide();
-      });
-
-      // on press escape, hide the screenshot modal
-      $(document).keyup(function (e) {
-        if (e.keyCode == 27) {
-          $("#screenshot_modal").hide();
-        }
-      });
-
-      // on click on the image, go to the next image
-      $("#screenshot_modal_img").click(function () {
-        next_screenshot();
-      });
-
-      // on click on the next button, go to the next image
-      $("#screenshot_modal .next").click(function () {
-        next_screenshot();
-      });
-
-      // on press the right arrow, go to the next image
-      $(document).keyup(function (e) {
-        if (e.keyCode == 39) {
-          next_screenshot();
-        }
-      });
-
-      // on click on the prev button, go to the prev image
-      $("#screenshot_modal .prev").click(function () {
-        prev_screenshot();
-      });
-
-      // on press the left arrow, go to the prev image
-      $(document).keyup(function (e) {
-        if (e.keyCode == 37) {
-          prev_screenshot();
-        }
-      });
-
-      // draw pagination function
-      //
-      function drawPagination(o, current_page, total_pages, page_size = 10) {
-        url = "?p="; // url to get the next page
-
-        o.html("");
-        u = $("<ul></ul>");
-        o.append(u);
-
-        if (current_page > 1) {
-          li = $(
-            '<li><a href="' +
-              url +
-              (current_page - 1).toString() +
-              '">Prev</a></li>'
-          );
-        } else {
-          li = $('<li class="disabled"><a href="#">Prev</a></li>');
-        }
-        u.append(li);
-
-        i = 1;
-        i_prev = 1;
-        while (i <= total_pages) {
-          if (i == current_page) {
-            sClassActive = "class='active'";
-          } else {
-            sClassActive = "";
-          }
-          if (
-            i == 1 ||
-            i == total_pages ||
-            (i >= current_page - 2 && i <= current_page + 2)
-          ) {
-            if (i > i_prev + 1) {
-              li = $("<li><span>...</span></li>");
-              u.append(li);
-            }
-            li = $(
-              "<li " +
-                sClassActive +
-                '><a href="' +
-                url +
-                i.toString() +
-                '">' +
-                i.toString() +
-                "</a></li>"
-            );
-            u.append(li);
-            i_prev = i;
-          }
-          i = i + 1;
-        }
-
-        if (current_page < total_pages) {
-          i = $(
-            '<li><a href="./' +
-              url +
-              (current_page + 1).toString() +
-              '">Next</a></li>'
-          );
-        } else {
-          i = $('<li class="disabled"><a href="#">Next</a></li>');
-        }
-        u.append(i);
-
-        // create a drodown list with different page sizes
-        li = $(
-          '<li><span style="margin-left:25px;"><i class="icon-caret-right"></i> <b>Page Size:</b></span> <select id="page-size" class="form-control" style="width: 100px;"><option value="10">10</option><option value="20">20</option><option value="50">50</option><option value="100">100</option></select></li>'
-        );
-        u.append(li);
-
-        // set the current page size in the dropdown list
-        $("#page-size").val(page_size);
-
-        // when the user changes the page size
-        // then reload the page with the new page size in the parameter z of the URL
-        $("#page-size").change(function () {
-          page_size = $(this).val();
-          window.location.href =
-            window.location.href.split("?")[0] + "?z=" + page_size;
-        });
-      }
-    </script>
-    <style type="text/css">
-      .jqstooltip {
-        position: absolute;
-        left: 0px;
-        top: 0px;
-        visibility: hidden;
-        background: rgb(0, 0, 0) transparent;
-        background-color: rgba(0, 0, 0, 0.6);
-        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-        -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
-        color: white;
-        font: 10px arial, san serif;
-        text-align: left;
-        white-space: nowrap;
-        padding: 5px;
-        border: 1px solid white;
-        z-index: 10000;
-      }
-      #body-default{
-        padding: 43px 0 0 82px !important;
-      }
-      @media screen and (max-width : 480px){
-        #body-default{
-          padding: 0 0 0 0 !important;
-        }
-      }
-      .jqsfield {
-        color: white;
-        font: 10px arial, san serif;
-        text-align: left;
-      }
-    </style>
-  </head>
-  <!-- / Message and error alerts -->
-  <!-- / Message and error alerts -->
-  <body class="mysaas default-layout wysihtml5-supported" id="body-default" >
-    <!-- Main navigation bar -->
-    <div
-      id="wait"
-      name="wait"
-      style="
+<body class="mysaas default-layout wysihtml5-supported" id="body-default">
+  <!-- Main navigation bar -->
+  <div id="wait" name="wait" style="
         position: fixed;
         z-index: 1000000;
         top: 0px;
@@ -1072,1004 +67,173 @@
         width: 100%;
         background: 50% 50% no-repeat rgba(255, 255, 255, 0.8);
         display: none;
-      "
-    >
-      <br />
-      <br />
-      <br />
-      <div id="loader-div">
-        <div id="loader" style="margin: 0 auto">
-          <img src="./unibox_files/loading.png" />
-        </div>
+      ">
+    <br />
+    <br />
+    <br />
+    <div id="loader-div">
+      <div id="loader" style="margin: 0 auto">
+        <img src="./unibox_files/loading.png" />
       </div>
-      <br />
-      <br />
-      <center>
-        <span
-          id="wait-caption"
-          name="wait-caption"
-          style="font-size: 24; text-align: center"
-          >Loading...
-        </span>
-      </center>
     </div>
-    <header
-      class="navbar navbar-fixed-top"
-      id="main-navbar"
-      style="padding: 0px"
-    >
-      <div class="navbar-inner" style="width: 100%">
-        <div class="">
-          <table width="100%">
-            <tbody>
-              <tr>
-                <td width="48px">
-                  <a
-                    class="logo"
-                    href="http://s01.massprospecting.com:3000/dashboard"
-                    title=""
-                    data-original-title="Home"
-                    ><img
-                      alt="https://s01.massprospecting.com:443_logo"
-                      src="./unibox_files/favicon.png"
-                      width="96px"
-                  /></a>
-                </td>
-                <td id="services" style="width: 125px">
-                  <span
-                    style="color: White; font-family: Arial; font-size: 12px"
-                  >
+    <br />
+    <br />
+    <center>
+      <span id="wait-caption" name="wait-caption" style="font-size: 24; text-align: center">Loading...
+      </span>
+    </center>
+  </div>
+  <header class="navbar navbar-fixed-top" id="main-navbar" style="padding: 0px">
+    <div class="navbar-inner" style="width: 100%">
+      <div class="">
+        <table width="100%">
+          <tbody>
+            <tr>
+              <td width="48px">
+                <a class="logo" href="http://s01.massprospecting.com:3000/dashboard" title=""
+                  data-original-title="Home"><img alt="https://s01.massprospecting.com:443_logo"
+                    src="./unibox_files/favicon.png" width="96px" /></a>
+              </td>
+              <td id="services" style="width: 125px">
+                <span style="color: White; font-family: Arial; font-size: 12px">
+                </span>
+              </td>
+              <td align="right" style="text-align: right" width="auto">
+                <a href="mailto:support@massprospecting.com?subject=I%20Need%20Help" style="color: white">
+                  <span>
+                    <span class="badge badge-blue"><i class="icon-question"></i>
+                      <span id="email_support">Email Support</span></span>
                   </span>
-                </td>
-                <td align="right" style="text-align: right" width="auto">
-                  <a
-                    href="mailto:support@massprospecting.com?subject=I%20Need%20Help"
-                    style="color: white"
-                  >
-                    <span>
-                      <span class="badge badge-blue"
-                        ><i class="icon-question"></i>
-                        <span id="email_support">Email Support</span></span
-                      >
-                    </span>
-                  </a>
-                </td>
-                <td align="right" style="text-align: right:" width="54px">
-                  <ul class="nav pull-right">
-                    <li class="dropdown">
-                      <a
-                        href="http://s01.massprospecting.com:3000/unibox#"
-                        class="dropdown-toggle usermenu"
-                        data-toggle="dropdown"
-                      >
-                        <img
-                          alt="Avatar"
-                          src="./unibox_files/9d62b5a6a6db16517fbf2591a9a95d78.jpg"
-                        />
-                        <!--
+                </a>
+              </td>
+              <td align="right" style="text-align: right" width="54px">
+                <ul class="nav pull-right">
+                  <li class="dropdown">
+                    <a href="http://s01.massprospecting.com:3000/unibox#" class="dropdown-toggle usermenu"
+                      data-toggle="dropdown">
+                      <img alt="Avatar" src="./unibox_files/9d62b5a6a6db16517fbf2591a9a95d78.jpg" />
+                      <!--
                                        <span>&nbsp;&nbsp;my-agency</span>
                                        -->
-                      </a>
-                      <ul class="dropdown-menu">
-                        <li class="nav-header">User Details</li>
-                        <li>
-                          <a><b>Email:</b> leandro@massprospecting.com</a>
-                        </li>
-                        <li>
-                          <a><b>Company:</b> my-agency</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="nav-header">mass.subaccount</li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/dashboard"
-                            >dashboard <span class="icon-bar-chart"></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/leads"
-                            >leads <span class="icon-heart"></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/profiles"
-                            >integrations <span class="icon-asterisk"></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/sources"
-                            >sources <span class="icon-search"></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/jobs"
-                            >jobs <span class="icon-tasks"></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/unibox"
-                            >unibox <span class="icon-inbox"></span
-                          ></a>
-                        </li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/mass.subaccount/rules"
-                            >rules <span class="icon-random"></span
-                          ></a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="nav-header">Options</li>
-                        <li>
-                          <a
-                            href="http://s01.massprospecting.com:3000/settings/dashboard"
-                            ><i class="icon-cog"></i> Settings</a
-                          >
-                        </li>
-                        <li>
-                          <a href="http://s01.massprospecting.com:3000/logout"
-                            ><i class="icon-signout"></i>Close</a
-                          >
-                        </li>
-                      </ul>
-                    </li>
-                  </ul>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li class="nav-header">User Details</li>
+                      <li>
+                        <a><b>Email:</b> leandro@massprospecting.com</a>
+                      </li>
+                      <li>
+                        <a><b>Company:</b> my-agency</a>
+                      </li>
+                      <li class="divider"></li>
+                      <li class="nav-header">mass.subaccount</li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/dashboard">dashboard <span
+                            class="icon-bar-chart"></span></a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/leads">leads <span
+                            class="icon-heart"></span></a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/profiles">integrations <span
+                            class="icon-asterisk"></span></a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/sources">sources <span
+                            class="icon-search"></span></a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/jobs">jobs <span
+                            class="icon-tasks"></span></a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/unibox">unibox <span
+                            class="icon-inbox"></span></a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/mass.subaccount/rules">rules <span
+                            class="icon-random"></span></a>
+                      </li>
+                      <li class="divider"></li>
+                      <li class="nav-header">Options</li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/settings/dashboard"><i class="icon-cog"></i>
+                          Settings</a>
+                      </li>
+                      <li>
+                        <a href="http://s01.massprospecting.com:3000/logout"><i class="icon-signout"></i>Close</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </header>
-    <!-- / Main navigation bar -->
-    <!-- Left navigation panel -->
-    <nav
-      id="left-panel"
-      style="height: 100%; position: fixed; top: 0px; left: 0px"
-    >
-      <div id="left-panel-content" style="overflow: hidden">
-        <ul
-          style="
+    </div>
+  </header>
+  <!-- / Main navigation bar -->
+  <!-- Left navigation panel -->
+  <nav id="left-panel" style="height: 100%; position: fixed; top: 0px; left: 0px">
+    <div id="left-panel-content" style="overflow: hidden">
+      <ul style="
             transition-property: -webkit-transform;
             transform-origin: 0px 0px;
             transform: translate3d(0px, 0px, 0px);
-          "
-        >
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/dashboard">
-              <span class="icon-bar-chart"></span> dashboard
-            </a>
-          </li>
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/leads">
-              <span class="icon-heart"></span> leads
-            </a>
-          </li>
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/profiles">
-              <span class="icon-asterisk"></span> integrations
-            </a>
-          </li>
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/sources">
-              <span class="icon-search"></span> sources
-            </a>
-          </li>
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/jobs">
-              <span class="icon-tasks"></span> jobs
-            </a>
-          </li>
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/unibox">
-              <span class="icon-inbox"></span> unibox
-            </a>
-          </li>
-          <li style="position: relative">
-            <a href="http://s01.massprospecting.com:3000/rules">
-              <span class="icon-random"></span> rules
-            </a>
-          </li>
-          <!-- this is shwn for all the services -->
-          <li>
-            <a href="http://s01.massprospecting.com:3000/settings/dashboard"
-              ><span class="icon-cog"></span>Settings</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-    <!-- / Left navigation panel -->
-    <section class="row-fluid">
-      <div class="span12" style="display: none;"></div>
-    </section>
-    <!-- Page content -->
-    <section class="row-fluid" style="">
-      <!-- Content here -->
-      <style>
-           body {
-           overflow: hidden; /* avoid the window to scroll because that breaks the layout of the panels */
-           }
-           /* variables */
-           :root {
-           --leftbar-width: 87px;
-           --pool1-width: 360px;
-           --pool3-width: 440px;
-           --pool-top: 120px;
-           --pool-bottom: 100px;
-           --header-height: 75px;
-           }
-           /* navigation bar */
-           div.mynavbar2 {
-           height:var(--pool-top);
-           }
-           div.mynavbar2 div.mynavbar2-contaner {
-           position:relative;
-           width:100%;
-           height:var(--pool-top);
-           }
-           div.mynavbar2 div.mynavbar2-contaner div.left {
-           position:absolute;
-           left:0;
-           top:0;
-           bottom:0;
-           width:40%;
-           }
-           div.mynavbar2 div.mynavbar2-contaner div.right {
-           position:absolute;
-           left:40%;
-           top:0;
-           bottom:0;
-           width:60%;
-           text-align:right;
-           }
-           /* New class definitions for the replaced style attributes */
-           .span9-right-align {
-           text-align: right;
-           }
-           /* pool1 */
-           /* .pool1 {
-           positon: absolute;
-           left: var(--leftbar-width); /* width of the left-bar (87px) */
-           top: var(--pool-top);
-           width: var(--pool1-width);
-           bottom: 0;
-           background-color: white;
-           overflow-y: hidden;
-           z-index: 1;
-           background-color: black;
-           } */
-           .pool1.expanded {
-           width: calc(100% - var(--leftbar-width) - var(--pool1-width)); /* Ensure all variables are properly defined with units */
-           }
-           .pool1 .pool1-panel {
-           position: relative;
-           left: 0;
-           top: 0px;
-           height: 100%;
-           right: 100%;
-           /* overflow-y: scroll; */
-           //background-color: black;
-           }
-           .pool1 .pool1-panel .pool1-header {
-           position: sticky;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: var(--header-height);
-           background-color: white;
-           box-shadow: 0px 5px 5px gray;
-           z-index: 2;
-           //background-color: black;
-           }
-           .pool1 .pool1-panel .pool1-header .ml25 {
-           margin-left: 25px;
-           }
-           div.lead_container {
-           margin-top: 10px;
-           padding-top: 5px;
-           cursor: pointer;
-           }
-           div.lead_container:hover {
-           background-color: #f0f0f0;
-           }
-           div.lead_container-selected {
-           background-color: yellow;
-           border-left: 5px dashed red;
-           border-right: 5px dashed red;
-           }
-           /* pool2 */
-           .pool2 {
-           position: absolute;
-           left: calc(var(--leftbar-width) + var(--pool1-width)); /* Adds 87px and 360px */
-           top: var(--pool-top); /* Use the top variable directly */
-           width: calc(100% - var(--leftbar-width) - var(--pool1-width) - var(--pool3-width)); /* Ensure all variables are properly defined with units */
-           bottom: var(--pool-bottom); /* Bottom value defined directly */
-           background-color: white;
-           overflow-y: hidden;
-           z-index: 1;
-           /* background-color: #fff; */
-           }
-           .pool2.expanded {
-           width: calc(100% - var(--leftbar-width) - var(--pool1-width)); /* Ensure all variables are properly defined with units */
-           }
-           .pool2 .pool2-panel {
-           position: relative;
-           top: 0px;
-           height: 100%;
-           right: 0;
-           width: 100%;
-           /* overflow-y: scroll; */
-           //background-color: black;
-           }
-           .pool2 .pool2-panel .panel2-header {
-           position: sticky;
-           top: 0;
-           left: 0;
-           width: 100%;
-           height: var(--header-height);
-           background-color: white;
-           box-shadow: 0px 5px 5px gray;
-           z-index: 2;
-           //background-color: black;
-           }
-           /* pool3 */
-           .pool3 {
-           position: absolute;
-           padding-left: 10px;
-           left: calc(100% - var(--pool3-width)); /* 360 pixels width */
-           top: var(--pool-top);
-           width: var(--pool3-width);
-           right: 0;
-           bottom: var(--pool-bottom);
-           background-color: white;
-           overflow: hidden;
-           z-index: 1;
-           //background-color: black;
-           }
-           .pool3.collapsed {
-           left: calc(100%);
-           width: 0px;
-           }
-           .pool3 .pool3-panel {
-           position: relative;
-           top: 0px;
-           height: 100%;
-           right: 0;
-           width: calc(100% - 15px); /* Adjust the width to leave space for scrollbar */
-           overflow-y: auto;
-           padding-right: 15px; /* Prevent content from overlapping with the scrollbar */
-           box-sizing: border-box;
-           /* //background-color: black; */
-           }
-         
-           .pool3 .pool3-panel .panel3-header {
-           position: sticky;
-           top: 0;
-           right: 0;
-           width: calc(100% - 15px); /* Adjust the width to leave space for scrollbar */
-           height: var(--header-height);
-           background-color: white;
-           box-shadow: 0px 5px 5px gray;
-           z-index: 2;
-           //background-color: black;
-           }
-           .pool3 .pool3-panel .event {
-           margin-left: 10px;
-           margin-bottom: 10px;
-           margin-right: 10px; /* Ensure there is space to the right for better visibility */
-           border-left: 3px solid pink;
-           padding: 10px;
-           height: 100px;
-           background-color: rgb(255, 235, 235);
-           cursor: pointer;
-           overflow: hidden;
-           transition: all 0.3s ease-in-out;
-           box-sizing: border-box;
-           }
-           .pool3 .pool3-panel .event.expanded {
-           height: auto;
-           }
-           .event .event-content {
-           max-height: 60px; /* Limit the visible height */
-           overflow: hidden; /* Hide overflowed content */
-           text-overflow: ellipsis; /* Add ellipsis to indicate overflow */
-           white-space: nowrap; /* Prevent content from wrapping */
-           }
-           .event.expanded .event-content {
-           max-height: none;
-           white-space: normal;
-           }
-           .event-content pre {
-           margin-top: 10px;
-           }
-           /* message redaction */
-           .new-message-body-container {
-           position: absolute;
-           left: calc(var(--leftbar-width) + var(--pool1-width)); /* Adds 87px and 360px */
-           width: calc(100% - var(--leftbar-width) - var(--pool1-width) - 150px);
-           top: calc(100% - var(--pool-bottom)); /* Use the top variable directly */
-           bottom: 20px;
-           right: 150px;
-           background-color: white;
-           z-index: 1;
-           }
-           .textarea-full {
-           width: 100%;
-           height: 100%;
-           }
-           .new-message-button-container {
-           position: absolute;
-           top: calc(100% - var(--pool-bottom)); /* Use the top variable directly */
-           bottom: 30px;
-           width: 120px;
-           right: 10px;
-           z-index: 1;
-           }
-           .btn-full {
-           width: 100%;
-           height: 100%;
-           }
-           /* Responsive */
-           /* Ensure only one pool is expanded when screen width is small */
-           @media (max-width: 1200px) { /* Adjust 1200px as per the screen size requirement */
-           .pool1, .pool2, .pool3 {
-           width: 0;
-           }
-           .pool1.expanded, .pool2.expanded, .pool3.expanded {
-           width: 100%;
-           }
-           }
+          ">
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/dashboard">
+            <span class="icon-bar-chart"></span> dashboard
+          </a>
+        </li>
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/leads">
+            <span class="icon-heart"></span> leads
+          </a>
+        </li>
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/profiles">
+            <span class="icon-asterisk"></span> integrations
+          </a>
+        </li>
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/sources">
+            <span class="icon-search"></span> sources
+          </a>
+        </li>
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/jobs">
+            <span class="icon-tasks"></span> jobs
+          </a>
+        </li>
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/unibox">
+            <span class="icon-inbox"></span> unibox
+          </a>
+        </li>
+        <li style="position: relative">
+          <a href="http://s01.massprospecting.com:3000/rules">
+            <span class="icon-random"></span> rules
+          </a>
+        </li>
+        <!-- this is shwn for all the services -->
+        <li>
+          <a href="http://s01.massprospecting.com:3000/settings/dashboard"><span class="icon-cog"></span>Settings</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- / Left navigation panel -->
+  <section class="row-fluid">
+    <div class="span12" style="display: none;"></div>
+  </section>
+  <!-- Page content -->
+  <section class="row-fluid" style="">
+    <!-- Content here -->
 
-
-
-
-
-
-
-
-
-
-
-        /* General Panel Styles */
-        .panel {
-        position: relative;
-        overflow: hidden;
-        border: 1px solid #ddd;
-        height:92vh;
-        background-color: #f7f9fc;
-        }
-        #pool1_header, #pool2_header, #pool3_header {
-        position: sticky;
-        top: 0;
-        /* background-color: #fff; */
-
-        border-bottom: 1px solid #ccc;
-        }
-        .panel-content {
-        /* overflow-y: auto; */
-        /* padding: 20px; */
-        height: calc(100% - 80px);
-        }
-        .panel2-header{
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding: 15px;
-          
-          border-bottom: 1px solid #e0e0e0;
-        }
-        .panel1-header, .panel3-header, .panel-footer {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          padding-top: 6px;
-          padding-bottom: 6px;
-          padding-left: 0px;
-          padding-right: 0px;
-          border-bottom: 1px solid #e0e0e0;
-        }
-        .panel1-header h2{
-          font-size: 18px;
-          margin-top:0 ;
-          margin-bottom: 0;
-        }
-
-        #pool2{
-          padding: 0 !important;
-        }
-        .panel-header {
-        border-bottom: 1px solid #ddd;
-        }
-        .panel-footer {
-        border-top: 1px solid #ddd;
-        
-        }
-        /* Arrow Buttons */
-        .arrow{
-        position: absolute;
-        top: 10px;
-        right: 40px;
-        color: #007bff;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        background-color: #d0d0d04a;
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
-        }
-        .arrow-left{
-        position: absolute;
-        top: 10px;
-        left: 4px;
-        color: #007bff;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        background-color: #d0d0d04a;
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
-        }
-        .arrow-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #007bff;
-        display: none;
-        color: #fff;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        z-index: 10;
-        }
-        .arrow-btn.left {
-        left: 0;
-        }
-        .arrow-btn.right {
-        right: 0;
-        }
-        /* Close Button */
-        .close-btn {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        color: #007bff;
-        border: none;
-        font-size: 18px;
-        cursor: pointer;
-        background-color: #d0d0d04a;
-        width: 30px;
-        height: 30px;
-        border-radius: 20px;
-        }
-        .search-bar {
-        padding: 15px;
-        border-bottom: 1px solid #e0e0e0;
-        }
-        /* Responsive Design */
-        @media (max-width: 768px) {
-         #pool3 {
-        display: none; /* Hide Panel 1 and Panel 3 */
-        }
-        #pool1{
-          display: block;
-          width: 100%;
-        }
-        #pool2 {
-        display: none;
-        flex: 1 1 100%; /* Panel 2 takes full width on mobile */
-        height: auto;
-        }
-        }
-        /* Desktop and Tablet */
-        @media (min-width: 769px) {
-        .panel {
-        display: block; /* Ensure all panels are visible */
-        }
-        }
-        .chat-messages {
-        flex-grow: 1;
-        padding: 15px;
-        overflow-y: auto;
-        background-color: #fff;
-        max-height: calc(92vh - 105px);
-        }
-        .message.other {
-        display: flex;
-        background-color: #e0f7fa;
-        margin-left: auto;
-        }
-        .message {
-        max-width: 90%;
-        margin-bottom: 15px;
-        padding: 20px 10px;
-        border-radius: 10px;
-        font-size: 14px;
-        line-height: 1.5;
-        }
-        .user-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        }
-        .other-user-content {
-        margin-left: 15px;
-        }
-        .other-user-content .user-name {
-        color: #007cf7;
-        font-size: 16px;
-        }
-        .message.user {
-        display: flex;
-        background-color: #d1e7dd;
-        align-self: flex-start;
-        }
-        .list{
-          /* overflow-y: auto; */
-          /* height: 90vh; */
-          height: 65vh;
-        }
-        
-        .user-list {
-        max-height: calc(100vh - 180px) !important;
-        overflow-y: auto !important;
-        padding-right: 10px !important; /* Optional: Scrollbar ke liye space */
-        }
-        .user-item:hover, .user-item.active {
-        background-color: #e6f7ff;
-        }
-        .user-item {
-        display: flex;
-        align-items: center;
-        padding: 15px 10px;
-        border-radius: 5px;
-        cursor: pointer;
-        margin: 10px 0px;
-        transition: background-color 0.3s;
-        }
-        .user-item .avatar-container {
-        position: relative;
-        display: inline-block;
-        margin-right: 20px;
-        }
-        .user-avatar {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        }
-        .user-info .user-name {
-        color: #3f89de;
-        font-size: 16px;
-        display: block;
-        font-weight: bold;
-        margin-bottom: 0px;
-        }
-        .avatar-container .badge {
-        position: absolute;
-        bottom: 0px;
-        right: -8px;
-        width: 22px;
-        height: 22px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        background-color: #007cf7;
-        border: 2px solid #ffffff;
-        }
-        .user-title-view {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        }
-        .user-info{
-          width: 70%;
-        }
-        .user-info .user-title {
-        font-size: 12px;
-        color: #666;
-        display: block;
-        line-height: 22px;
-        }
-        .message-date {
-        font-size: 11px;
-        color: #666;
-        }
-        .message-date .fa {
-        margin: 0px 5px;
-        font-size: 13px;
-        }
-        .header-info {
-        display: flex;
-        align-items: center;
-        }
-        .header-info .user-name {
-        font-weight: bold;
-        font-size: 16px;
-        font-weight: 600;
-        color: #3f89de;
-        }
-        .user-name,
-.user-title,
-.chat-messages .user-name {
-   display: inline-block; /* Add display inline-block for width to take effect */
-   /* max-width: 105px;       Adjust width as needed */
-   white-space: nowrap;
-   overflow: hidden;
-   text-overflow: ellipsis;
-}
-
-        .header-info .user-name {
-          max-width: 220px;       /* Adjust width as needed */
-          white-space: nowrap;
-          display: inline-block;
-          padding: 0;
-          padding-left: 23px ;
-          vertical-align: middle;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-        
-        .header-info .user-message {
-          max-width: 240px;       /* Adjust width as needed */
-          white-space: nowrap;
-          display: inline-block;
-          vertical-align: middle;
-          padding: 0;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
-
-        .header-info .user-message {
-        font-size: 12px;
-        color: #666;
-        text-transform: capitalize;
-        }
-        .days {
-        color: #666;
-        font-size: 14px;
-        }
-        .message-input input {
-        flex-grow: 1;
-        padding: 10px;
-        border-radius: 20px;
-        border: 1px solid #ccc;
-        margin-right: 10px;
-        font-size: 14px;
-        }
-        .send-btn {
-        background-color: #0077ff;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        border-radius: 20px;
-        cursor: pointer;
-        }
-        /* Ensure the panel2 section has relative positioning */
-        #panel2_panel {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        }
-        /* Ensure the panel content grows to take remaining space */
-        #list_div {
-        flex-grow: 1;
-        /* overflow-y: auto; */
-        }
-        /* Fix the panel-footer at the bottom of the section */
-        .panel-footer.bottom-label {
-        position: absolute;
-        bottom: 0px;
-        left: 0;
-        right: 0;
-        height: 50px;
-        /* top:0px; */
-        background-color: #fff; /* Adjust as needed */
-        padding: 10px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        border-top: 1px solid #ccc;
-        }
-        /* Make sure the input and send button are aligned */
-        .message-input {
-        display: flex;
-        width: 100%;
-        }
-        .message-header .days{
-          vertical-align: super;
-        }
-        .message-header .user-name{
-            max-width: 129px;
-        }
-        .message-input input {
-        flex-grow: 1;
-        padding: 8px;
-        height: 42px !important;
-        margin-bottom: 0 !important;
-        border: 1px solid #ccc;
-        border: none !important;
-        border-radius: 4px;
-        }
-        .message-input button {
-        margin-left: 10px;
-        padding: 8px 12px;
-        background-color: #4CAF50; /* Adjust color as needed */
-        color: white;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        }
-        .message-input button:hover {
-        background-color: #45a049;
-        }
-        /* Style for the arrow buttons */
-        .arrow-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #ddd;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        display: none;
-        }
-        .arrow-btn.left {
-        left: 10px;
-        }
-        .arrow-btn.right {
-        right: 10px;
-        }
-        .arrow-btn:hover {
-        background-color: #bbb;
-        }
-        .search-bar {
-    padding-top: 15px !important;
-    padding-bottom: 15px !important;
-    padding-right: 5px !important;
-    padding-left: 5px !important;
-    border-bottom: 1px solid #e0e0e0;
-}
-@media screen and (max-width: 420px ) {
-  .panel-footer.bottom-label{
-    /* bottom: 20px; */
-  }
-}
-
-.search-bar input {
-    width: 100%;
-    padding: 10px !important;
-    height: 42px !important;
-    margin-bottom: 0 !important;
-    border-radius: 20px;
-    border: 1px solid #ccc;
-    font-size: 14px;
-}
-#pool3_header{
-  height: 54px;
-}
-#pool3{
-  padding-right: 25px !important;
-}
-.third-section-header{
-    padding: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: end;
-    background-color: #f9f9f9; 
-    border-bottom: 1px solid #e0e0e0;
-}
-
-.third-section-content{
-    /* padding: 15px; */
-    margin-top: 12px;
-}
-
-/* Tab container */
-.tab-container {
-    width: 100%;
-    /* max-width: 600px; */
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-}
-
-/* Tab buttons */
-.tab-buttons {
-    display: flex;
-    background: #007bff;
-}
-
-.tab-button {
-    flex: 1;
-    padding: 12px;
-    color: white;
-    background: #007bff;
-    border: none;
-    text-align: center;
-    cursor: pointer;
-    transition: background 0.3s;
-
-    /* Truncate text with ellipsis */
-    white-space: nowrap;        /* Prevents text from wrapping */
-    overflow: hidden;           /* Hides overflow text */
-    text-overflow: ellipsis;    /* Adds "..." when text overflows */
-}
-
-
-.tab-button:hover {
-    background: #0056b3;
-}
-
-.tab-button.active {
-    background: #0056b3;
-}
-
-
-
-/* Tab content */
-.tab-contents {
-    padding: 20px;
-    border-top: 1px solid #ddd;
-    overflow-y: auto !important;
-    height:82vh;
-}
-
-.tab-content {
-    display: none;
-    animation: fadeIn 0.3s ease-in-out;
-
-}
-
-.tab-content.active {
-    display: block;
-}
-@media screen and (max-width: 768px) {
-  .row{
-    height: 90vh;
-  }
-}
-@media screen and (max-width: 480px) {
-  #left-panel{
-    margin-bottom:0 !important;
-  } 
-}
-
-@media screen and (min-width : 769px) and (max-width : 1062px) {
-  .user-item{
-    display: block;
-  }
-  .user-name{
-    font-size: 12px !important;
-  }
-  .user-title{
-    font-size: 10px !important;
-  }
-  .message-date{
-    display: none;
-  }
-  .view{
-    display: none;
-  }
-  
-}
-#main-footer{
-  display: none;
-}
-
-      </style>
-      <!-- NavBar -->
-      <!-- <div class="mynavbar2 mysticky">
+    <!-- NavBar -->
+    <!-- <div class="mynavbar2 mysticky">
             <div class="mynavbar2-contaner">
                <div class="left">
                   <p><a class="simple" href="http://s01.massprospecting.com:3000/"><b>my-agency</b></a> <i class="icon-chevron-right"></i> Unibox</p>
@@ -2085,1767 +249,583 @@
             </div>
          </div> -->
 
-      <div class="container-fluid" style="padding-right: 0 !important;">
-        <div class="row">
-          <!-- Pool 1 -->
-          <section id="pool1" name="pool1" class="col panel">
-            <div id="panel1_panel" class="pool1-panel">
-              <div id="pool1_header" name="pool1_header" class="panel1-header">
-                <h2>Messages</h2>
-                <button class="close-btn" onclick="closePanel('pool1')"><i class="fa fa-times-circle-o" aria-hidden="true"></i></button>
-                <button class="arrow"  onclick="togglePanel('pool2')"><i class="fa-solid fa-arrows-left-right"></i></button>
+    <div class="container-fluid" style="padding-right: 0 !important;">
+      <div class="row">
+        <!-- Pool 1 -->
+        <section id="pool1" name="pool1" class="col panel">
+          <div id="panel1_panel" class="pool1-panel">
+            <div id="pool1_header" name="pool1_header" class="panel1-header">
+              <h2>Messages</h2>
+              <button class="close-btn" onclick="closePanel('pool1')"><i class="fa fa-times-circle-o"
+                  aria-hidden="true"></i></button>
+              <button class="arrow" onclick="togglePanel('pool2')"><i
+                  class="fa-solid fa-arrows-left-right"></i></button>
 
-              </div>
-              <div class="search-bar">
-                <input type="text" placeholder="Search">
-             </div>
-              <div id="list_div" class="panel-content">
-                <section class="list">
-                  <div class="user-list">
-                    <div  class="user-item active" onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Mkjhkjkjkjkjknjjjjjjjjjjjjjjjjjjjjiller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Deveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeelopment</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
+            </div>
+            <div class="search-bar">
+              <input type="text" placeholder="Search">
+            </div>
+            <div id="list_div" class="panel-content">
+              <section class="list">
+                <div class="user-list">
+                  <div class="user-item active" onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
                     </div>
-                    <!-- Additional -->
-
-                    <div  class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Mkjhkjkjkjkjknjjjjjjjjjjjjjjjjjjjjiller</span>
+                        <span class="view">view</span>
                       </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Missssssssssssssssssssssssssssssssssssller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Dessssssssssssssssssssssssssssssssvelopment</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <div  class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <div  class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <div  class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-                    <div class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-
-                    <div class="user-item " onclick="openPanel('pool2')">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avatar.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                    </div>
-
-                    <!-- End -->
-                    <div class="user-item">
-                      <div class="avatar-container position-relative">
-                        <img
-                          class="user-avatar"
-                          src="./unibox_files/avata2.jpg"
-                          alt="User Avatar"
-                        />
-                        <span class="position-absolute badge">
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                        </span>
-                      </div>
-                      <div class="user-info">
-                        <div class="user-title-view">
-                          <span class="user-name">John L Miller</span>
-                          <span class="view">view</span>
-                        </div>
-                        <span class="user-title">Full Stack Development</span>
-                        <span class="message-date"
-                          >22 minute ago |
-                          <i class="fa fa-linkedin" aria-hidden="true"></i>
-                          <i class="fa fa-envelope" aria-hidden="true"></i>
-                          <i class="fa fa-phone" aria-hidden="true"></i>
-                        </span>
-                      </div>
+                      <span class="user-title">Full Stack Deveeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeelopment</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
                     </div>
                   </div>
-                </section>
-              </div>
-              <!-- <div class="panel-footer">
+                  <!-- Additional -->
+
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Missssssssssssssssssssssssssssssssssssller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Dessssssssssssssssssssssssssssssssvelopment</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <div class="user-item " onclick="openPanel('pool2')">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- End -->
+                  <div class="user-item">
+                    <div class="avatar-container position-relative">
+                      <img class="user-avatar" src="./unibox_files/avata2.jpg" alt="User Avatar" />
+                      <span class="position-absolute badge">
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                    <div class="user-info">
+                      <div class="user-title-view">
+                        <span class="user-name">John L Miller</span>
+                        <span class="view">view</span>
+                      </div>
+                      <span class="user-title">Full Stack Development</span>
+                      <span class="message-date">22 minute ago |
+                        <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        <i class="fa fa-envelope" aria-hidden="true"></i>
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <!-- <div class="panel-footer">
                         Footer for Pool 1
                         </div> -->
-              <button id="arrow1" class="arrow-btn right" onclick="togglePanel('pool2')">→</button>
-            </div>
-          </section>
-          <!-- Pool 2 -->
-          <section id="pool2" name="pool2" class="col-6 panel ">
-            <div id="panel2_panel" class="pool2-panel">
-              <div id="pool2_header" name="pool2_header" class="panel2-header">
-                <div class="header-info">
-                  <div>
-                    <span class="user-name">John L Miller</span> |
-                    <span class="user-message">Full Stack Development</span>
-                  </div>
-                </div>
-                <button class="close-btn" onclick="closePanel('pool2')">
-                  <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-                </button>
-                
-                <button class="arrow" onclick="togglePanel('pool3')">
-                  <i class="fa-solid fa-arrows-left-right"></i>
-                </button>
-                <button class="arrow-left" onclick="togglePanel('pool1')">
-                  <i class="fa-solid fa-arrows-left-right"></i>
-                </button>
-              </div>
-              <div id="list_div" class="panel-content">
-                <section class="list">
-                  <div class="chat-messages">
-                    <div class="message other">
-                      <!-- <span class="user-avatar">JM</span> -->
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Millhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhher
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the timeline.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="message user">
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the 
-                        </p>
-                      </div>
-                    </div>
-
-                    <div class="message other">
-                      <!-- <span class="user-avatar">JM</span> -->
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the timeline.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="message user">
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the 
-                        </p>
-                      </div>
-                    </div>
-                    <div class="message other">
-                      <!-- <span class="user-avatar">JM</span> -->
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the timeline.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="message user">
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the 
-                        </p>
-                      </div>
-                    </div>
-                    <div class="message other">
-                      <!-- <span class="user-avatar">JM</span> -->
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the timeline.
-                        </p>
-                      </div>
-                    </div>
-                    <div class="message user">
-                      <img
-                        class="user-avatar"
-                        src="./unibox_files/avatar.jpg"
-                        alt="User Avatar"
-                      />
-                      <div class="other-user-content">
-                        <span class="message-header">
-                          <span class="user-name"
-                          >John L Miller
-                        </span>
-                        <span class="days">| 22 days ago </span>
-                      </span>
-                        <p>
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          As a Full Stack Developer I can help you complete this
-                          project. I have experience with HTML, CSS, JavaScript,
-                          React, Node.js, and MongoDB. I can also help with
-                          testing and debugging.
-                          
-                          project with highest quality and within the 
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </section>
-              </div>
-              <div class="panel-footer bottom-label div">
-                <div class="message-input">
-                  <input type="text" placeholder="Send a message..." />
-                  <button class="send-btn">Send</button>
+            <button id="arrow1" class="arrow-btn right" onclick="togglePanel('pool2')">→</button>
+          </div>
+        </section>
+        <!-- Pool 2 -->
+        <section id="pool2" name="pool2" class="col-6 panel ">
+          <div id="panel2_panel" class="pool2-panel">
+            <div id="pool2_header" name="pool2_header" class="panel2-header">
+              <div class="header-info">
+                <div>
+                  <span class="user-name">John L Miller</span> |
+                  <span class="user-message">Full Stack Development</span>
                 </div>
               </div>
-              <button id="arrow2" class="arrow-btn left" onclick="togglePanel('pool1')">←</button>
-              <button id="arrow3" class="arrow-btn right" onclick="togglePanel('pool3')">→</button>
+              <button class="close-btn" onclick="closePanel('pool2')">
+                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+              </button>
+
+              <button class="arrow" onclick="togglePanel('pool3')">
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </button>
+              <button class="arrow-left" onclick="togglePanel('pool1')">
+                <i class="fa-solid fa-arrows-left-right"></i>
+              </button>
             </div>
-          </section>
-          <!-- Pool 3 -->
-          <section id="pool3" name="pool3" class="col panel">
-            <div id="panel3_panel" class="pool3-panel">
-              <div id="pool3_header" name="pool3_header" class="panel3-header">
-                
-                <button class="close-btn" onclick="closePanel('pool3')">
-                  <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-                </button>
-                <button class="arrow-left" onclick="togglePanel('pool2')"><i class="fa-solid fa-arrows-left-right"></i></button>
+            <div id="list_div" class="panel-content">
+              <section class="list">
+                <div class="chat-messages">
+                  <div class="message other">
+                    <!-- <span class="user-avatar">JM</span> -->
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Millhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhher
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
 
-              </div>
-              <div id="list_div" class="panel-content">
-                <section class="list">
-                  <div class="third-section-content">
-                    <div class="tab-container">
-                       <!-- Tab Buttons -->
-                       <div class="tab-buttons">
-                          <button class="tab-button active" data-tab="tab1">Chats</button>
-                          <button class="tab-button" data-tab="tab2">Filters</button>
-                          <button class="tab-button" data-tab="tab3">Events</button>
-                          <button class="tab-button" data-tab="tab4">Insights</button>
-                       </div>
-                       <!-- Tab Contents -->
-                       <div class="tab-contents">
-                          <div id="tab1" class="tab-content active">
-                             <p>
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-                              Content for Chats. This is the first tab's content.
-
-
-                             </p>
-                          </div>
-                          <div id="tab2" class="tab-content">
-                             <p>Content for Filters. This is the second tab's content.</p>
-                          </div>
-                          <div id="tab3" class="tab-content">
-                             <p>Content for Events. This is the third tab's content.</p>
-                          </div>
-                          <div id="tab4" class="tab-content">
-                             <p>Content for Insights. This is the fourth tab's content.</p>
-                          </div>
-                       </div>
+                        project with highest quality and within the timeline.
+                      </p>
                     </div>
-                </section>
+                  </div>
+                  <div class="message user">
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="message other">
+                    <!-- <span class="user-avatar">JM</span> -->
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the timeline.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="message user">
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the
+                      </p>
+                    </div>
+                  </div>
+                  <div class="message other">
+                    <!-- <span class="user-avatar">JM</span> -->
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the timeline.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="message user">
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the
+                      </p>
+                    </div>
+                  </div>
+                  <div class="message other">
+                    <!-- <span class="user-avatar">JM</span> -->
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the timeline.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="message user">
+                    <img class="user-avatar" src="./unibox_files/avatar.jpg" alt="User Avatar" />
+                    <div class="other-user-content">
+                      <span class="message-header">
+                        <span class="user-name">John L Miller
+                        </span>
+                        <span class="days">| 22 days ago </span>
+                      </span>
+                      <p>
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        As a Full Stack Developer I can help you complete this
+                        project. I have experience with HTML, CSS, JavaScript,
+                        React, Node.js, and MongoDB. I can also help with
+                        testing and debugging.
+
+                        project with highest quality and within the
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+            <div class="panel-footer bottom-label div">
+              <div class="message-input">
+                <input type="text" placeholder="Send a message..." />
+                <button class="send-btn">Send</button>
               </div>
-              <!-- <div class="panel-footer">
+            </div>
+            <button id="arrow2" class="arrow-btn left" onclick="togglePanel('pool1')">←</button>
+            <button id="arrow3" class="arrow-btn right" onclick="togglePanel('pool3')">→</button>
+          </div>
+        </section>
+        <!-- Pool 3 -->
+        <section id="pool3" name="pool3" class="col panel">
+          <div id="panel3_panel" class="pool3-panel">
+            <div id="pool3_header" name="pool3_header" class="panel3-header">
+
+              <button class="close-btn" onclick="closePanel('pool3')">
+                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
+              </button>
+              <button class="arrow-left" onclick="togglePanel('pool2')"><i
+                  class="fa-solid fa-arrows-left-right"></i></button>
+
+            </div>
+            <div id="list_div" class="panel-content">
+              <section class="list">
+                <div class="third-section-content">
+                  <div class="tab-container">
+                    <!-- Tab Buttons -->
+                    <div class="tab-buttons">
+                      <button class="tab-button active" data-tab="tab1">Chats</button>
+                      <button class="tab-button" data-tab="tab2">Filters</button>
+                      <button class="tab-button" data-tab="tab3">Events</button>
+                      <button class="tab-button" data-tab="tab4">Insights</button>
+                    </div>
+                    <!-- Tab Contents -->
+                    <div class="tab-contents">
+                      <div id="tab1" class="tab-content active">
+                        <p>
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+                          Content for Chats. This is the first tab's content.
+
+
+                        </p>
+                      </div>
+                      <div id="tab2" class="tab-content">
+                        <p>Content for Filters. This is the second tab's content.</p>
+                      </div>
+                      <div id="tab3" class="tab-content">
+                        <p>Content for Events. This is the third tab's content.</p>
+                      </div>
+                      <div id="tab4" class="tab-content">
+                        <p>Content for Insights. This is the fourth tab's content.</p>
+                      </div>
+                    </div>
+                  </div>
+              </section>
+            </div>
+            <!-- <div class="panel-footer">
                         Footer for Pool 3
                         </div> -->
-              <button class="arrow-btn left" onclick="togglePanel('pool2')">←</button>
-            </div>
-          </section>
-        </div>
+            <button class="arrow-btn left" onclick="togglePanel('pool2')">←</button>
+          </div>
+        </section>
       </div>
-
-      <script>
-        function closePanel(panelId) {
-        document.getElementById(panelId).style.display = "none";
-
-        document.getElementById("arrow1").style.display = "none";
-        document.getElementById("arrow2").style.display = "none";
-        document.getElementById("arrow3").style.display = "none";
-
-        const pool1 = document.getElementById("pool1").style.display !== "none";
-        const pool2 = document.getElementById("pool2").style.display !== "none";
-        const pool3 = document.getElementById("pool3").style.display !== "none";
-
-        const visiblePanels = [pool1, pool2, pool3].filter(Boolean).length;
-        if (visiblePanels === 1) {
-         if (pool1) {
-        document.querySelector("#pool1 .close-btn").style.display = "none";
-        }
-         if (pool2) {
-        document.querySelector("#pool2 .close-btn").style.display = "none";
-          }
-         if (pool3) {
-        document.querySelector("#pool3 .close-btn").style.display = "none";
-        }
-         }
-
-        adjustLayout();
-      }
-
-
-        
-      function togglePanel(panelId) {
-  const panel = document.getElementById(panelId);
-  const pool1 = document.getElementById("pool1");
-  const pool2 = document.getElementById("pool2");
-  const pool3 = document.getElementById("pool3");
-  const arrow1 = document.getElementById("arrow1");
-  const arrow2 = document.getElementById("arrow2");
-  const arrow3 = document.getElementById("arrow3");
-
-  if (window.matchMedia("(max-width: 768px)").matches) {
-    pool1.style.display = "none";
-    pool2.style.display = "none";
-    pool3.style.display = "none";
-
-    panel.style.display = "block";
-
-    arrow1.style.display = "none";
-    arrow2.style.display = "none";
-    arrow3.style.display = "none";
-  } else {
-
-    const pool1Visible = window.getComputedStyle(pool1).display !== "none";
-    const pool2Visible = window.getComputedStyle(pool2).display !== "none";
-    const pool3Visible = window.getComputedStyle(pool3).display !== "none";
-
-    const panelVisible = window.getComputedStyle(panel).display !== "none";
-
-    if (!panelVisible) {
-      panel.style.display = "block";
-    } else {
-      panel.style.display = "none";
-    }
-
-    const visiblePanels = [pool1, pool2, pool3].filter(Boolean).length;
-        if (visiblePanels !== 1) {
-         if (pool1) {
-        document.querySelector("#pool1 .close-btn").style.display = "block";
-        }
-         if (pool2) {
-        document.querySelector("#pool2 .close-btn").style.display = "block";
-          }
-         if (pool3) {
-        document.querySelector("#pool3 .close-btn").style.display = "block";
-        }
-         }
-    if (pool1Visible || pool2Visible || pool3Visible) {
-      arrow1.style.display = "none";
-      arrow2.style.display = "none";
-      arrow3.style.display = "none";
-    }
-  }
-
-
-  adjustLayout();
-}
-
-
-
-
-
-        function openPanel(panelId) {
-          const panel = document.getElementById(panelId);
-          panel.style.display = "block";
-         adjustLayout();
-        }
-        function adjustLayout() {
-             const sidebar = document.getElementById("pool1");
-             const chatSection = document.getElementById("pool2");
-             const thirdSection = document.getElementById("pool3");
-         
-             if (sidebar.style.display !== "none" && chatSection.style.display !== "none" && thirdSection.style.display !== "none") {
-                 sidebar.style.width = "25%";
-                 chatSection.style.width = "50%";
-                 thirdSection.style.width = "25%";
-                //  document.getElementById('arrow-btn').style.display = 'none'
-             } else if (sidebar.style.display !== "none" && chatSection.style.display !== "none") {
-                 sidebar.style.width = "30%";
-                 chatSection.style.width = "70%";
-             } else if (chatSection.style.display !== "none" && thirdSection.style.display !== "none") {
-                 chatSection.style.width = "70%";
-                 thirdSection.style.width = "30%";
-             } else if (sidebar.style.display !== "none" && thirdSection.style.display !== "none") {
-                 sidebar.style.width = "50%";
-                 thirdSection.style.width = "50%";
-             } else {
-                 if (sidebar.style.display !== "none") sidebar.style.width = "100%";
-                 if (chatSection.style.display !== "none") chatSection.style.width = "100%";
-                 if (thirdSection.style.display !== "none") thirdSection.style.width = "100%";
-             }
-         }
-
-         document.querySelectorAll(".tab-button").forEach(button => {
-             button.addEventListener("click", () => {
-                 const tabContainer = button.closest(".tab-container");
-                 const tabId = button.getAttribute("data-tab");
-         
-                 tabContainer.querySelectorAll(".tab-button").forEach(btn => {
-                     btn.classList.remove("active");
-                 });
-         
-                 button.classList.add("active");
-         
-                 tabContainer.querySelectorAll(".tab-content").forEach(content => {
-                     content.classList.remove("active");
-                 });
-         
-                 tabContainer.querySelector(`#${tabId}`).classList.add("active");
-             });
-         });
-      </script>
-
-      <script>
-        function pushOutreach(
-          outreach_type,
-          id_profile,
-          id_lead,
-          id_company,
-          body
-        ) {
-          // show ajax wait
-          showWait();
-
-          // do the AJAX call
-          $.ajax({
-            url: "/ajax/unibox/push.json",
-            type: "POST",
-            data: {
-              outreach_type: outreach_type,
-              id_profile: id_profile,
-              id_lead: id_lead,
-              id_company: id_company,
-              body: body,
-            },
-            success: function (data) {
-              // hide ajax wait
-              hideWait();
-              // parse JSON response
-              json = JSON.parse(data);
-              // validate json status
-              if (json.status != "success") {
-                alert(json.status);
-              } else {
-                // clean the textbox
-                $("#new_message_body").val("");
-                // reload the list of outreaches
-                let scroll_to_bottom = true;
-                let refresh_insights = false;
-                loadOutreaches(
-                  id_profile,
-                  id_lead,
-                  id_company,
-                  scroll_to_bottom,
-                  refresh_insights
-                );
-              }
-            },
-          });
-        }
-
-        // load latest `limit` outreaches between a profile, and a lead or company
-        function loadOutreaches(
-          id_profile,
-          id_lead,
-          id_company,
-          scroll_to_bottom = true,
-          refresh_insights = true,
-          limit = 100
-        ) {
-          //alert('id_profile:'+id_profile+'.');
-          //alert('id_lead:'+id_lead+'.');
-          //alert('id_company:'+id_company+'.');
-
-          if (id_lead == "") {
-            id_lead = null;
-          }
-          if (id_company == "") {
-            id_company = null;
-          }
-
-          // do the AJAX call
-          $.ajax({
-            url: "/ajax/unibox/outreaches.json",
-            type: "POST",
-            data: {
-              id_profile: id_profile,
-              id_lead: id_lead,
-              id_company: id_company,
-              limit: limit,
-            },
-            success: function (data) {
-              // parse JSON response
-              json = JSON.parse(data);
-              // validate json status
-              if (json.status != "success") {
-                alert(json.status);
-              } else {
-                // hide loading button
-                // clean previous content
-                $("#outreaches_div").html("");
-                // iterate array json.data
-                for (var i = 0; i < json.data.length; i++) {
-                  // get outreach
-                  let h = json.data[i];
-                  let picture_url = null;
-                  let name = null;
-                  let url = null;
-                  let body = null;
-                  let status_icon = null;
-                  let status_color = null;
-                  let time_ago = h.time_ago;
-
-                  if (h.direction == "outgoing") {
-                    picture_url = h.profile.picture_url_dropbox;
-                    name = h.profile.name;
-                    url = "/profiles/" + h.profile.id;
-                  } else if (
-                    h.direction == "incoming" ||
-                    h.direction == "accepted"
-                  ) {
-                    if (h.lead != null) {
-                      picture_url = h.lead.picture_url_dropbox;
-                      name = h.lead.first_name + " " + h.lead.last_name;
-                      url = "/leads/" + h.lead.id;
-                    } else if (h.company != null) {
-                      picture_url = h.company.picture_url_dropbox;
-                      name = h.company.name;
-                      url = "/companies/" + h.company.id;
-                    }
-                  }
-                  if (h.direction == "incoming" || h.direction == "outgoing") {
-                    body = h.simplified_body;
-                  } else if (h.direction == "accepted") {
-                    body = "------- accepted --------";
-                  }
-
-                  if (h.status == "pending") {
-                    status_icon = "icon-time";
-                    status_color = "gray";
-                  } else if (h.status == "running") {
-                    status_icon = "icon-play";
-                    status_color = "blue";
-                  } else if (h.status == "performed") {
-                    status_icon = "icon-ok";
-                    status_color = "green";
-                  } else if (h.status == "failed") {
-                    status_icon = "icon-warning-sign";
-                    status_color = "red";
-                  } else if (h.status == "aborted") {
-                    status_icon = "icon-remove";
-                    status_color = "gray";
-                  } else if (h.status == "canceled") {
-                    status_icon = "icon-ban-circle";
-                    status_color = "black";
-                  }
-                  // build html element
-                  html = "";
-                  html += "<section class='message-left'> ";
-                  html += "    <br/> ";
-                  html +=
-                    "    <div id='message_container" +
-                    i.toString() +
-                    "' name='message_container" +
-                    i.toString() +
-                    "' class='message_container'> ";
-                  //html += "        <input type='hidden' id='message_id"+i.toString()+"' name='message_id"+i.toString()+"' class='message_id' value='{messages.messages[].id}' /> ";
-                  html += "        <section class='row-fluid'> ";
-                  html += "            <div class='span1'> ";
-                  html +=
-                    "                <img id='m_sender_picture" +
-                    i.toString() +
-                    "' name='m_sender_picture" +
-                    i.toString() +
-                    "' class='m_sender-picture avatar' width='100%' src='" +
-                    picture_url +
-                    "' /> ";
-                  html += "            </div> ";
-                  html += "            <div class='span11'> ";
-                  html +=
-                    "                <p><a id='m_sender_name" +
-                    i.toString() +
-                    "' name='m_sender_name" +
-                    i.toString() +
-                    "' class='m_sender_name' style='font-weight:bold;' href='" +
-                    url +
-                    "'>" +
-                    name +
-                    "</a> | <span id='m_timeago" +
-                    i.toString() +
-                    "' name='m_timeago" +
-                    i.toString() +
-                    "' class='m_timeago' style='color:gray'>" +
-                    time_ago +
-                    " ago</span></p> ";
-                  html +=
-                    "                <p id='m_body" +
-                    i.toString() +
-                    "' name='m_body" +
-                    i.toString() +
-                    "' class='m_body'>" +
-                    body +
-                    "</p> ";
-                  html +=
-                    "                <p style='text-align:right;margin:0;padding:0;margin-right:15px;'> ";
-                  html +=
-                    "                    <span id='m_status" +
-                    i.toString() +
-                    "' name='m_status" +
-                    i.toString() +
-                    "' class='m_status' style='opacity:50%;color:" +
-                    status_color +
-                    "'><i class='" +
-                    status_icon +
-                    "'></i></span> ";
-                  html +=
-                    "                    <a id='m_details" +
-                    i.toString() +
-                    "' name='m_details" +
-                    i.toString() +
-                    "' class='m_details' href='/jobs/outreaches?id_outreach=" +
-                    h.id +
-                    "' target='window'><i class='icon-info-sign'></i></a> ";
-                  html += "                </p> ";
-                  html += "            </div> ";
-                  html += "        </section> ";
-                  html += "    </div> ";
-                  html += "</section> ";
-                  // append html element to list_div
-                  $("#outreaches_div").append(html);
-                }
-
-                // scroll to the bottom
-                if (scroll_to_bottom) {
-                  let j = 0;
-                  let scroll_top = 0;
-                  let total_divs = $("#outreaches_div").children().length;
-                  while (j < total_divs) {
-                    let div0 = $("#message_container" + j);
-                    scroll_top = div0.offset().top - div0.height();
-                    j += 1;
-                  }
-                  if (scroll_top > 0) {
-                    $("#pool2_panel").scrollTop(scroll_top);
-                  }
-                }
-
-                // set innerText and href of a.lead_url inside div#lead_details
-                let div = $("#lead_details");
-                let h = json.data[0];
-
-                // show header
-                if (h.lead != null) {
-                  $(div)
-                    .find("#lead_picture")
-                    .attr("src", h.lead.picture_url_dropbox);
-                  $(div)
-                    .find("#lead_url")
-                    .attr("href", "/leads/" + h.lead.id);
-                  $(div)
-                    .find("#lead_name")
-                    .text(h.lead.first_name + " " + h.lead.last_name);
-                  $(div)
-                    .find("#lead_name")
-                    .attr("href", "/leads/" + h.lead.id);
-                } else if (h.company != null) {
-                  $(div)
-                    .find("#lead_picture")
-                    .attr("src", h.company.picture_url_dropbox);
-                  $(div)
-                    .find("#lead_url")
-                    .attr("href", "/companies/" + h.company.id);
-                  $(div).find("#lead_name").text(h.company.name);
-                }
-
-                // refresh insights
-                if (refresh_insights == true) {
-                  // Select the container to clear
-                  let insightsDiv = document.querySelector("#posts_div");
-
-                  // Clear all existing events
-                  insightsDiv.innerHTML = "";
-
-                  // Iterate over each event and create new elements
-                  json.events.forEach((event) => {
-                    // Create the event row
-                    const eventDiv = document.createElement("div");
-                    eventDiv.className = "row-fluid event";
-
-                    // Create the event time span
-                    const eventTimeSpan = document.createElement("span");
-                    eventTimeSpan.className = "event-time";
-                    eventTimeSpan.style.color = "gray";
-                    eventTimeSpan.textContent = timeAgo(event.create_time);
-
-                    // Create the badge span
-                    //const badgeSpan = document.createElement("span");
-                    //badgeSpan.className = "badge badge-black";
-                    //badgeSpan.innerHTML = `<i class='icon-circle' style='color:blue'></i> LinkedIn_PublicFeed`;
-
-                    // Create the live link
-                    const liveAnchor = document.createElement("a");
-                    liveAnchor.className = "btn btn-normal btn-link";
-                    liveAnchor.setAttribute("href", event.url);
-                    liveAnchor.setAttribute("target", "_window");
-                    liveAnchor.innerHTML = "view live";
-
-                    // Append event time and badge to the eventDiv
-                    eventDiv.appendChild(eventTimeSpan);
-                    //eventDiv.appendChild(document.createTextNode(" | "));
-                    //eventDiv.appendChild(badgeSpan);
-                    eventDiv.appendChild(document.createTextNode(" | "));
-                    eventDiv.appendChild(liveAnchor);
-
-                    // Create the event content container
-                    const eventContentDiv = document.createElement("div");
-                    eventContentDiv.className = "span12 event-content";
-
-                    // Create the content text as <pre>
-                    const contentPre = document.createElement("pre");
-                    contentPre.textContent = event.content;
-                    eventContentDiv.appendChild(contentPre);
-
-                    // Append pictures if any
-                    event.pictures.forEach((pictureUrl) => {
-                      const img = document.createElement("img");
-                      img.src = pictureUrl;
-                      eventContentDiv.appendChild(img);
-                    });
-
-                    // Append event content to the event row
-                    eventDiv.appendChild(eventContentDiv);
-
-                    // Append the whole event row to the insights div
-                    insightsDiv.appendChild(eventDiv);
-                  });
-                }
-
-                // To enable the expanding and collapsing functionality of the .event div when clicked.
-                //
-                // Add click event listener to all event divs.
-                //
-                document
-                  .querySelectorAll(".event")
-                  .forEach(function (eventElement) {
-                    eventElement.addEventListener("click", function () {
-                      // Toggle the 'expanded' class to show/hide the full content
-                      eventElement.classList.toggle("expanded");
-                    });
-                  });
-
-                // set hidden fields
-                $(div).find("#outreach_type_selected").val(h.outreach_type);
-                $(div).find("#id_profile_selected").val(h.profile.id);
-                if (h.lead != null) {
-                  $(div).find("#id_lead_selected").val(h.lead.id);
-                } else {
-                  $(div).find("#id_lead_selected").val("");
-                }
-
-                if (h.company != null) {
-                  $(div).find("#id_company_selected").val(h.company.id);
-                } else {
-                  $(div).find("#id_company_selected").val("");
-                }
-
-                if (h.lead != null) {
-                  if (h.lead.job_title != null) {
-                    $(div).find("#lead_job_title").text(h.lead.job_title);
-                  } else {
-                    $(div).find("#lead_job_title").text("-");
-                  }
-
-                  if (h.lead.company != null) {
-                    $(div).find("#company_name").show();
-                    $(div).find("#company_name").text(h.lead.company.name);
-                    $(div)
-                      .find("#company_name")
-                      .attr("href", "/companies/" + h.lead.company.id);
-                  } else {
-                    $(div).find("#company_name").hide();
-                  }
-                } else {
-                  $(div).find("#lead_job_title").text("-");
-                  $(div).find("#company_name").hide();
-                }
-
-                // set #lead_details 1.0 opacity amd enable mouse pointer events
-                $("#lead_details").css("opacity", "1.0");
-                $("#lead_details").css("pointer-events", "auto");
-
-                // set #lead_details 1.0 opacity amd enable mouse pointer events
-                $("#new_message_container").css("opacity", "1.0");
-                $("#new_message_container").css("pointer-events", "auto");
-
-                // set focus on #new_message_body, and select all text inside
-                $("#new_message_body").focus();
-
-                // after open a conversation, reload the list for update the unread messages
-                loadList();
-              }
-            },
-          });
-        }
-
-        // load list of latest incoming or accepted outreaches by doing a POST AJAX call to /ajax/unibox/list.json
-        function loadList() {
-          // get the search query
-          var q = $("#q").val();
-          // get the page number
-          var p = 1;
-          // get the page size
-          var z = 50;
-          // get value of choosen option of select#id_tag
-          var id_tag = $("#id_tag").val() == "" ? null : $("#id_tag").val();
-          // get value of choosen option of select#id_profile
-          var id_profile =
-            $("#id_profile").val() == "" ? null : $("#id_profile").val();
-
-          // show loading button
-          //$('#list_div').html('<div style="text-align:center;"><img src="/images/loading.gif" /></div>');
-
-          // do the AJAX call
-          $.ajax({
-            url: "/ajax/unibox/list.json",
-            type: "POST",
-            data: {
-              q: q,
-              p: p,
-              z: z,
-              id_tag: id_tag,
-              id_profile: id_profile,
-            },
-            success: function (data) {
-              // parse JSON response
-              json = JSON.parse(data);
-              // validate json status
-              if (json.status != "success") {
-                alert(json.status);
-              } else {
-                // hide loading button
-                // clean previous content
-                $("#list_div").html("");
-                // iterate array json.data
-                for (var i = 0; i < json.data.length; i++) {
-                  // get list
-                  let h = json.data[i];
-                  badge_color = "gray";
-                  badge_text = "";
-                  if (h.unread_messages > 0) {
-                    badge_color = "blue";
-                    badge_text = h.unread_messages.toString();
-                  }
-                  // create html elememt
-                  html = "";
-                  html +=
-                    "<div id='lead_container" +
-                    i.toString() +
-                    "' name='lead_container" +
-                    i.toString() +
-                    "' class='lead_container'>"; // onclick='alert(\"Click!!\")'>"
-                  html +=
-                    "<input type='hidden' id='id_profile" +
-                    i.toString() +
-                    "' name='id_profile" +
-                    i.toString() +
-                    "' class='id_profile' value='" +
-                    h.id_profile +
-                    "' />";
-
-                  if (h.id_lead != null) {
-                    html +=
-                      "<input type='hidden' id='id_lead" +
-                      i.toString() +
-                      "' name='id_lead" +
-                      i.toString() +
-                      "' class='id_lead' value='" +
-                      h.id_lead +
-                      "' />";
-                  } else {
-                    html +=
-                      "<input type='hidden' id='id_lead" +
-                      i.toString() +
-                      "' name='id_lead" +
-                      i.toString() +
-                      "' class='id_lead' value />";
-                  }
-
-                  if (h.id_company != null) {
-                    html +=
-                      "<input type='hidden' id='id_company" +
-                      i.toString() +
-                      "' name='id_company" +
-                      i.toString() +
-                      "' class='id_company' value='" +
-                      h.id_company +
-                      "' />";
-                  } else {
-                    html +=
-                      "<input type='hidden' id='id_company" +
-                      i.toString() +
-                      "' name='id_company" +
-                      i.toString() +
-                      "' class='id_company' value />";
-                  }
-
-                  html += "<section class='row-fluid'>";
-                  html += "    <div class='span3' style='position:relative;'>";
-                  html +=
-                    "        <img id='c_lead_picture" +
-                    i.toString() +
-                    "' name='c_lead_picture" +
-                    i.toString() +
-                    "' class='c_lead-picture avatar' width='64px' height='64px' src='" +
-                    h.lead_picture_url +
-                    "' />";
-                  html +=
-                    "        <div style='position:absolute;bottom:-5px;right:10px;'>";
-                  html +=
-                    "           <img id='c_channel_avatar" +
-                    i.toString() +
-                    "' name='c_channel_avatar" +
-                    i.toString() +
-                    "' class='c_channel-avatar avatar' width='24px' height='24px' src='" +
-                    h.channel_avatar_url +
-                    "' />";
-                  html += "        </div>";
-                  html += "    </div>";
-                  html += "    <div class='span9'>";
-                  html += "        <p>";
-
-                  if (h.id_lead != null) {
-                    html +=
-                      "            <a id='c_lead_name" +
-                      i.toString() +
-                      "' name='c_lead_name" +
-                      i.toString() +
-                      "' class='c_lead_name' href='/leads/" +
-                      h.id_lead +
-                      "'>" +
-                      h.lead_first_name +
-                      " " +
-                      h.lead_last_name +
-                      "</a>";
-                  } else if (h.id_company != null) {
-                    html +=
-                      "            <a id='c_company_name" +
-                      i.toString() +
-                      "' name='c_company_name" +
-                      i.toString() +
-                      "' class='c_company_name' href='/companies/" +
-                      h.id_company +
-                      "'>" +
-                      h.company_name +
-                      "</a>";
-                  }
-
-                  html +=
-                    "            <span style='color:wite;font-size:14px;width:50px;text-align:center;'>";
-                  //html += "                |"
-                  html += "            </span>";
-                  html +=
-                    "            <span id='c_unread_messages" +
-                    i.toString() +
-                    "' name='c_unread_messages" +
-                    i.toString() +
-                    "' class='c_unread_messages badge badge-" +
-                    badge_color +
-                    "'>" +
-                    badge_text +
-                    "</span>";
-                  html +=
-                    "            <span style='color:wite;font-size:14px;width:50px;text-align:center;'>";
-                  //html += "                |"
-                  html += "            </span>";
-                  html +=
-                    "            <a id='c_event" +
-                    i.toString() +
-                    "' name='c_event" +
-                    i.toString() +
-                    "' data-i='" +
-                    i.toString() +
-                    "' class='c_event btn btn-small btn-link' style='color:gray;'>view</a>";
-                  html += "            <br/>";
-                  html +=
-                    "            <span id='c_lead_job_title" +
-                    i.toString() +
-                    "' name='c_lead_job_title" +
-                    i.toString() +
-                    "' class='c_lead_job_title' style='color:gray'>" +
-                    h.lead_job_title +
-                    "</span>";
-                  html += "            <br/>";
-                  html +=
-                    "            <span id='c_timeago" +
-                    i.toString() +
-                    "' name='c_timeago" +
-                    i.toString() +
-                    "' class='c_timeago' style='color:gray'>" +
-                    h.last_outreach_time_ago +
-                    " ago</span>";
-
-                  if (h.id_lead != null) {
-                    html += "                | ";
-                    if (h.lead_linkedin) {
-                      html +=
-                        "            <a id='c_linkedin" +
-                        i.toString() +
-                        "' name='c_linkedin" +
-                        i.toString() +
-                        "' class='c_linkedin' style='margin-left:5px;color:gray' href='" +
-                        h.lead_linkedin +
-                        "' target='window'><i class='icon-linkedin'></i></a>";
-                    }
-
-                    if (h.lead_facebook) {
-                      html +=
-                        "            <a id='c_facebook" +
-                        i.toString() +
-                        "' name='c_facebook" +
-                        i.toString() +
-                        "' class='c_facebook' style='margin-left:5px;color:gray' href='" +
-                        h.lead_facebook +
-                        "' target='window'><i class='icon-facebook'></i></a>";
-                    }
-
-                    if (h.lead_email) {
-                      html +=
-                        "            <a id='c_email" +
-                        i.toString() +
-                        "' name='c_email" +
-                        i.toString() +
-                        "' class='c_email' style='margin-left:5px;color:gray' href='mailto:" +
-                        h.lead_email +
-                        "' target='window'><i class='icon-envelope'></i></a>";
-                    }
-
-                    if (h.lead_phone) {
-                      html +=
-                        "            <a id='c_phone" +
-                        i.toString() +
-                        "' name='c_phone" +
-                        i.toString() +
-                        "' class='c_phone' style='margin-left:5px;color:gray' href='tel:" +
-                        h.lead_phone +
-                        "' target='window'><i class='icon-phone'></i></a>";
-                    }
-                  } else if (h.id_company != null) {
-                    html += "                | ";
-                    if (h.company_linkedin) {
-                      html +=
-                        "            <a id='c_linkedin" +
-                        i.toString() +
-                        "' name='c_linkedin" +
-                        i.toString() +
-                        "' class='c_linkedin' style='margin-left:5px;color:gray' href='" +
-                        h.company_linkedin +
-                        "' target='window'><i class='icon-linkedin'></i></a>";
-                    }
-
-                    if (h.company_facebook) {
-                      html +=
-                        "            <a id='c_facebook" +
-                        i.toString() +
-                        "' name='c_facebook" +
-                        i.toString() +
-                        "' class='c_facebook' style='margin-left:5px;color:gray' href='" +
-                        h.company_facebook +
-                        "' target='window'><i class='icon-facebook'></i></a>";
-                    }
-
-                    if (h.company_email) {
-                      html +=
-                        "            <a id='c_email" +
-                        i.toString() +
-                        "' name='c_email" +
-                        i.toString() +
-                        "' class='c_email' style='margin-left:5px;color:gray' href='mailto:" +
-                        h.company_email +
-                        "' target='window'><i class='icon-envelope'></i></a>";
-                    }
-
-                    if (h.company_phone) {
-                      html +=
-                        "            <a id='c_phone" +
-                        i.toString() +
-                        "' name='c_phone" +
-                        i.toString() +
-                        "' class='c_phone' style='margin-left:5px;color:gray' href='tel:" +
-                        h.company_phone +
-                        "' target='window'><i class='icon-phone'></i></a>";
-                    }
-                  }
-
-                  html += "        </p>";
-                  html += "    </div>";
-                  html += "</section>";
-                  html += "</div>";
-                  // append html element to list_div
-                  $("#list_div").append(html);
-                }
-
-                // update the #page_number
-                $("#page_number").html(json.page_number);
-
-                // update the #total_pages
-                $("#total_pages").html(json.total_pages);
-
-                // set the #next button in readonly
-                if (p >= json.total_pages) {
-                  $("#next").attr("disabled", "disabled");
-                  $("#next").attr("href", "/unibox?p=" + p);
-                } else {
-                  $("#next").removeAttr("disabled");
-                  $("#next").attr("href", "/unibox?p=" + (p + 1));
-                }
-
-                // set the #prev button in readonly
-                if (p <= 1) {
-                  $("#prev").attr("disabled", "disabled");
-                  $("#prev").attr("href", "/unibox?p=1");
-                } else {
-                  $("#prev").removeAttr("disabled");
-                  $("#prev").attr("href", "/unibox?p=" + (p - 1));
-                }
-
-                // set event when click on a div.lead_container
-                // problem: jquery event on dynamically created element
-                // solution: https://stackoverflow.com/questions/203198/event-binding-on-dynamically-created-elements
-                //
-                $("div.lead_container").on("click", function () {
-                  let id_profile = $(this).find(".id_profile").val();
-                  let id_lead = $(this).find(".id_lead").val();
-                  let id_company = $(this).find(".id_company").val();
-                  let scroll_to_bottom = true;
-                  let refresh_insights = true;
-                  loadOutreaches(
-                    id_profile,
-                    id_lead,
-                    id_company,
-                    scroll_to_bottom,
-                    refresh_insights
-                  );
-                });
-              }
-            },
-          });
-        }
-
-        // on page load
-        $(document).ready(function () {
-          init_search("/unibox");
-
-          // set div#lead_details 0.2 opacity
-          $("div#lead_details").css("opacity", "0.2");
-          $("div#lead_details").css("pointer-events", "none");
-
-          // set #new_message_container 0.2 opacity and readonly
-          $("#new_message_container").css("opacity", "0.2");
-          $("#new_message_container").css("pointer-events", "none");
-
-          // when select an option inside #id_tag, redirect to /leads?id_tag=...
-          // the value of id_tag is in the select #id_tag
-          $("#id_tag").change(function () {
-            // get the value of the select #id_tag
-            let id_tag = $("#id_tag").val();
-            // redirect to /leads?id_tag=...
-            window.location.href = "/unibox?id_tag=" + id_tag;
-          });
-
-          // when select an option inside #id_profile, redirect to /leads?id_profile=...
-          // the value of id_profile is in the select #id_profile
-          $("#id_profile").change(function () {
-            // get the value of the select #id_profile
-            let id_profile = $("#id_profile").val();
-            // redirect to /leads?id_profile=...
-            window.location.href = "/unibox?id_profile=" + id_profile;
-          });
-
-          // when click on #new_message_button, call the method push_outreach
-          $("#new_message_button").on("click", function () {
-            let outreach_type = $("#outreach_type_selected").val();
-            let id_profile = $("#id_profile_selected").val();
-            let id_lead = $("#id_lead_selected").val();
-            let id_company = $("#id_company_selected").val();
-            let body = $("#new_message_body").val();
-            pushOutreach(outreach_type, id_profile, id_lead, id_company, body);
-          });
-
-          // when press keypress on #new_message_body, call the method push_outreach
-          $("#new_message_body").keypress(function (event) {
-            // if the key pressed is ENTER
-            if (event.ctrlKey && event.which == 10) {
-              $("#new_message_button").click();
-            }
-          });
-
-          // load list of latest incoming or accepted outreaches
-          loadList();
-
-          // refresh list and outreaches every few seconds
-          setInterval(function () {
-            //setTimeout(function() {
-            loadList();
-            let id_profile = $("#id_profile_selected").val();
-            let id_lead = $("#id_lead_selected").val();
-            let id_company = $("#id_company_selected").val();
-            let scroll_to_bottom = false;
-            let refresh_insights = false;
-            if (id_profile != "" && (id_lead != "" || id_company != "")) {
-              loadOutreaches(
-                id_profile,
-                id_lead,
-                id_company,
-                scroll_to_bottom,
-                refresh_insights
-              );
-            }
-          }, 5000);
-
-          $(".expand-pool1").on("click", function () {
-            $(".pool1").addClass("expanded").removeClass("collapsed");
-            $(".pool2").addClass("collapsed").removeClass("expanded");
-            $(".pool3").addClass("collapsed").removeClass("expanded");
-          });
-
-          $(".expand-pool2").on("click", function () {
-            $(".pool1").addClass("collapsed").removeClass("expanded");
-            $(".pool2").addClass("expanded").removeClass("collapsed");
-            $(".pool3").addClass("collapsed").removeClass("expanded");
-          });
-
-          $(".expand-pool3").on("click", function () {
-            $(".pool1").addClass("collapsed").removeClass("expanded");
-            $(".pool2").addClass("collapsed").removeClass("expanded");
-            $(".pool3").addClass("expanded").removeClass("collapsed");
-          });
-
-          // Optional: Automatically collapse sections on small screens
-          function checkWindowSize() {
-            if ($(window).width() <= 1200) {
-              // Adjust the size based on your design needs
-              if (
-                !$("#pool1").hasClass("expanded") &&
-                !$("#pool2").hasClass("expanded") &&
-                !$("#pool3").hasClass("expanded")
-              ) {
-                // If none are expanded, expand pool1 by default
-                $("#pool1").addClass("expanded").removeClass("collapsed");
-              }
-            }
-          }
-
-          // Check window size on load and resize
-          checkWindowSize();
-          $(window).resize(function () {
-            checkWindowSize();
-          });
-        });
-      </script>
-      <!-- / Content here -->
-      <!-- Page footer -->
-      <footer id="main-footer">
-        <section class="row-fluid">
-          <div class="span2">
-            <div
-              style="
+    </div>
+    <!-- / Content here -->
+    <!-- Page footer -->
+    <footer id="main-footer">
+      <section class="row-fluid">
+        <div class="span2">
+          <div style="
                 width: 100%;
                 text-align: left;
                 margin-top: 5px;
                 margin-left: 10px;
-              "
-            >
-              <img
-                align="left"
-                src="./unibox_files/logo.png"
-                height="50px"
-                title=""
-                style="opacity: 0.25"
-                data-original-title="MassProspecting"
-              />
-            </div>
-            <!--
+              ">
+            <img align="left" src="./unibox_files/logo.png" height="50px" title="" style="opacity: 0.25"
+              data-original-title="MassProspecting" />
+          </div>
+          <!--
                      <br/><br/>
                      <div style='width:100%; text-align:left; margin-top:5px; margin-left:10px;'>
                      	<a target='_window' style='text-decoration:none;font-size:18px;margin-right:5px;width:24px;' title='Follow Us on Facebook' href='https://www.facebook.com/groups/560001971837935'><i class='icon-facebook'></i></a>
                      	<a target='_window' style='text-decoration:none;font-size:18px;margin-right:5px;width:24px;' title='Follow Us on GitHub' href='https://github.com/leandrosardi'><i class='icon-github'></i></a>
                      </div>
                      -->
-          </div>
-        </section>
-        <br />
-        <br />
-        <br />
-        <b>MassProspecting</b> - MySaaS Version:
-        <a href="https://github.com/leandrosardi/my.saas" target="_window"
-          >1.7.0</a
-        ><br />
-        Copyright © 2024
-        <a href="https://massprospecting.com/" target="_window"
-          >MassProspecting</a
-        >, all rights reserved.<br />
-        <!--
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
+      <b>MassProspecting</b> - MySaaS Version:
+      <a href="https://github.com/leandrosardi/my.saas" target="_window">1.7.0</a><br />
+      Copyright © 2024
+      <a href="https://massprospecting.com/" target="_window">MassProspecting</a>, all rights reserved.<br />
+      <!--
                Powered by <a href='https://github.com/leandrosardi/blackstack' target='_window'>BlackStack</a>.
                -->
-        <a
-          href="http://s01.massprospecting.com:3000/unibox#"
-          class="pull-right"
-          id="on-top-link"
-        >
-          On Top&nbsp;<i class="icon-chevron-up"></i> </a
-        ><br />
-      </footer>
-      <!-- / Page footer -->
-      <script type="text/javascript">
-        //applyReadMore();
+      <a href="http://s01.massprospecting.com:3000/unibox#" class="pull-right" id="on-top-link">
+        On Top&nbsp;<i class="icon-chevron-up"></i> </a><br />
+    </footer>
+    <!-- / Page footer -->
+    <!-- / Page footer -->
+  </section>
+</body>
 
-        showWait("Loading... ");
-
-        // function to update the credits in the header. TODO: move this to the I2P module
-        // call ajax /ajax/i2p/get_credits.json, and update the credits in the header
-        function i2p_update_header(service) {
-          $.ajax({
-            url: "/ajax/i2p/get_credits.json",
-            type: "POST",
-            data: { service: service },
-            dataType: "json",
-            success: function (data) {
-              if (data.status == "success") {
-                $("#credits").html(data.credits);
-              } else {
-                alert(
-                  "Error Ocurrend when Updating the Credits in the Header: " +
-                    data.status
-                );
-              }
-            },
-            error: function (data) {
-              alert(
-                "Unkown Error Ocurrend when Updating the Credits in the Header: " +
-                  data.status
-              );
-            },
-          });
-        }
-
-        // overload the onload event in order to
-        // hide the "Loading..." message when the
-        // onload event has done.
-        var old_onload = window.onload;
-        window.onload = function () {
-          // execute redirection when click on a button.btn-link with an href attribute
-          $(".btn-link").click(function () {
-            // if the button is not disabled and if it has an href attribute
-            if (!$(this).attr("disabled") && $(this).attr("href")) {
-              window.location.href = $(this).attr("href");
-            }
-          });
-
-          // making it responsive
-          if ($(window).width() < 485) {
-            // top bar responsive - hide service name if wdith < 485
-            $("header").find("#service_name").remove();
-            $("header").find("#services").width("16px");
-
-            // top bar responsive - hide the 'email support' label
-            $("header").find("#email_support").remove();
-
-            // top bar responsive - hide left bar if width < 485
-            $("#left-panel-content").remove();
-          } else {
-            $("header").find("#services").width("125px");
-          }
-
-          // call the original onload function
-          if (typeof old_onload == "function") {
-            old_onload();
-          }
-
-          // setup smooth scrolling, fiexd top navbar, fixed left bar
-          //ajaxStatus.setup();
-
-          // enable select-all-text when focus on any input with class `select-all-on-focus`
-          enableSelectAllTextOnFocus();
-
-          // apply tooltips
-          applyToolTips();
-
-          // if user press ESC, then I close any popup
-          $(".popup").keydown(function (event) {
-            if (event.key == "Escape") {
-              $(".popup").hide("fade");
-            }
-          });
-
-          // if click on this button, then I close any popup
-          $(".popup .cancel-button").click(function () {
-            $(".popup").hide("fade");
-          });
-
-          // hide the "Loading..." message
-          if (hide_loading_message_after_page_load == true) {
-            hideWait();
-          }
-        };
-      </script>
-      <!-- / Page footer -->
-    </section>
-  </body>
 </html>
