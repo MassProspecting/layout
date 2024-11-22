@@ -177,7 +177,6 @@ li.style.opacity = '0.5';
                     <div class="btn-group">
                         <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="${id_lead}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caption badge badge-blue">1</span>
-                            Tags
                         </button>
                         <ul class="dropdown-menu ul-tags" data-id-lead="${id_lead}">
                             <li class="div-tag-lists" data-id-lead="${id_lead}">
