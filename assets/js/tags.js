@@ -1,5 +1,12 @@
-manyTagsJs = {
+tagsJs = {
     allow_selection_of_each_instance: {},
+
+    // close the drop-down menu
+    collapse: function(parent) {
+        let id_lead = parent.data('id');
+        let o = document.querySelector("div.btn-group[data-id='"+id_lead+"']");
+        $(o).removeClass('open');
+    },
 
     // increase the number of tags with checked='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
@@ -80,7 +87,7 @@ manyTagsJs = {
 
     check_tag: function(parent, id_tag) {
         let id_lead = parent.data('id');
-        if (manyTagsJs.allow_selection_of_each_instance[id_lead]) {
+        if (tagsJs.allow_selection_of_each_instance[id_lead]) {
             let id_lead = parent.data('id');
             let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
             let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
@@ -92,7 +99,7 @@ manyTagsJs = {
 
     uncheck_tag: function(parent, id_tag) {
         let id_lead = parent.data('id');
-        if (manyTagsJs.allow_selection_of_each_instance[id_lead]) {        
+        if (tagsJs.allow_selection_of_each_instance[id_lead]) {        
             let id_lead = parent.data('id');
             let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
             let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
@@ -117,7 +124,7 @@ manyTagsJs = {
         li.setAttribute('data-checked', h.checked.toString());
         li.style.cursor = 'pointer';
         // create an icon-ok element, with style green text color
-        if (manyTagsJs.allow_selection_of_each_instance[id_lead]) {
+        if (tagsJs.allow_selection_of_each_instance[id_lead]) {
             let icon = document.createElement('i');
             icon.setAttribute('data-id-tag-list', h.id);
             icon.setAttribute('data-id', id_lead);
@@ -133,7 +140,7 @@ manyTagsJs = {
         }
         // create the tag element
         tagHtml = `<span class='badge badge-black' style='margin-left:5px;margin-bottom:5px;'><i class='icon-circle' style='color:${h.color}'></i>${h.name}</span>`;
-        tag = manyTagsJs.createElementFromHTML(tagHtml);
+        tag = tagsJs.createElementFromHTML(tagHtml);
         li.append(tag);
         
         // if the tag is deleted, then add a "deleted" label
@@ -149,13 +156,13 @@ manyTagsJs = {
                 if (h['on_unselect_tag']) {
                     h['on_unselect_tag']();
                 } else {
-                    manyTagsJs.uncheck_tag(parent, h.id);
+                    tagsJs.uncheck_tag(parent, h.id);
                 }
             } else {
                 if (h['on_select_tag']) {
                     h['on_select_tag']();
                 } else {
-                    manyTagsJs.check_tag(parent, h.id);
+                    tagsJs.check_tag(parent, h.id);
                 }
             }
 
@@ -173,7 +180,7 @@ manyTagsJs = {
     draw: function(parent, h) {
         let id_lead = parent.data('id');
         
-        manyTagsJs.allow_selection_of_each_instance[id_lead] = h.allow_selection;
+        tagsJs.allow_selection_of_each_instance[id_lead] = h.allow_selection;
 
         text = 'tags';
         if (h['text']) text = h['text'];
@@ -181,7 +188,7 @@ manyTagsJs = {
         let tagsHtml = `
             <div class="tags" data-id="${id_lead}">
                 <div class="buttons">
-                    <div class="btn-group">
+                    <div class="btn-group" data-id="${id_lead}">
                         <button class="btn btn-link dropdown-toggle btn-tag-lists" data-id="${id_lead}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caption badge badge-blue">${text}</span>
                         </button>
@@ -222,9 +229,9 @@ manyTagsJs = {
 
         // en endit any textfield inside a ul,
         // enable/disable the add button depending on the value of the textfield
-        // by calling function manyTagsJs.enable_add_button(parent)
+        // by calling function tagsJs.enable_add_button(parent)
         $('ul[data-id="'+id_lead+'"].ul-tags').on('keyup', 'input.input-tags', function() {
-            manyTagsJs.enable_add_button($(this).closest('ul'));
+            tagsJs.enable_add_button($(this).closest('ul'));
         });
 
         // when click on .btn-tag-lists, set focus on input
@@ -252,7 +259,7 @@ manyTagsJs = {
             if (h['on_create_tag'] != null) {
                 h['on_create_tag'](s);
             } else {
-                manyTagsJs.add_tag(parent, {
+                tagsJs.add_tag(parent, {
                     id: s,
                     name: s,
                     color: 'gray',

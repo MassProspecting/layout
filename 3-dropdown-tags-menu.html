@@ -47,7 +47,7 @@
   <script src="./assets/js/adminflare.min.js" type="text/javascript"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
-<script src="./assets/js/many_tags.js" type="text/javascript"></script>
+<script src="./assets/js/tags.js" type="text/javascript"></script>
 
   <!-- TODO: Getting javascript error when enable this line.
          <script src="/landing/javascripts/ajax_status-1.0.1.min.js" type="text/javascript"></script>
@@ -290,7 +290,7 @@
               Place your panel content here...
 
               <div class='tags' data-id="lead-123">
-                <!-- call manyTagsJs.draw -->
+                <!-- call tagsJs.draw -->
               </div>
               
             </div>
@@ -325,7 +325,7 @@
   $(document).ready(function() {
     parent1 = $('div.tags[data-id="lead-123"]');
     
-    manyTagsJs.draw(parent1, {
+    tagsJs.draw(parent1, {
       text: '3 tags',
       allow_creation: false,
       allow_selection: false,
@@ -336,7 +336,7 @@
         console.log('on_create_tag: ' + s);
 
         // create the temporary tag
-        manyTagsJs.add_tag(parent1, {
+        tagsJs.add_tag(parent1, {
           id: s,
           name: s,
           color: 'gray',
@@ -344,7 +344,7 @@
         });
 
         // set the tag opacity in 0.5 to the temporary tag, not checked yet
-        manyTagsJs.set_tag_opacity(parent1, s, 0.5);
+        tagsJs.set_tag_opacity(parent1, s, 0.5);
 
         // do the AJAX call
         $.ajax({
@@ -360,13 +360,13 @@
                 // validate json status
                 if (json.status != 'success') {
                   // set the tag opacity back in 1
-                  manyTagsJs.set_tag_opacity(parent1, s, 1);
+                  tagsJs.set_tag_opacity(parent1, s, 1);
 
                   // I received the response, with the tag created with an ID
                   // Then, I remove the temporary tag
-                  manyTagsJs.remove_tag(parent1, s);
+                  tagsJs.remove_tag(parent1, s);
                   // And create the final tag, with the right ID, checked.
-                  manyTagsJs.add_tag(parent1, {
+                  tagsJs.add_tag(parent1, {
                     id: json.id_tag,
                     name: s,
                     color: 'gray',
@@ -377,55 +377,56 @@
                 } else {
                   console.log('AJAX Error: ' + json.status);
                   // if an error happened, remove the tag
-                  manyTagsJs.remove_tag(parent1, s);
+                  tagsJs.remove_tag(parent1, s);
                 }
             },
             error: function(xhr, status, error) {
                 console.error('AJAX Error:', status, error);
                 // if an error happened, remove the tag
-                manyTagsJs.remove_tag(parent1, s);
+                tagsJs.remove_tag(parent1, s);
             }
         });
       },
     });
 
-    manyTagsJs.add_tag(parent1, {
+    tagsJs.add_tag(parent1, {
       id: '1',
       name: 'Tag1',
       color: 'blue',
       checked: true,
       on_click_tag: function() {
         console.log('on_click_tag: 1');
+        tagsJs.collapse(parent1);
       },
       on_select_tag: function() {
         console.log('on_select_tag: 1');
-        manyTagsJs.check_tag(parent1, '1');
+        tagsJs.check_tag(parent1, '1');
       },
       on_unselect_tag: function() {
         console.log('on_unselect_tag: 1');
-        manyTagsJs.uncheck_tag(parent1, '1');
+        tagsJs.uncheck_tag(parent1, '1');
       },
     });
 
-    manyTagsJs.add_tag(parent1, {
+    tagsJs.add_tag(parent1, {
       id: '2',
       name: 'Tag2',
       color: '#00dd00',
       checked: false
     });
 
-    manyTagsJs.add_tag(parent1, {
+    tagsJs.add_tag(parent1, {
       id: '3',
       name: 'Tag3',
       color: 'rgb(255,0,0)',
       checked: false
     });
 
-    manyTagsJs.set_text(parent1, 'click to select tags');
+    tagsJs.set_text(parent1, 'click to select tags');
 
-    manyTagsJs.set_tag_opacity(parent1, '2', 0.5);
+    tagsJs.set_tag_opacity(parent1, '2', 0.5);
 
-    //manyTagsJs.remove_tag(parent1, '1');
+    //tagsJs.remove_tag(parent1, '1');
 
   }); // end of document.ready
 </script>
