@@ -1,4 +1,4 @@
-tagsJs = {
+manyTagsJs = {
     // increase the number of tags with checked='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
     set_text: function(parent, s) {
@@ -123,7 +123,7 @@ tagsJs = {
         li.appendChild(icon);
 
         tagHtml = ` - <span class='badge badge-black'><i class='icon-circle' style='color:${h.color}'></i>${h.name}</span>`;
-        tag = tagsJs.createElementFromHTML(tagHtml);
+        tag = manyTagsJs.createElementFromHTML(tagHtml);
         li.append(tag);
         
         // if the tag is deleted, then add a "deleted" label
@@ -139,13 +139,13 @@ tagsJs = {
                 if (h['on_unselect_tag']) {
                     h['on_unselect_tag']();
                 } else {
-                    tagsJs.uncheck_tag(parent, h.id);
+                    manyTagsJs.uncheck_tag(parent, h.id);
                 }
             } else {
                 if (h['on_select_tag']) {
                     h['on_select_tag']();
                 } else {
-                    tagsJs.check_tag(parent, h.id);
+                    manyTagsJs.check_tag(parent, h.id);
                 }
             }
             // JavaScript, stop additional event listeners
@@ -196,9 +196,9 @@ tagsJs = {
 
         // en endit any textfield inside a ul,
         // enable/disable the add button depending on the value of the textfield
-        // by calling function tagsJs.enable_add_button(parent)
+        // by calling function manyTagsJs.enable_add_button(parent)
         $('ul[data-id="'+id_lead+'"].ul-tags').on('keyup', 'input.input-tags', function() {
-            tagsJs.enable_add_button($(this).closest('ul'));
+            manyTagsJs.enable_add_button($(this).closest('ul'));
         });
 
         // when click on .btn-tag-lists, set focus on input
@@ -226,7 +226,7 @@ tagsJs = {
             if (h['on_create_tag'] != null) {
                 h['on_create_tag'](s);
             } else {
-                tagsJs.add_tag(parent, {
+                manyTagsJs.add_tag(parent, {
                     id: s,
                     name: s,
                     color: 'gray',
