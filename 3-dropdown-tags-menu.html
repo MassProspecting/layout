@@ -327,6 +327,7 @@
     
     manyTagsJs.draw(parent1, {
       text: '3 tags',
+      allow_creation: false,
       on_expand: function() {
         console.log('on_expand');
       },
@@ -416,7 +417,7 @@
       checked: false
     });
 
-    manyTagsJs.set_text(parent1, 'click to edit tag');
+    manyTagsJs.set_text(parent1, 'click to select tags');
 
     manyTagsJs.set_tag_opacity(parent1, '2', 0.5);
 

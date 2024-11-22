@@ -160,7 +160,7 @@ manyTagsJs = {
         text = 'tags';
         if (h['text']) text = h['text'];
         
-        const tagsHtml = `
+        let tagsHtml = `
             <div class="tags" data-id="${id_lead}">
                 <div class="buttons">
                     <div class="btn-group">
@@ -173,14 +173,22 @@ manyTagsJs = {
                                     <!-- tags added by JavaScript are placed here -->
                                 </div>
                             </li>
-                            <li class="divider"></li>
-                            <li>
-                                <p>Create New Tag</p>
-                                <input type="text" class="input input-medium input-tags" data-id="${id_lead}" placeholder="Enter tag name"><br> 
-                                <button class="btn btn-link btn-create-tag-list" data-id="${id_lead}" disabled>
-                                    <i class="icon-plus"></i> Add
-                                </button>
-                            </li>
+        `;
+
+        if (h.allow_creation) {
+            tagsHtml += `
+                                <li class="divider"></li>
+                                <li>
+                                    <p>Create New Tag</p>
+                                    <input type="text" class="input input-medium input-tags" data-id="${id_lead}" placeholder="Enter tag name"><br> 
+                                    <button class="btn btn-link btn-create-tag-list" data-id="${id_lead}" disabled>
+                                        <i class="icon-plus"></i> Add
+                                    </button>
+                                </li>
+            `;
+        }
+
+        tagsHtml += `
                         </ul>
                     </div>      
                 </div>
