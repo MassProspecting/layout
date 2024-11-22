@@ -1,4 +1,6 @@
 manyTagsJs = {
+    allow_selection_of_each_instance: {},
+
     // increase the number of tags with checked='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
     set_text: function(parent, s) {
@@ -78,20 +80,26 @@ manyTagsJs = {
 
     check_tag: function(parent, id_tag) {
         let id_lead = parent.data('id');
-        let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
-        let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
-        icon.setAttribute('style', 'color: green');
-        icon.setAttribute('class', 'icon-check');
-        li.setAttribute('data-checked', 'true');    
+        if (manyTagsJs.allow_selection_of_each_instance[id_lead]) {
+            let id_lead = parent.data('id');
+            let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
+            let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
+            icon.setAttribute('style', 'color: green');
+            icon.setAttribute('class', 'icon-check');
+            li.setAttribute('data-checked', 'true');        
+        }
     },
 
     uncheck_tag: function(parent, id_tag) {
         let id_lead = parent.data('id');
-        let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
-        let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
-        icon.setAttribute('style', 'color: gray');
-        icon.setAttribute('class', 'icon-check-empty');
-        li.setAttribute('data-checked', 'false');
+        if (manyTagsJs.allow_selection_of_each_instance[id_lead]) {        
+            let id_lead = parent.data('id');
+            let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
+            let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
+            icon.setAttribute('style', 'color: gray');
+            icon.setAttribute('class', 'icon-check-empty');
+            li.setAttribute('data-checked', 'false');
+        }
     },
 
     // receive a hash descriptor of the tag related with the lead { id:, name:, checked: }
@@ -109,20 +117,22 @@ manyTagsJs = {
         li.setAttribute('data-checked', h.checked.toString());
         li.style.cursor = 'pointer';
         // create an icon-ok element, with style green text color
-        let icon = document.createElement('i');
-        icon.setAttribute('data-id-tag-list', h.id);
-        icon.setAttribute('data-id', id_lead);
-        if ( h.checked ) { 
-            icon.setAttribute('style', 'color: green');
-            icon.setAttribute('class', 'icon-check');
-        } else {
-            icon.setAttribute('style', 'color: gray');
-            icon.setAttribute('class', 'icon-check-empty');
+        if (manyTagsJs.allow_selection_of_each_instance[id_lead]) {
+            let icon = document.createElement('i');
+            icon.setAttribute('data-id-tag-list', h.id);
+            icon.setAttribute('data-id', id_lead);
+            if ( h.checked ) { 
+                icon.setAttribute('style', 'color: green');
+                icon.setAttribute('class', 'icon-check');
+            } else {
+                icon.setAttribute('style', 'color: gray');
+                icon.setAttribute('class', 'icon-check-empty');
+            }
+            // add the icon and the name of the list to the anchor
+            li.appendChild(icon);
         }
-        // add the icon and the name of the list to the anchor
-        li.appendChild(icon);
-
-        tagHtml = ` - <span class='badge badge-black'><i class='icon-circle' style='color:${h.color}'></i>${h.name}</span>`;
+        // create the tag element
+        tagHtml = `<span class='badge badge-black' style='margin-left:5px;margin-bottom:5px;'><i class='icon-circle' style='color:${h.color}'></i>${h.name}</span>`;
         tag = manyTagsJs.createElementFromHTML(tagHtml);
         li.append(tag);
         
@@ -148,6 +158,12 @@ manyTagsJs = {
                     manyTagsJs.check_tag(parent, h.id);
                 }
             }
+
+            // any case, raise the on_click_tag event
+            if (h['on_click_tag']) {
+                h['on_click_tag']();
+            }
+
             // JavaScript, stop additional event listeners
             // reference: https://www.w3schools.com/jsref/event_stopimmediatepropagation.asp
             e.stopImmediatePropagation();
@@ -157,6 +173,8 @@ manyTagsJs = {
     draw: function(parent, h) {
         let id_lead = parent.data('id');
         
+        manyTagsJs.allow_selection_of_each_instance[id_lead] = h.allow_selection;
+
         text = 'tags';
         if (h['text']) text = h['text'];
         

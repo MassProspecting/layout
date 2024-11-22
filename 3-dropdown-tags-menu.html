@@ -328,6 +328,7 @@
     manyTagsJs.draw(parent1, {
       text: '3 tags',
       allow_creation: false,
+      allow_selection: false,
       on_expand: function() {
         console.log('on_expand');
       },
@@ -393,6 +394,9 @@
       name: 'Tag1',
       color: 'blue',
       checked: true,
+      on_click_tag: function() {
+        console.log('on_click_tag: 1');
+      },
       on_select_tag: function() {
         console.log('on_select_tag: 1');
         manyTagsJs.check_tag(parent1, '1');
