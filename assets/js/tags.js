@@ -1,11 +1,11 @@
 tagsJs = {
-    // increase the number of tags with belonging='true' in the tag button
+    // increase the number of tags with checked='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
     set_text: function(parent, s) {
         let id_lead = parent.data('id');
         // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
         // get the value of the span
-        // update the text into the span, with the number of tags with belonging='true'
+        // update the text into the span, with the number of tags with checked='true'
         let span = $('button.btn-tag-lists[data-id="'+id_lead+'"] span.caption');
         span.html(s);
     },
@@ -76,7 +76,14 @@ tagsJs = {
         return documentFragment;
     },
 
-    // receive a hash descriptor of the tag related with the lead { id:, name:, belonging: }
+    check_tag: function(parent, id_tag) {
+        let id_lead = parent.data('id');
+        let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
+        let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
+
+    }
+
+    // receive a hash descriptor of the tag related with the lead { id:, name:, checked: }
     add_tag: function(parent, h) {
         let id_lead = parent.data('id');
         // 
@@ -88,13 +95,13 @@ tagsJs = {
         li.setAttribute('data-id-tag-list', h.id);
         li.setAttribute('data-id', id_lead);
         li.setAttribute('data-name', h.name);
-        li.setAttribute('data-belonging', h.belonging.toString());
+        li.setAttribute('data-checked', h.checked.toString());
         li.style.cursor = 'pointer';
         // create an icon-ok element, with style green text color
         let icon = document.createElement('i');
         icon.setAttribute('data-id-tag-list', h.id);
         icon.setAttribute('data-id', id_lead);
-        if ( h.belonging ) { 
+        if ( h.checked ) { 
             icon.setAttribute('style', 'color: green');
             icon.setAttribute('class', 'icon-check');
         } else {
@@ -116,26 +123,25 @@ tagsJs = {
         $(div).append(li);
         // on click on the li, call ajax to add/remove the lead from/to the tag list
         li.addEventListener('click', function(e) {
-// decide the access point to call
-if ($(li).attr('data-belonging') == 'true') {
-    // remove from the list
-    access_point = 'remove_tag';
-} else {
-    // add to the list
-    access_point = 'add_tag';
-}
-// call the ajax
             // find the icon about this tag list and this lead
             let icon = document.querySelector('i[data-id-tag-list="'+h.id+'"][data-id="'+id_lead+'"]');
             // if the icon is green, change it to gray
-            if ($(li).attr('data-belonging') == 'true') {
-                icon.setAttribute('style', 'color: gray');
-                icon.setAttribute('class', 'icon-check-empty');
-                li.setAttribute('data-belonging', 'false');
+            if ($(li).attr('data-checked') == 'true') {
+                if (h['on_unselect_tag']) {
+                    h['on_unselect_tag']();
+                } else {
+                    icon.setAttribute('style', 'color: gray');
+                    icon.setAttribute('class', 'icon-check-empty');
+                    li.setAttribute('data-checked', 'false');
+                }
             } else {
-                icon.setAttribute('style', 'color: green');
-                icon.setAttribute('class', 'icon-check');
-                li.setAttribute('data-belonging', 'true');
+                if (h['on_select_tag']) {
+                    h['on_select_tag']();
+                } else {
+                    icon.setAttribute('style', 'color: green');
+                    icon.setAttribute('class', 'icon-check');
+                    li.setAttribute('data-checked', 'true');    
+                }
             }
             // JavaScript, stop additional event listeners
             // reference: https://www.w3schools.com/jsref/event_stopimmediatepropagation.asp
@@ -219,7 +225,7 @@ if ($(li).attr('data-belonging') == 'true') {
                     id: s,
                     name: s,
                     color: 'gray',
-                    belonging: false              
+                    checked: false              
                 });
                 // stop the event scalation
                 e.stopImmediatePropagation();
