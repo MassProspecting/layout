@@ -37,6 +37,7 @@
   <link href="./unibox_files/dialog.css" media="all" rel="stylesheet" type="text/css" id="ajax-dialog-css" />
   <link href="./unibox_files/filters(1).css" media="all" rel="stylesheet" type="text/css" />
   <link href="./assets/css/index.css" media="all" rel="stylesheet" type="text/css" />
+
   <script src="./unibox_files/modernizr-jquery.min.js" type="text/javascript"></script>
   <script src="./unibox_files/react-1.0.2.min.js" type="text/javascript"></script>
   <script src="./unibox_files/contenteditable.js" type="text/javascript"></script>
@@ -261,8 +262,8 @@
               <button class="arrow" onclick="togglePanel('pool2')"><i
                   class="fa-solid fa-arrows-left-right"></i></button>
             </div>
-            <div>
-              Hello...
+            <div class="panel-content">
+              Place your panel content here...
             </div>
           </div>
         </section>
@@ -270,26 +271,11 @@
         <section id="pool2" name="pool2" class="col-6 panel ">
           <div id="panel2_panel" class="pool2-panel">
             <div id="pool2_header" name="pool2_header" class="panel2-header">
-              <div class="header-info">
-                <div>
-                  <h3>Live Example</h3>
-                </div>
-                <!--
-                <button class="close-btn" onclick="closePanel('pool2')">
-                  <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-                </button>
-                -->
-                <button class="arrow" onclick="togglePanel('pool3')">
-                  <i class="fa-solid fa-arrows-left-right"></i>
-                </button>
-                <button class="arrow-left" onclick="togglePanel('pool1')">
-                  <i class="fa-solid fa-arrows-left-right"></i>
-                </button>
-              </div>
+              <h2>Live Example</h2>
+              
               <button class="close-btn" onclick="closePanel('pool2')">
                 <i class="fa fa-times-circle-o" aria-hidden="true"></i>
               </button>
-
               <button class="arrow" onclick="togglePanel('pool3')">
                 <i class="fa-solid fa-arrows-left-right"></i>
               </button>
@@ -297,131 +283,60 @@
                 <i class="fa-solid fa-arrows-left-right"></i>
               </button>
             </div>
-            <div>
-              Hello...
+            <div class="panel-content">
+              Place your panel content here...
+
+              <div class="buttons">
+                <div class="btn-group open">
+                <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown">
+                  <span class="caption badge badge-blue">1</span>
+                </button>
+                <ul class="dropdown-menu ul-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                    <div class="div-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                      <li data-id-tag-list="4e9f3b6c-076e-489f-ba27-cecf9706fa10" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="test1234" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="4e9f3b6c-076e-489f-ba27-cecf9706fa10" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> test1234</li>
+                      <li data-id-tag-list="c8358cbf-68a4-4c89-b104-c6b40ef23612" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="Offsite Expo ATL" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="c8358cbf-68a4-4c89-b104-c6b40ef23612" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> Offsite Expo ATL</li>
+                      <li data-id-tag-list="8930e49a-aadb-43e8-a86f-1fb252936f5c" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="PatientPayments" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="8930e49a-aadb-43e8-a86f-1fb252936f5c" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> PatientPayments</li>
+                      <li data-id-tag-list="8e7265ed-a449-4741-a7fc-3a019e3dd132" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="RPA Outreach" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="8e7265ed-a449-4741-a7fc-3a019e3dd132" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> RPA Outreach</li>
+                      <li data-id-tag-list="bf9e5799-858b-41a3-85a5-d4cff012675f" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="scraping" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="bf9e5799-858b-41a3-85a5-d4cff012675f" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> scraping</li>
+                      <li data-id-tag-list="d94f69a1-1ef1-417c-bac2-ff0f2921f1f8" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="target" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="d94f69a1-1ef1-417c-bac2-ff0f2921f1f8" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> target</li>
+                      <li data-id-tag-list="9ac151fb-dc31-4ae0-84c5-3125bdc46e36" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="hiring" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="9ac151fb-dc31-4ae0-84c5-3125bdc46e36" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> hiring</li>
+                      <li data-id-tag-list="56562126-d773-4403-9c9c-0c482a2f4f33" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="efficiency-verified" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="56562126-d773-4403-9c9c-0c482a2f4f33" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> efficiency-verified</li>
+                      <li data-id-tag-list="304079f3-4b28-43ee-a291-902ab773020a" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="hiring-verified" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="304079f3-4b28-43ee-a291-902ab773020a" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> hiring-verified</li>
+                      <li data-id-tag-list="830de3c8-7d89-4bdd-959d-1c245adb0d01" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="accepters" data-belonging="false" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="830de3c8-7d89-4bdd-959d-1c245adb0d01" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: gray" class="icon-check-empty"></i> accepters</li>
+                      <li data-id-tag-list="d10fb5ef-3948-4bdc-bb87-42613bb1ccd8" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-name="efficiency" data-belonging="true" style="cursor: pointer; opacity: 1;"><i data-id-tag-list="d10fb5ef-3948-4bdc-bb87-42613bb1ccd8" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" style="color: green" class="icon-check"></i> efficiency</li></div>
+                      <li class="divider"></li>
+                      <li>
+                        <p>Create New Tag</p>
+                        <input class="input input-medium input-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"><br> 
+                        <button class="btn btn-link btn-create-tag-list" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" disabled=""><i class="icon-plus"></i> Add</button>
+                      </li>
+                  </ul>
+                </div>      
+              </div>
+              
             </div>
           </section>
           <!-- Pool 3 -->
           <section id="pool3" name="pool3" class="col panel">
             <div id="panel3_panel" class="pool3-panel">
               <div id="pool3_header" name="pool3_header" class="panel3-header">
-                <!--
+                <h2>Code Example</h2>
+              
                 <button class="close-btn" onclick="closePanel('pool3')">
                   <i class="fa fa-times-circle-o" aria-hidden="true"></i>
                 </button>
-                -->
-                <button class="arrow-left" onclick="togglePanel('pool2')"><i class="fa-solid fa-arrows-left-right"></i></button>
-              <button class="close-btn" onclick="closePanel('pool3')">
-                <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-              </button>
-              <button class="arrow-left" onclick="togglePanel('pool2')"><i
-                  class="fa-solid fa-arrows-left-right"></i></button>
-
+                <button class="arrow-left" onclick="togglePanel('pool2')">
+                  <i class="fa-solid fa-arrows-left-right"></i>
+                </button>  
+              </div>
             </div>
-            <div id="list_div" class="panel-content">
-              <section class="list">
-                <div class="third-section-content">
-                  <div class="tab-container">
-                    <!-- Tab Buttons -->
-                    <div class="tab-buttons">
-                      <button class="tab-button active" data-tab="tab1">Chats</button>
-                      <button class="tab-button" data-tab="tab2">Filters</button>
-                      <button class="tab-button" data-tab="tab3">Events</button>
-                      <button class="tab-button" data-tab="tab4">Insights</button>
-                    </div>
-                    <!-- Tab Contents -->
-                    <div class="tab-contents">
-                      <div id="tab1" class="tab-content active">
-                        <p>
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-                          Content for Chats. This is the first tab's content.
-
-
-                        </p>
-                      </div>
-                      <div id="tab2" class="tab-content">
-                        <p>Content for Filters. This is the second tab's content.</p>
-                      </div>
-                      <div id="tab3" class="tab-content">
-                        <p>Content for Events. This is the third tab's content.</p>
-                      </div>
-                      <div id="tab4" class="tab-content">
-                        <p>Content for Insights. This is the fourth tab's content.</p>
-                      </div>
-                    </div>
-                  </div>
-              </section>
+            <div class="panel-content">
+              Place your panel content here...
             </div>
-            <!-- <div class="panel-footer">
-                        Footer for Pool 3
-                        </div> -->
-            <button class="arrow-btn left" onclick="togglePanel('pool2')">←</button>
           </div>
         </section>
       </div>
     </div>
-    <!-- / Content here -->
-    <!-- Page footer -->
-    <footer id="main-footer">
-      <section class="row-fluid">
-        <div class="span2">
-          <div style="
-                width: 100%;
-                text-align: left;
-                margin-top: 5px;
-                margin-left: 10px;
-              ">
-            <img align="left" src="./unibox_files/logo.png" height="50px" title="" style="opacity: 0.25"
-              data-original-title="MassProspecting" />
-          </div>
-          <!--
-                     <br/><br/>
-                     <div style='width:100%; text-align:left; margin-top:5px; margin-left:10px;'>
-                     	<a target='_window' style='text-decoration:none;font-size:18px;margin-right:5px;width:24px;' title='Follow Us on Facebook' href='https://www.facebook.com/groups/560001971837935'><i class='icon-facebook'></i></a>
-                     	<a target='_window' style='text-decoration:none;font-size:18px;margin-right:5px;width:24px;' title='Follow Us on GitHub' href='https://github.com/leandrosardi'><i class='icon-github'></i></a>
-                     </div>
-                     -->
-        </div>
-      </section>
-      <br />
-      <br />
-      <br />
-      <b>MassProspecting</b> - MySaaS Version:
-      <a href="https://github.com/leandrosardi/my.saas" target="_window">1.7.0</a><br />
-      Copyright © 2024
-      <a href="https://massprospecting.com/" target="_window">MassProspecting</a>, all rights reserved.<br />
-      <!--
-               Powered by <a href='https://github.com/leandrosardi/blackstack' target='_window'>BlackStack</a>.
-               -->
-      <a href="http://s01.massprospecting.com:3000/unibox#" class="pull-right" id="on-top-link">
-        On Top&nbsp;<i class="icon-chevron-up"></i> </a><br />
-    </footer>
-    <!-- / Page footer -->
-    <!-- / Page footer -->
   </section>
 </body>
 
