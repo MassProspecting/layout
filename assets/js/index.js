@@ -262,9 +262,9 @@ function togglePanel(panelId) {
 
     panel.style.display = "block";
 
-    arrow1.style.display = "none";
-    arrow2.style.display = "none";
-    arrow3.style.display = "none";
+    if (arrow1) arrow1.style.display = "none";
+    if (arrow2) arrow2.style.display = "none";
+    if (arrow3) arrow3.style.display = "none";
   } else {
     const pool1Visible = window.getComputedStyle(pool1).display !== "none";
     const pool2Visible = window.getComputedStyle(pool2).display !== "none";
