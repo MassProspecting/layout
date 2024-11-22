@@ -89,7 +89,7 @@ tagsJs = {
     add_tag: function(parent, h, opacity='1.0') {
         let id_lead = parent.data('id-lead');
         // 
-        let div = document.querySelector('div.div-tag-lists[data-id-lead="'+id_lead+'"]');
+        let div = document.querySelector('div.div-tags[data-id-lead="'+id_lead+'"]');
         // remove '<i>' element with innert text 'No tag lists found' from the div content
         $('i:contains("No tag lists found")').remove();
         // create the li element, with hand cursor
@@ -138,13 +138,13 @@ li.style.opacity = '0.5';
             let icon = document.querySelector('i[data-id-tag-list="'+h.id+'"][data-id-lead="'+id_lead+'"]');
             // if the icon is green, change it to gray
             if ($(li).attr('data-belonging') == 'true') {
-            icon.setAttribute('style', 'color: gray');
-            icon.setAttribute('class', 'icon-check-empty');
-            li.setAttribute('data-belonging', 'false');
+                icon.setAttribute('style', 'color: gray');
+                icon.setAttribute('class', 'icon-check-empty');
+                li.setAttribute('data-belonging', 'false');
             } else {
-            icon.setAttribute('style', 'color: green');
-            icon.setAttribute('class', 'icon-check');
-            li.setAttribute('data-belonging', 'true');
+                icon.setAttribute('style', 'color: green');
+                icon.setAttribute('class', 'icon-check');
+                li.setAttribute('data-belonging', 'true');
             }
             // JavaScript, stop additional event listeners
             // reference: https://www.w3schools.com/jsref/event_stopimmediatepropagation.asp
@@ -152,31 +152,43 @@ li.style.opacity = '0.5';
         });
     },
 
-    init: function() {
+    draw: function(parent) {
+        let id_lead = parent.data('id-lead');
+        
         // en endit any textfield inside a ul,
         // enable/disable the add button depending on the value of the textfield
         // by calling function tagsJs.enable_add_button(parent)
-        $('ul.ul-tags').on('keyup', 'input.input-tags', function() {
+        $('ul[data-id-lead="'+id_lead+'"].ul-tags').on('keyup', 'input.input-tags', function() {
             tagsJs.enable_add_button($(this).closest('ul'));
         });
 
+        // when click on .btn-tag-lists, set focus on input
+        $('button[data-id-lead="'+id_lead+'"].btn-tag-lists').click(function(e) {
+            let id_lead = $(this).data('id-lead');
+            let input = document.querySelector('input[data-id-lead="'+id_lead+'"].input-tags');
+            setTimeout(() => {
+                $(input).focus();
+            }, 0); // Add a minimal delay
+        });
+
+
         // avoid to close the ul when click on the input box
-        $('input.input-tags').click(function(e) {
+        $('input[data-id-lead="'+id_lead+'"].input-tags').click(function(e) {
             // JavaScript, stop additional event listeners
             // reference: https://www.w3schools.com/jsref/event_stopimmediatepropagation.asp
             e.stopImmediatePropagation();
         });
 
         // better user experience: when press ENTER on any .input-tags, for click on the add button with same data-id-lead.
-        $('input.input-tags').keypress(function(e) {
+        $('input[data-id-lead="'+id_lead+'"].input-tags').keypress(function(e) {
             if (e.which == 13) {
                 // find button .btn-create-tag-list with same data-id-lead value
                 let id_lead = $(this).attr('data-id-lead');
                 let button = $('button.btn-create-tag-list[data-id-lead="'+id_lead+'"]');
                 // if button is enabled
                 if ( button.prop('disabled') == false ) {
-                // click the button
-                button.click();
+                    // click the button
+                    button.click();
                 }
             }
         });  

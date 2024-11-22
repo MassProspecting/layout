@@ -288,21 +288,26 @@
             <div class="panel-content">
               Place your panel content here...
 
-              <div class="buttons">
-                <div class="btn-group">
-                <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown">
-                  <span class="caption badge badge-blue">1</span>
-                </button>
-                <ul class="dropdown-menu ul-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
-                    <div class="div-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
-                      <li class="divider"></li>
-                      <li>
-                        <p>Create New Tag</p>
-                        <input class="input input-medium input-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"><br> 
-                        <button class="btn btn-link btn-create-tag-list" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" disabled=""><i class="icon-plus"></i> Add</button>
-                      </li>
-                  </ul>
-                </div>      
+              <div class='tags' data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                <div class="buttons">
+                  <div class="btn-group">
+                  <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown">
+                    <span class="caption badge badge-blue">1</span>
+                  </button>
+                  <ul class="dropdown-menu ul-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                      <div class="div-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                        <div class="div-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
+                          <!-- tags added by javascript are placed here -->
+                        </div>
+                        <li class="divider"></li>
+                        <li>
+                          <p>Create New Tag</p>
+                          <input class="input input-medium input-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"><br> 
+                          <button class="btn btn-link btn-create-tag-list" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" disabled=""><i class="icon-plus"></i> Add</button>
+                        </li>
+                    </ul>
+                  </div>      
+                </div>
               </div>
               
             </div>
@@ -335,6 +340,23 @@
 
 <script>
   $(document).ready(function() {
-    tagsJs.init();
+    parent1 = $('ul[data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"]');
+
+    tagsJs.draw(parent1);
+
+    tagsJs.add_tag(parent1, {
+      id: '1',
+      name: 'Tag1',
+      belonging: true
+    });
+
+    tagsJs.add_tag(parent1, {
+      id: '2',
+      name: 'Tag2',
+      belonging: false
+    });
+
+    tagsJs.remove_tag(parent1, '1');
+
   }); // end of document.ready
 </script>
