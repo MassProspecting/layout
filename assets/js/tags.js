@@ -85,6 +85,19 @@ tagsJs = {
         li.remove();
     },
 
+    createElementFromHTML: function(htmlString) {
+        // Sanitize the HTML string to prevent XSS
+        const sanitizedHtml = DOMPurify.sanitize(htmlString);
+  
+        // Create a Range object
+        const range = document.createRange();
+  
+        // Parse the sanitized HTML string into a DocumentFragment
+        const documentFragment = range.createContextualFragment(sanitizedHtml);
+  
+        return documentFragment;
+    },
+
     // receive a hash descriptor of the tag related with the lead { id:, name:, belonging: }
     add_tag: function(parent, h, opacity='1.0') {
         let id_lead = parent.data('id-lead');
@@ -113,8 +126,11 @@ tagsJs = {
         }
         // add the icon and the name of the list to the anchor
         li.appendChild(icon);
-        li.appendChild(document.createTextNode(' '));
-        li.appendChild(document.createTextNode(h.name));
+
+        tagHtml = ` - <span class='badge badge-black'><i class='icon-circle' style='color:${h.color}'></i>${h.name}</span>`;
+        tag = tagsJs.createElementFromHTML(tagHtml);
+        li.append(tag);
+        
         // if the tag is deleted, then add a "deleted" label
         if (h.deleted === true) {
             li.appendChild(document.createTextNode(' (deleted)'));
@@ -155,6 +171,35 @@ li.style.opacity = '0.5';
     draw: function(parent) {
         let id_lead = parent.data('id-lead');
         
+        const tagsHtml = `
+            <div class="tags" data-id-lead="${id_lead}">
+                <div class="buttons">
+                    <div class="btn-group">
+                        <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="${id_lead}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="caption badge badge-blue">1</span>
+                            Tags
+                        </button>
+                        <ul class="dropdown-menu ul-tags" data-id-lead="${id_lead}">
+                            <li class="div-tag-lists" data-id-lead="${id_lead}">
+                                <div class="div-tags" data-id-lead="${id_lead}">
+                                    <!-- tags added by JavaScript are placed here -->
+                                </div>
+                            </li>
+                            <li class="divider"></li>
+                            <li>
+                                <p>Create New Tag</p>
+                                <input type="text" class="input input-medium input-tags" data-id-lead="${id_lead}" placeholder="Enter tag name"><br> 
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="${id_lead}" disabled>
+                                    <i class="icon-plus"></i> Add
+                                </button>
+                            </li>
+                        </ul>
+                    </div>      
+                </div>
+            </div>
+        `;
+        parent.append(tagsHtml);
+
         // en endit any textfield inside a ul,
         // enable/disable the add button depending on the value of the textfield
         // by calling function tagsJs.enable_add_button(parent)

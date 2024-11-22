@@ -46,7 +46,8 @@
   <script src="./assets/js/awesomplete.min.js" type="text/javascript"></script>
   <script src="./assets/js/adminflare.min.js" type="text/javascript"></script>
 
-  <script src="./assets/js/tags.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/2.3.10/purify.min.js"></script>
+<script src="./assets/js/tags.js" type="text/javascript"></script>
 
   <!-- TODO: Getting javascript error when enable this line.
          <script src="/landing/javascripts/ajax_status-1.0.1.min.js" type="text/javascript"></script>
@@ -289,25 +290,7 @@
               Place your panel content here...
 
               <div class='tags' data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
-                <div class="buttons">
-                  <div class="btn-group">
-                  <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown">
-                    <span class="caption badge badge-blue">1</span>
-                  </button>
-                  <ul class="dropdown-menu ul-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
-                      <div class="div-tag-lists" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
-                        <div class="div-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe">
-                          <!-- tags added by javascript are placed here -->
-                        </div>
-                        <li class="divider"></li>
-                        <li>
-                          <p>Create New Tag</p>
-                          <input class="input input-medium input-tags" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"><br> 
-                          <button class="btn btn-link btn-create-tag-list" data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" disabled=""><i class="icon-plus"></i> Add</button>
-                        </li>
-                    </ul>
-                  </div>      
-                </div>
+                <!-- call tagsJs.draw -->
               </div>
               
             </div>
@@ -340,19 +323,27 @@
 
 <script>
   $(document).ready(function() {
-    parent1 = $('ul[data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"]');
-
+    parent1 = $('div.tags[data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe"]');
     tagsJs.draw(parent1);
 
     tagsJs.add_tag(parent1, {
       id: '1',
       name: 'Tag1',
+      color: 'blue',
       belonging: true
     });
 
     tagsJs.add_tag(parent1, {
       id: '2',
       name: 'Tag2',
+      color: '#00dd00',
+      belonging: false
+    });
+
+    tagsJs.add_tag(parent1, {
+      id: '3',
+      name: 'Tag3',
+      color: 'rgb(255,0,0)',
       belonging: false
     });
 
