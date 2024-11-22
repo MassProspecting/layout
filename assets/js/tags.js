@@ -2,7 +2,7 @@ tagsJs = {
     // increase the number of tags with belonging='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
     increase_tag_button: function(parent) {
-        let id_lead = parent.data('id-lead');
+        let id_lead = parent.data('id');
         // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
         // get the value of the span
         // update the text into the span, with the number of tags with belonging='true'
@@ -21,7 +21,7 @@ tagsJs = {
     // decrease the number of tags with belonging='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
     decrease_tag_button: function(parent) {
-        let id_lead = parent.data('id-lead');
+        let id_lead = parent.data('id');
         // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
         // get the value of the span
         // update the text into the span, with the number of tags with belonging='true'
@@ -39,46 +39,44 @@ tagsJs = {
 
     // enable/disable the add button depending on the value of the textfield
     enable_add_button: function(parent) {
-        let id_lead = parent.data('id-lead');
+        let id_lead = parent.data('id');
         // find the ul with this data-id='id_lead'
         let ul = document.querySelector('ul.ul-tags[data-id="'+id_lead+'"]');
         // find the button inside the ul
         let button = ul.querySelector('button.btn-create-tag-list');
         // find the textfield inside the ul
         let textfield = ul.querySelector('input.input-tags');
+        // remove any span just below the textfield
+        let span = ul.querySelectorAll('span:not(.badge)');
         // if the textfield is empty, disable the button
         if (textfield.value.trim() == '') {
             // disable the button
             button.disabled = true;
             // remove any span just below the textfield
-            let span = ul.querySelector('span');
             if (span) {
-                // remove span
                 span.remove();
             }
         } else {
             // if the name already exists in the list, disabe the button
             if (ul.querySelector('li[data-name="'+textfield.value.trim()+'"]')) {
-            // disable the button
-            button.disabled = true;
-            // show a red text 'Name already exists' just below the textfield
-            textfield.parentNode.insertBefore(document.createElement('span'), textfield.nextSibling).innerHTML = 'Name already exists';
+                // disable the button
+                button.disabled = true;
+                // show a red text 'Name already exists' just below the textfield
+                textfield.parentNode.insertBefore(document.createElement('span'), textfield.nextSibling).innerHTML = 'Name already exists';
             } else {
             // enable the button
-            button.disabled = false;
-            // remove any span just below the textfield
-            let span = ul.querySelector('span');
-            if (span) {
-                // remove span
-                span.remove();
-            }
+                button.disabled = false;
+                // remove any span just below the textfield
+                if (span) {
+                    span.remove();
+                }
             }
         }
     },
 
     // remove an li element from the ul with data-id='id_lead' and data-id-tag-list='id_tag'
     remove_tag: function(parent, id_tag) {
-        let id_lead = parent.data('id-lead');
+        let id_lead = parent.data('id');
         // find the il with this data-id='id_lead' and data-id-tag='id_tag'
         let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
         // delete the element
@@ -100,7 +98,7 @@ tagsJs = {
 
     // receive a hash descriptor of the tag related with the lead { id:, name:, belonging: }
     add_tag: function(parent, h, opacity='1.0') {
-        let id_lead = parent.data('id-lead');
+        let id_lead = parent.data('id');
         // 
         let div = document.querySelector('div.div-tags[data-id="'+id_lead+'"]');
         // remove '<i>' element with innert text 'No tag lists found' from the div content
@@ -168,8 +166,8 @@ li.style.opacity = '0.5';
         });
     },
 
-    draw: function(parent) {
-        let id_lead = parent.data('id-lead');
+    draw: function(parent, h) {
+        let id_lead = parent.data('id');
         
         const tagsHtml = `
             <div class="tags" data-id="${id_lead}">
@@ -199,6 +197,12 @@ li.style.opacity = '0.5';
         `;
         parent.append(tagsHtml);
 
+        // store function to trigger when the user open the list
+        if (h['on_expand'] != null) {
+            let o = $('button.btn-tag-lists[data-id="'+id_lead+'"]');
+            o.on('click', h['on_expand']);
+        }
+
         // en endit any textfield inside a ul,
         // enable/disable the add button depending on the value of the textfield
         // by calling function tagsJs.enable_add_button(parent)
@@ -208,7 +212,7 @@ li.style.opacity = '0.5';
 
         // when click on .btn-tag-lists, set focus on input
         $('button[data-id="'+id_lead+'"].btn-tag-lists').click(function(e) {
-            let id_lead = $(this).data('id-lead');
+            let id_lead = $(this).data('id');
             let input = document.querySelector('input[data-id="'+id_lead+'"].input-tags');
             setTimeout(() => {
                 $(input).focus();
@@ -221,6 +225,26 @@ li.style.opacity = '0.5';
             // JavaScript, stop additional event listeners
             // reference: https://www.w3schools.com/jsref/event_stopimmediatepropagation.asp
             e.stopImmediatePropagation();
+        });
+
+        // call add tag event
+        $('button.btn-create-tag-list[data-id="'+id_lead+'"]').click(function(e) {
+            let s = $('input[data-id="'+id_lead+'"].input-tags').val();
+
+            // store function to trigger when the user adds tag
+            if (h['on_create_tag'] != null) {
+                h['on_create_tag'](s);
+            } else {
+                tagsJs.add_tag(parent, {
+                    id: s,
+                    name: s,
+                    color: 'gray',
+                    belonging: false              
+                });
+            }
+
+            // clear content of the input.
+            $('input[data-id="'+id_lead+'"].input-tags').val('');
         });
 
         // better user experience: when press ENTER on any .input-tags, for click on the add button with same data-id.
@@ -236,5 +260,6 @@ li.style.opacity = '0.5';
                 }
             }
         });  
+
     },
 }; 

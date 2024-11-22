@@ -324,13 +324,20 @@
 <script>
   $(document).ready(function() {
     parent1 = $('div.tags[data-id="lead-123"]');
-    tagsJs.draw(parent1);
+    tagsJs.draw(parent1, {
+      on_expand: function() {
+        console.log('on_expand');
+      },
+      //on_add_tab: function(s) {
+      //  console.log('on_add_tag');
+      //},
+    });
 
     tagsJs.add_tag(parent1, {
       id: '1',
       name: 'Tag1',
       color: 'blue',
-      belonging: true
+      belonging: true,
     });
 
     tagsJs.add_tag(parent1, {
