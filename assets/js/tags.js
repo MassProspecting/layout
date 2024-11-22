@@ -1,12 +1,12 @@
 tagsJs = {
     // increase the number of tags with belonging='true' in the tag button
-    // with data-id-lead='id_lead'. Update the color of the badge.
+    // with data-id='id_lead'. Update the color of the badge.
     increase_tag_button: function(parent) {
         let id_lead = parent.data('id-lead');
-        // get the span.caption inside the button.btn-tag-lists with data-id-lead='id_lead'
+        // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
         // get the value of the span
         // update the text into the span, with the number of tags with belonging='true'
-        let span = $('button.btn-tag-lists[data-id-lead="'+id_lead+'"] span.caption');
+        let span = $('button.btn-tag-lists[data-id="'+id_lead+'"] span.caption');
         let value = parseInt(span.html())+1;            
         span.html(value.toString());    
         if (value == 0) {
@@ -19,13 +19,13 @@ tagsJs = {
     },
 
     // decrease the number of tags with belonging='true' in the tag button
-    // with data-id-lead='id_lead'. Update the color of the badge.
+    // with data-id='id_lead'. Update the color of the badge.
     decrease_tag_button: function(parent) {
         let id_lead = parent.data('id-lead');
-        // get the span.caption inside the button.btn-tag-lists with data-id-lead='id_lead'
+        // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
         // get the value of the span
         // update the text into the span, with the number of tags with belonging='true'
-        let span = $('button.btn-tag-lists[data-id-lead="'+id_lead+'"] span.caption');
+        let span = $('button.btn-tag-lists[data-id="'+id_lead+'"] span.caption');
         let value = parseInt(span.html())-1;            
         span.html(value.toString());    
         if (value == 0) {
@@ -40,8 +40,8 @@ tagsJs = {
     // enable/disable the add button depending on the value of the textfield
     enable_add_button: function(parent) {
         let id_lead = parent.data('id-lead');
-        // find the ul with this data-id-lead='id_lead'
-        let ul = document.querySelector('ul.ul-tags[data-id-lead="'+id_lead+'"]');
+        // find the ul with this data-id='id_lead'
+        let ul = document.querySelector('ul.ul-tags[data-id="'+id_lead+'"]');
         // find the button inside the ul
         let button = ul.querySelector('button.btn-create-tag-list');
         // find the textfield inside the ul
@@ -76,11 +76,11 @@ tagsJs = {
         }
     },
 
-    // remove an li element from the ul with data-id-lead='id_lead' and data-id-tag-list='id_tag'
+    // remove an li element from the ul with data-id='id_lead' and data-id-tag-list='id_tag'
     remove_tag: function(parent, id_tag) {
         let id_lead = parent.data('id-lead');
-        // find the il with this data-id-lead='id_lead' and data-id-tag='id_tag'
-        let li = document.querySelector('li[data-id-lead="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
+        // find the il with this data-id='id_lead' and data-id-tag='id_tag'
+        let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
         // delete the element
         li.remove();
     },
@@ -102,13 +102,13 @@ tagsJs = {
     add_tag: function(parent, h, opacity='1.0') {
         let id_lead = parent.data('id-lead');
         // 
-        let div = document.querySelector('div.div-tags[data-id-lead="'+id_lead+'"]');
+        let div = document.querySelector('div.div-tags[data-id="'+id_lead+'"]');
         // remove '<i>' element with innert text 'No tag lists found' from the div content
         $('i:contains("No tag lists found")').remove();
         // create the li element, with hand cursor
         let li = document.createElement('li');
         li.setAttribute('data-id-tag-list', h.id);
-        li.setAttribute('data-id-lead', id_lead);
+        li.setAttribute('data-id', id_lead);
         li.setAttribute('data-name', h.name);
         li.setAttribute('data-belonging', h.belonging.toString());
         li.style.cursor = 'pointer';
@@ -116,7 +116,7 @@ tagsJs = {
         // create an icon-ok element, with style green text color
         let icon = document.createElement('i');
         icon.setAttribute('data-id-tag-list', h.id);
-        icon.setAttribute('data-id-lead', id_lead);
+        icon.setAttribute('data-id', id_lead);
         if ( h.belonging ) { 
             icon.setAttribute('style', 'color: green');
             icon.setAttribute('class', 'icon-check');
@@ -151,7 +151,7 @@ if ($(li).attr('data-belonging') == 'true') {
 li.style.opacity = '0.5';
 // call the ajax
             // find the icon about this tag list and this lead
-            let icon = document.querySelector('i[data-id-tag-list="'+h.id+'"][data-id-lead="'+id_lead+'"]');
+            let icon = document.querySelector('i[data-id-tag-list="'+h.id+'"][data-id="'+id_lead+'"]');
             // if the icon is green, change it to gray
             if ($(li).attr('data-belonging') == 'true') {
                 icon.setAttribute('style', 'color: gray');
@@ -172,23 +172,23 @@ li.style.opacity = '0.5';
         let id_lead = parent.data('id-lead');
         
         const tagsHtml = `
-            <div class="tags" data-id-lead="${id_lead}">
+            <div class="tags" data-id="${id_lead}">
                 <div class="buttons">
                     <div class="btn-group">
-                        <button class="btn btn-link dropdown-toggle btn-tag-lists" data-id-lead="${id_lead}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn btn-link dropdown-toggle btn-tag-lists" data-id="${id_lead}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="caption badge badge-blue">1</span>
                         </button>
-                        <ul class="dropdown-menu ul-tags" data-id-lead="${id_lead}">
-                            <li class="div-tag-lists" data-id-lead="${id_lead}">
-                                <div class="div-tags" data-id-lead="${id_lead}">
+                        <ul class="dropdown-menu ul-tags" data-id="${id_lead}">
+                            <li class="div-tag-lists" data-id="${id_lead}">
+                                <div class="div-tags" data-id="${id_lead}">
                                     <!-- tags added by JavaScript are placed here -->
                                 </div>
                             </li>
                             <li class="divider"></li>
                             <li>
                                 <p>Create New Tag</p>
-                                <input type="text" class="input input-medium input-tags" data-id-lead="${id_lead}" placeholder="Enter tag name"><br> 
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="${id_lead}" disabled>
+                                <input type="text" class="input input-medium input-tags" data-id="${id_lead}" placeholder="Enter tag name"><br> 
+                                <button class="btn btn-link btn-create-tag-list" data-id="${id_lead}" disabled>
                                     <i class="icon-plus"></i> Add
                                 </button>
                             </li>
@@ -202,14 +202,14 @@ li.style.opacity = '0.5';
         // en endit any textfield inside a ul,
         // enable/disable the add button depending on the value of the textfield
         // by calling function tagsJs.enable_add_button(parent)
-        $('ul[data-id-lead="'+id_lead+'"].ul-tags').on('keyup', 'input.input-tags', function() {
+        $('ul[data-id="'+id_lead+'"].ul-tags').on('keyup', 'input.input-tags', function() {
             tagsJs.enable_add_button($(this).closest('ul'));
         });
 
         // when click on .btn-tag-lists, set focus on input
-        $('button[data-id-lead="'+id_lead+'"].btn-tag-lists').click(function(e) {
+        $('button[data-id="'+id_lead+'"].btn-tag-lists').click(function(e) {
             let id_lead = $(this).data('id-lead');
-            let input = document.querySelector('input[data-id-lead="'+id_lead+'"].input-tags');
+            let input = document.querySelector('input[data-id="'+id_lead+'"].input-tags');
             setTimeout(() => {
                 $(input).focus();
             }, 0); // Add a minimal delay
@@ -217,18 +217,18 @@ li.style.opacity = '0.5';
 
 
         // avoid to close the ul when click on the input box
-        $('input[data-id-lead="'+id_lead+'"].input-tags').click(function(e) {
+        $('input[data-id="'+id_lead+'"].input-tags').click(function(e) {
             // JavaScript, stop additional event listeners
             // reference: https://www.w3schools.com/jsref/event_stopimmediatepropagation.asp
             e.stopImmediatePropagation();
         });
 
-        // better user experience: when press ENTER on any .input-tags, for click on the add button with same data-id-lead.
-        $('input[data-id-lead="'+id_lead+'"].input-tags').keypress(function(e) {
+        // better user experience: when press ENTER on any .input-tags, for click on the add button with same data-id.
+        $('input[data-id="'+id_lead+'"].input-tags').keypress(function(e) {
             if (e.which == 13) {
-                // find button .btn-create-tag-list with same data-id-lead value
-                let id_lead = $(this).attr('data-id-lead');
-                let button = $('button.btn-create-tag-list[data-id-lead="'+id_lead+'"]');
+                // find button .btn-create-tag-list with same data-id value
+                let id_lead = $(this).attr('data-id');
+                let button = $('button.btn-create-tag-list[data-id="'+id_lead+'"]');
                 // if button is enabled
                 if ( button.prop('disabled') == false ) {
                     // click the button
