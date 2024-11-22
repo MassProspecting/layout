@@ -8,7 +8,7 @@ gtag("config", "G-XHCG5LE744");
 //////////////////////////////////////////////////////////
 
 DEMO_CURRENT_THEME = "black-blue";
-
+/*
 // Include Bootstrap stylesheet
 document.write(
   '<link href="/core/css/' +
@@ -57,12 +57,11 @@ document.write(
 document.write(
   '<link href="/core/css/dialog.css" media="all" rel="stylesheet" type="text/css" id="ajax-dialog-css">'
 );
-
 // Include CSS files of extensions
-
 document.write(
   '<link href="/filtersjs/css/filters.css" media="all" rel="stylesheet" type="text/css">'
 );
+*/
 
 /////////////////////////////////////////////////////////////////
 
