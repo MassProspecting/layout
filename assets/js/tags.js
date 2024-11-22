@@ -1,40 +1,20 @@
 tagsJs = {
     // increase the number of tags with belonging='true' in the tag button
     // with data-id='id_lead'. Update the color of the badge.
-    increase_tag_button: function(parent) {
+    set_text: function(parent, s) {
         let id_lead = parent.data('id');
         // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
         // get the value of the span
         // update the text into the span, with the number of tags with belonging='true'
         let span = $('button.btn-tag-lists[data-id="'+id_lead+'"] span.caption');
-        let value = parseInt(span.html())+1;            
-        span.html(value.toString());    
-        if (value == 0) {
-            span.removeClass('badge-blue');
-            span.addClass('badge-gray');
-        } else {
-            span.removeClass('badge-gray');
-            span.addClass('badge-blue');
-        }
+        span.html(s);
     },
 
-    // decrease the number of tags with belonging='true' in the tag button
-    // with data-id='id_lead'. Update the color of the badge.
-    decrease_tag_button: function(parent) {
+    // change the opacity of a tag 
+    set_tag_opacity: function(parent, id_tag, x) {
         let id_lead = parent.data('id');
-        // get the span.caption inside the button.btn-tag-lists with data-id='id_lead'
-        // get the value of the span
-        // update the text into the span, with the number of tags with belonging='true'
-        let span = $('button.btn-tag-lists[data-id="'+id_lead+'"] span.caption');
-        let value = parseInt(span.html())-1;            
-        span.html(value.toString());    
-        if (value == 0) {
-            span.removeClass('badge-blue');
-            span.addClass('badge-gray');
-        } else {
-            span.removeClass('badge-gray');
-            span.addClass('badge-blue');
-        }
+        let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
+        li.style.opacity = x
     },
 
     // enable/disable the add button depending on the value of the textfield
@@ -54,7 +34,7 @@ tagsJs = {
             button.disabled = true;
             // remove any span just below the textfield
             if (span) {
-                span.remove();
+                $(span).remove();
             }
         } else {
             // if the name already exists in the list, disabe the button
@@ -68,7 +48,7 @@ tagsJs = {
                 button.disabled = false;
                 // remove any span just below the textfield
                 if (span) {
-                    span.remove();
+                    $(span).remove();
                 }
             }
         }
@@ -97,7 +77,7 @@ tagsJs = {
     },
 
     // receive a hash descriptor of the tag related with the lead { id:, name:, belonging: }
-    add_tag: function(parent, h, opacity='1.0') {
+    add_tag: function(parent, h) {
         let id_lead = parent.data('id');
         // 
         let div = document.querySelector('div.div-tags[data-id="'+id_lead+'"]');
@@ -110,7 +90,6 @@ tagsJs = {
         li.setAttribute('data-name', h.name);
         li.setAttribute('data-belonging', h.belonging.toString());
         li.style.cursor = 'pointer';
-        li.style.opacity = opacity;
         // create an icon-ok element, with style green text color
         let icon = document.createElement('i');
         icon.setAttribute('data-id-tag-list', h.id);
@@ -145,8 +124,6 @@ if ($(li).attr('data-belonging') == 'true') {
     // add to the list
     access_point = 'add_tag';
 }
-// set the li with 50% opacity, to show that it is being processed
-li.style.opacity = '0.5';
 // call the ajax
             // find the icon about this tag list and this lead
             let icon = document.querySelector('i[data-id-tag-list="'+h.id+'"][data-id="'+id_lead+'"]');
@@ -169,12 +146,15 @@ li.style.opacity = '0.5';
     draw: function(parent, h) {
         let id_lead = parent.data('id');
         
+        text = 'tags';
+        if (h['text']) text = h['text'];
+        
         const tagsHtml = `
             <div class="tags" data-id="${id_lead}">
                 <div class="buttons">
                     <div class="btn-group">
                         <button class="btn btn-link dropdown-toggle btn-tag-lists" data-id="${id_lead}" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="caption badge badge-blue">1</span>
+                            <span class="caption badge badge-blue">${text}</span>
                         </button>
                         <ul class="dropdown-menu ul-tags" data-id="${id_lead}">
                             <li class="div-tag-lists" data-id="${id_lead}">
@@ -241,6 +221,8 @@ li.style.opacity = '0.5';
                     color: 'gray',
                     belonging: false              
                 });
+                // stop the event scalation
+                e.stopImmediatePropagation();
             }
 
             // clear content of the input.

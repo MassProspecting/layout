@@ -324,13 +324,54 @@
 <script>
   $(document).ready(function() {
     parent1 = $('div.tags[data-id="lead-123"]');
+    
     tagsJs.draw(parent1, {
+      text: '3 tags',
       on_expand: function() {
         console.log('on_expand');
       },
-      //on_add_tab: function(s) {
-      //  console.log('on_add_tag');
-      //},
+      on_create_tag: function(s) {
+        console.log('on_create_tag: ' + s);
+
+        // create the tag
+        tagsJs.add_tag(parent1, {
+          id: s,
+          name: s,
+          color: 'gray',
+          belonging: false              
+        });
+
+        // set the tag opacity in 0.5
+        tagsJs.set_tag_opacity(parent1, s, 0.5);
+
+        // do the AJAX call
+        $.ajax({
+            url: '/ajax/leads/create_and_add_tag.json',
+            type: 'POST',
+            data: {
+                id_lead: 'lead-123',
+                id_tag: s,
+            },
+            success: function(data) {
+                // parse JSON response
+                json = JSON.parse(data);
+                // validate json status
+                if (json.status != 'success') {
+                  // set the tag opacity back in 1
+                  tagsJs.set_tag_opacity(parent1, s, 1);
+                } else {
+                  console.log('AJAX Error: ' + json.status);
+                  // if an error happened, remove the tag
+                  tagsJs.remove_tag(parent1, s);
+                }
+            },
+            error: function(xhr, status, error) {
+                console.error('AJAX Error:', status, error);
+                // if an error happened, remove the tag
+                tagsJs.remove_tag(parent1, s);
+            }
+        });
+      },
     });
 
     tagsJs.add_tag(parent1, {
@@ -353,6 +394,10 @@
       color: 'rgb(255,0,0)',
       belonging: false
     });
+
+    tagsJs.set_text(parent1, 'click to edit tag');
+
+    tagsJs.set_tag_opacity(parent1, '2', 0.5);
 
     //tagsJs.remove_tag(parent1, '1');
 
