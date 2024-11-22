@@ -394,9 +394,11 @@
       checked: true,
       on_select_tag: function() {
         console.log('on_select_tag: 1');
+        tagsJs.check_tag(parent1, '1');
       },
       on_unselect_tag: function() {
         console.log('on_unselect_tag: 1');
+        tagsJs.uncheck_tag(parent1, '1');
       },
     });
 

@@ -80,8 +80,19 @@ tagsJs = {
         let id_lead = parent.data('id');
         let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
         let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
+        icon.setAttribute('style', 'color: green');
+        icon.setAttribute('class', 'icon-check');
+        li.setAttribute('data-checked', 'true');    
+    },
 
-    }
+    uncheck_tag: function(parent, id_tag) {
+        let id_lead = parent.data('id');
+        let li = document.querySelector('li[data-id="'+id_lead+'"][data-id-tag-list="'+id_tag+'"]');
+        let icon = document.querySelector('i[data-id-tag-list="'+id_tag+'"][data-id="'+id_lead+'"]');
+        icon.setAttribute('style', 'color: gray');
+        icon.setAttribute('class', 'icon-check-empty');
+        li.setAttribute('data-checked', 'false');
+    },
 
     // receive a hash descriptor of the tag related with the lead { id:, name:, checked: }
     add_tag: function(parent, h) {
@@ -123,24 +134,18 @@ tagsJs = {
         $(div).append(li);
         // on click on the li, call ajax to add/remove the lead from/to the tag list
         li.addEventListener('click', function(e) {
-            // find the icon about this tag list and this lead
-            let icon = document.querySelector('i[data-id-tag-list="'+h.id+'"][data-id="'+id_lead+'"]');
             // if the icon is green, change it to gray
             if ($(li).attr('data-checked') == 'true') {
                 if (h['on_unselect_tag']) {
                     h['on_unselect_tag']();
                 } else {
-                    icon.setAttribute('style', 'color: gray');
-                    icon.setAttribute('class', 'icon-check-empty');
-                    li.setAttribute('data-checked', 'false');
+                    tagsJs.uncheck_tag(parent, h.id);
                 }
             } else {
                 if (h['on_select_tag']) {
                     h['on_select_tag']();
                 } else {
-                    icon.setAttribute('style', 'color: green');
-                    icon.setAttribute('class', 'icon-check');
-                    li.setAttribute('data-checked', 'true');    
+                    tagsJs.check_tag(parent, h.id);
                 }
             }
             // JavaScript, stop additional event listeners
