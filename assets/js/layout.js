@@ -76,7 +76,7 @@ function togglePanel(panelId) {
       arrow3.style.display = "none";
     }
   }
-
+  
   adjustLayout();
 }
 
@@ -85,6 +85,7 @@ function openPanel(panelId) {
   panel.style.display = "block";
   adjustLayout();
 }
+
 function adjustLayout() {
   const sidebar = document.getElementById("pool1");
   const chatSection = document.getElementById("pool2");
@@ -125,8 +126,9 @@ function adjustLayout() {
   }
 }
 
-document.querySelectorAll(".tab-button").forEach((button) => {
-  button.addEventListener("click", () => {
+$(document).ready(function() {
+  $(".tab-button").click(function() {
+    const button = this;
     const tabContainer = button.closest(".tab-container");
     const tabId = button.getAttribute("data-tab");
 
@@ -143,4 +145,3 @@ document.querySelectorAll(".tab-button").forEach((button) => {
     tabContainer.querySelector(`#${tabId}`).classList.add("active");
   });
 });
-
