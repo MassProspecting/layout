@@ -337,8 +337,9 @@
 				caption: 'Add Contact Information',
         textarea: true,
         calendar: true,
+        show_date: true,
 				trash_enabled: true, // default: false
-				copy_enabled: true, // default: false
+				copy_enabled: false, // default: false
 				strikethrough_enabled: true, // default: false
 				buttons: [{
 					code: '1',
@@ -352,12 +353,15 @@
 				items: [{
 					id: 'a',
 					button_code: '1',
-					value: 'leandro@connectionsphere.com',
+					value: 'Call the lead for his BirthDay!',
+          date: '2025-01-01',
 					strikethrough: true
 				}, { 
 					id: 'b',
 					button_code: '1',
 					value: '555 555-5555',
+					value: 'Send an offer!',
+          date: '2025-01-03',
 					strikethrough: false
 				}],
         /*
