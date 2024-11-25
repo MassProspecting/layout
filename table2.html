@@ -283,6 +283,12 @@
                   <table class="table table-bordered" style=" table-layout: fixed; width: 100%;">
                     <thead class="table-light position-sticky" style="top: -1px; z-index: 1020;">
                       <tr>
+
+                        <th scope="col" style="width: 3%;">
+                          <input type="checkbox" class="checkbox select-all-rows" data-input-id="ids"
+                            data-rows-group-id="main">
+
+                        </th>
                         <th scope="col" style="width: 3%;">ID</th>
                         <th scope="col" style="width: 20%;">Character</th>
                         <th scope="col" style="width: 15%;">Time Zone</th>
@@ -293,8 +299,12 @@
                         <th scope="col" style="width: 5%;">Actions</th> <!-- New Actions Column -->
                       </tr>
                     </thead>
-                    <tbody style="background-color: white;">
+                    <tbody>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -314,14 +324,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -334,8 +345,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -343,6 +353,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -353,6 +369,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -372,14 +392,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -392,8 +413,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -401,6 +421,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -411,6 +437,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -430,14 +460,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -450,8 +481,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -459,6 +489,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -469,6 +505,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -488,14 +528,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -508,8 +549,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -517,6 +557,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -527,6 +573,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -546,14 +596,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -566,8 +617,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -575,6 +625,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -585,6 +641,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -604,14 +664,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -624,8 +685,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -633,6 +693,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -643,6 +709,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -662,14 +732,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -682,8 +753,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -691,6 +761,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -701,6 +777,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -720,14 +800,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -740,8 +821,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -749,6 +829,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -759,6 +845,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -778,14 +868,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -798,8 +889,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -807,6 +897,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -817,6 +913,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -836,14 +936,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -856,8 +957,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -865,6 +965,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -875,6 +981,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -894,14 +1004,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -914,8 +1025,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -923,6 +1033,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -933,6 +1049,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -952,14 +1072,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -972,8 +1093,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -981,6 +1101,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -991,6 +1117,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -1010,14 +1140,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -1030,8 +1161,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -1039,6 +1169,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -1049,6 +1185,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -1068,14 +1208,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -1088,8 +1229,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -1097,6 +1237,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -1107,6 +1253,10 @@
                         </td>
                       </tr>
                       <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
                         <td data-label="#">1</td>
                         <td data-label="Profile" class="profile-cell">
                           <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
@@ -1126,14 +1276,15 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
+
+
+
                         <td data-label="Tags">
                           <div class="btn-group">
-                            <button class="btn btn-gray dropdown-toggle btn-tag-lists" data-id-lead="example-id"
-                              data-toggle="dropdown"
-                              style="border-radius: 20px; padding: 4px 12px; font-size: 0px; background-color: #f1f1f1; border: 1px solid #ccc; transition: all 0.3s ease-in-out;">
-                              <span class="caption badge badge-blue"
-                                style="background-color: #007bff; padding: 5px 10px; border-radius: 12px; font-weight: 500;">1</span>
-                              <span class="caret" style="font-size: 12px; margin-left: 5px;"></span>
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
                             </button>
                             <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
                               style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
@@ -1146,8 +1297,7 @@
                                 <input class="input input-medium input-tags" data-id-lead="example-id"
                                   style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
                                   placeholder="Enter tag..."><br>
-                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id"
-                                  style="font-size: 14px; color: #007bff; padding: 8px; border-radius: 4px; transition: all 0.3s ease-in-out;">
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
                                   <i class="icon-plus"></i> Add
                                 </button>
                               </li>
@@ -1155,6 +1305,12 @@
                           </div>
 
                         </td>
+
+
+
+
+
+
                         <td data-label="Actions">
 
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
@@ -1164,6 +1320,7 @@
 
                         </td>
                       </tr>
+
 
                     </tbody>
                   </table>
