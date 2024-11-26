@@ -81,6 +81,10 @@ table tbody tr.selected td:last-child {
   white-space: nowrap;
 }
 
+.user_list .table {
+  max-width: 1250px !important;
+}
+
 /* Dark Mode Bootstrap Add-on */
 /* General Dark Mode Colors */
 body.dark-mode {
