@@ -177,8 +177,8 @@
     </div>
   </header>
   <!-- / Main navigation bar -->
-  <!-- Left navigation panel -->
-  <nav id="left-panel" style="height: 100%; position: fixed; top: 0px; left: 0px">
+  <!-- Left navigation panel height: 100%;-->
+  <nav id="left-panel" style=" position: fixed; top: 0px; left: 0px">
     <div id="left-panel-content" style="overflow: hidden">
       <ul style="
             transition-property: -webkit-transform;
@@ -232,7 +232,7 @@
     <div class="span12" style="display: none;"></div>
   </section>
   <!-- Page content -->
-  <section class="row-fluid" style="">
+  <section class="row-fluid">
     <!-- Content here -->
 
     <!-- NavBar -->
@@ -257,7 +257,7 @@
         <!-- Pool 1 -->
 
         <!-- Pool 2 -->
-        <section id="pool2" name="pool2" class="col-6 panel ">
+        <section id="pool2" name="pool2" class="col-6 panel responsive-height-1">
           <div id="panel2_panel" class="pool2-panel">
             <div id="pool2_header" name="pool2_header" class="panel2-header">
               <div class="header-info">
@@ -277,9 +277,9 @@
                   <i class="fa-solid fa-arrow-left"></i>
                 </button> -->
             </div>
-            <div id="list_div" class="panel-content">
-              <section class="list">
-                <div class="table-responsive user_list">
+            <div id="list_div">
+              <section class="responsive-height-2" style="overflow: auto; max-height: fit-content;">
+                <div class="user_list">
                   <table class="table table-bordered table-striped table-condensed fix" width="3000px;">
                     <thead class="table-light position-sticky" style="top: -1px; z-index: 1020;">
                       <tr>

@@ -78,72 +78,75 @@ table tbody tr.selected td:last-child {
 
 .user_list {
   width: 100%;
-  overflow-x: auto;
+  /* overflow-x: auto; */
   /* white-space: nowrap; */
 }
-.user_list  td, th{
 
+.user_list td,
+th {
   white-space: nowrap;
 }
 
-.profile-cell{
-  width: 100% !important; 
+.profile-cell {
+  width: 100% !important;
 }
 
 @media screen and (max-width: 1300px) {
-  .name{
+  .name {
     white-space: nowrap;
     /* overflow: hidden;
     text-overflow: ellipsis; */
     font-size: 12px;
   }
-.profile-cell{
-  width: 160px !important; 
-}
-.profile-cell img {
-  margin-right: 5px;
-  border-radius: 50%;
-  width: 30px !important;
-  height: 30px !important;
-}
-}
 
-@media screen and (max-width: 1100px) {
-  
-.profile-cell{
-  width: 175px !important; 
-}
-
-}
-
-@media screen and (max-width: 1000px) {
-  .profile-cell{
-    width: 170px !important; 
+  .profile-cell {
+    width: 160px !important;
   }
-  }
-  @media screen and (max-width: 900px) {
-    .profile-cell{
-      width: 180px !important; 
-    }
-    }
 
-    @media screen and (max-width: 800px) {
-      .profile-cell{
-        width: 190px !important; 
-      }
-      }
-
-@media screen and (max-width: 768px) {
-  .profile-cell{
-    width: 100% !important; 
-  }
   .profile-cell img {
     margin-right: 5px;
     border-radius: 50%;
     width: 30px !important;
     height: 30px !important;
   }
+}
+
+@media screen and (max-width: 1100px) {
+  .profile-cell {
+    width: 175px !important;
   }
+}
+
+@media screen and (max-width: 1000px) {
+  .profile-cell {
+    width: 170px !important;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .profile-cell {
+    width: 180px !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .profile-cell {
+    width: 190px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .profile-cell {
+    width: 100% !important;
+  }
+
+  .profile-cell img {
+    margin-right: 5px;
+    border-radius: 50%;
+    width: 30px !important;
+    height: 30px !important;
+  }
+}
 
 /* .user_list .table {
   max-width: 1250px !important;
@@ -181,7 +184,7 @@ table tbody tr.selected td:last-child {
 /* General Dark Mode Colors */
 body.dark-mode {
   /* Background Image */
-  background: url('/core/images/blockquote-bg.png') no-repeat center center fixed;
+  background: url("/core/images/blockquote-bg.png") no-repeat center center fixed;
   background-size: cover;
   color: #f1f1f1;
   /* Ensure the background covers the entire viewport */
@@ -247,7 +250,6 @@ body.dark-mode {
 
 .dark-mode .btn-outline-primary:hover {
   background-color: rgba(42, 42, 42, 0.22) !important;
-  ;
   border-color: #666;
 }
 
@@ -699,7 +701,7 @@ table.fix td.fix {
   background: rgb(0, 0, 0) transparent;
   background-color: rgba(0, 0, 0, 0.6);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
-  -ms-filter: 'progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)';
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000)";
   color: white;
   font: 10px arial, san serif;
   text-align: left;
@@ -1135,7 +1137,7 @@ body.dark-mode #darkModeButton {
   position: relative;
   overflow: hidden;
   border: 1px solid #ddd;
-  height: 92vh;
+  /* height: 92vh; */
   background-color: #f7f9fc;
 }
 
