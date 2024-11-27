@@ -280,23 +280,21 @@
             <div id="list_div" class="panel-content">
               <section class="list">
                 <div class="table-responsive user_list">
-                  <table class="table table-bordered">
+                  <table class="table table-bordered table-striped table-condensed fix" width="3000px;">
                     <thead class="table-light position-sticky" style="top: -1px; z-index: 1020;">
                       <tr>
-
-                        <th>
+                        <th style="width:50px;">
                           <input type="checkbox" class="checkbox select-all-rows" data-input-id="ids"
                             data-rows-group-id="main">
-
                         </th>
-                        <th >ID</th>
-                        <th scope="col" class="chracter-th">Character</th>
-                        <th >Time Zone</th>
-                        <th >Job Title</th>
-                        <th >Company</th>
-                        <th >Social</th>
-                        <th >Tags</th>
-                        <th >Actions</th> <!-- New Actions Column -->
+                        <th style="width:2050px;" scope="col" class="chracter-th">Picture</th>
+                        <th style="width:2050px;" scope="col">Character</th>
+                        <th style="width:150px;">Time Zone</th>
+                        <th style="width:150px;">Job Title</th>
+                        <th style="width:250px;">Company</th>
+                        <th style="width:150px;">Social</th>
+                        <th style="width:150px;">Tags</th>
+                        <th style="width:150px;">Actions</th> <!-- New Actions Column -->
                       </tr>
                     </thead>
                     <tbody>
@@ -324,9 +322,6 @@
                             <i class="bi bi-envelope"></i>
                           </button>
                         </td>
-
-
-
                         <td data-label="Tags">
                           <div class="btn-group">
                             <button class="btn btn-gray dropdown-toggle btn-tag-lists"
@@ -351,24 +346,1687 @@
                               </li>
                             </ul>
                           </div>
-
                         </td>
-
-
-
-
-
-
                         <td data-label="Actions">
-
                           <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
-
-
                           <i class="bi bi-trash"></i> <!-- Delete Icon -->
-
                         </td>
                       </tr>
 
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <input type="checkbox" class="checkbox select-row"
+                            data-id="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-rows-group-id="main">
+                        </td>
+                        <td data-label="#">1</td>
+                        <td data-label="Profile" class="profile-cell">
+                          <img src="https://via.placeholder.com/50" alt="Profile Pic" class="rounded-circle">
+                          <span class="name">John Doe</span>
+                        </td>
+                        <td data-label="Time Zone">UTC-5</td>
+                        <td data-label="Job Title">Software Engineer</td>
+                        <td data-label="Company">TechCorp</td>
+                        <td data-label="Social">
+                          <button class="btn btn-outline-primary btn-sm social-icon linkedin">
+                            <i class="bi bi-linkedin"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon phone">
+                            <i class="bi bi-telephone"></i>
+                          </button>
+                          <button class="btn btn-outline-primary btn-sm social-icon messsage">
+                            <i class="bi bi-envelope"></i>
+                          </button>
+                        </td>
+                        <td data-label="Tags">
+                          <div class="btn-group">
+                            <button class="btn btn-gray dropdown-toggle btn-tag-lists"
+                              data-id-lead="02fd99bf-f6fa-48b7-9cd4-4afb50c948fe" data-toggle="dropdown"><span
+                                class="caption badge badge-blue">1</span>
+                              <!-- <span class="caret"></span> -->
+                            </button>
+                            <ul class="dropdown-menu ul-tags" data-id-lead="example-id"
+                              style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); min-width: 200px; padding: 10px 0; background-color: #fff; border: 1px solid #ddd; margin-top: 8px;">
+                              <div class="div-tag-lists" data-id-lead="example-id">
+                                <!-- Dynamic tag list will be filled here -->
+                              </div>
+                              <li class="divider" style="border-top: 1px solid #f1f1f1;"></li>
+                              <li style="padding: 10px;">
+                                <p style="font-size: 14px; color: #666; margin-bottom: 5px;">Create New Tag</p>
+                                <input class="input input-medium input-tags" data-id-lead="example-id"
+                                  style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ddd; font-size: 14px; margin-bottom: 8px;"
+                                  placeholder="Enter tag..."><br>
+                                <button class="btn btn-link btn-create-tag-list" data-id-lead="example-id">
+                                  <i class="icon-plus"></i> Add
+                                </button>
+                              </li>
+                            </ul>
+                          </div>
+                        </td>
+                        <td data-label="Actions">
+                          <i style="padding-right: 9px;" class="bi bi-pencil"></i> <!-- Pencil Icon -->
+                          <i class="bi bi-trash"></i> <!-- Delete Icon -->
+                        </td>
+                      </tr>
 
                     </tbody>
                   </table>
